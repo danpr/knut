@@ -1,0 +1,146 @@
+/****************************************************************************
+** Meta object code from reading C++ file 'knutsetting.h'
+**
+** Created: Fri Dec 21 09:23:02 2012
+**      by: The Qt Meta Object Compiler version 62 (Qt 4.6.3)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#include "../../src/knutsetting.h"
+#if !defined(Q_MOC_OUTPUT_REVISION)
+#error "The header file 'knutsetting.h' doesn't include <QObject>."
+#elif Q_MOC_OUTPUT_REVISION != 62
+#error "This file was generated using the moc from 4.6.3. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+QT_BEGIN_MOC_NAMESPACE
+static const uint qt_meta_data_KNutSetting[] = {
+
+ // content:
+       4,       // revision
+       0,       // classname
+       0,    0, // classinfo
+      26,   14, // methods
+       0,    0, // properties
+       0,    0, // enums/sets
+       0,    0, // constructors
+       0,       // flags
+       0,       // signalCount
+
+ // slots: signature, parameters, type, tag, flags
+      13,   12,   12,   12, 0x0a,
+      40,   29,   12,   12, 0x0a,
+      67,   12,   12,   12, 0x08,
+      92,   12,   12,   12, 0x08,
+     113,   12,   12,   12, 0x08,
+     135,   12,   12,   12, 0x08,
+     157,   12,   12,   12, 0x08,
+     181,   12,   12,   12, 0x08,
+     200,   12,   12,   12, 0x08,
+     220,   12,   12,   12, 0x08,
+     242,   12,   12,   12, 0x08,
+     272,  266,   12,   12, 0x08,
+     297,   12,   12,   12, 0x08,
+     319,   12,   12,   12, 0x08,
+     346,   12,   12,   12, 0x08,
+     375,   12,   12,   12, 0x08,
+     403,   12,   12,   12, 0x08,
+     426,   12,   12,   12, 0x08,
+     450,   12,   12,   12, 0x08,
+     473,   12,   12,   12, 0x08,
+     499,   12,   12,   12, 0x08,
+     524,   12,   12,   12, 0x08,
+     542,   12,   12,   12, 0x08,
+     570,  562,   12,   12, 0x08,
+     603,  594,   12,   12, 0x08,
+     628,  594,   12,   12, 0x08,
+
+       0        // eod
+};
+
+static const char qt_meta_stringdata_KNutSetting[] = {
+    "KNutSetting\0\0configChanged()\0activeSlot\0"
+    "tabIsChangedSlot(QWidget*)\0"
+    "confChangedSlot(QString)\0changedUpsConfSlot()\0"
+    "changedUpsdConfSlot()\0changedUpsdUserSlot()\0"
+    "changedUpsmonConfSlot()\0getConfigDirSlot()\0"
+    "getServerFileSlot()\0getDrivCtrlFileSlot()\0"
+    "getMonitoringFileSlot()\0index\0"
+    "setSelectedDistSlot(int)\0upsdConectionOKSlot()\0"
+    "upsdConnectionBrokenSlot()\0"
+    "upsdConnectionErrorSlot(int)\0"
+    "upsdConnectionTimeoutSlot()\0"
+    "slotReconnectTimeout()\0upsdProcesStartedSlot()\0"
+    "upsdProcesStopedSlot()\0upsmonProcesStartedSlot()\0"
+    "upsmonProcesStopedSlot()\0upsdRestartSlot()\0"
+    "upsmonRestartSlot()\0upsName\0"
+    "upsDeletedSlot(QString)\0userName\0"
+    "userDeletedSlot(QString)\0"
+    "userAddedSlot(QString)\0"
+};
+
+const QMetaObject KNutSetting::staticMetaObject = {
+    { &KCModule::staticMetaObject, qt_meta_stringdata_KNutSetting,
+      qt_meta_data_KNutSetting, 0 }
+};
+
+#ifdef Q_NO_DATA_RELOCATION
+const QMetaObject &KNutSetting::getStaticMetaObject() { return staticMetaObject; }
+#endif //Q_NO_DATA_RELOCATION
+
+const QMetaObject *KNutSetting::metaObject() const
+{
+    return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
+}
+
+void *KNutSetting::qt_metacast(const char *_clname)
+{
+    if (!_clname) return 0;
+    if (!strcmp(_clname, qt_meta_stringdata_KNutSetting))
+        return static_cast<void*>(const_cast< KNutSetting*>(this));
+    return KCModule::qt_metacast(_clname);
+}
+
+int KNutSetting::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+{
+    _id = KCModule::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        switch (_id) {
+        case 0: configChanged(); break;
+        case 1: tabIsChangedSlot((*reinterpret_cast< QWidget*(*)>(_a[1]))); break;
+        case 2: confChangedSlot((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 3: changedUpsConfSlot(); break;
+        case 4: changedUpsdConfSlot(); break;
+        case 5: changedUpsdUserSlot(); break;
+        case 6: changedUpsmonConfSlot(); break;
+        case 7: getConfigDirSlot(); break;
+        case 8: getServerFileSlot(); break;
+        case 9: getDrivCtrlFileSlot(); break;
+        case 10: getMonitoringFileSlot(); break;
+        case 11: setSelectedDistSlot((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 12: upsdConectionOKSlot(); break;
+        case 13: upsdConnectionBrokenSlot(); break;
+        case 14: upsdConnectionErrorSlot((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 15: upsdConnectionTimeoutSlot(); break;
+        case 16: slotReconnectTimeout(); break;
+        case 17: upsdProcesStartedSlot(); break;
+        case 18: upsdProcesStopedSlot(); break;
+        case 19: upsmonProcesStartedSlot(); break;
+        case 20: upsmonProcesStopedSlot(); break;
+        case 21: upsdRestartSlot(); break;
+        case 22: upsmonRestartSlot(); break;
+        case 23: upsDeletedSlot((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 24: userDeletedSlot((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 25: userAddedSlot((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        default: ;
+        }
+        _id -= 26;
+    }
+    return _id;
+}
+QT_END_MOC_NAMESPACE

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/326/trunk/knutsetting4/xmlconf
+END
+modules_def.xml.template
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/509/trunk/knutsetting4/xmlconf/modules_def.xml.template
+END
+modules.dtd
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/509/trunk/knutsetting4/xmlconf/modules.dtd
+END
+modules_def_old.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/595/trunk/knutsetting4/xmlconf/modules_def_old.xml
+END
+modules_def.xml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/610/trunk/knutsetting4/xmlconf/modules_def.xml
+END
+upses_def.xml.template
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/326/trunk/knutsetting4/xmlconf/upses_def.xml.template
+END
+upses.dtd
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/326/trunk/knutsetting4/xmlconf/upses.dtd
+END
+upses_def.xml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/612/trunk/knutsetting4/xmlconf/upses_def.xml
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/493/trunk/knutsetting4/xmlconf/CMakeLists.txt
+END

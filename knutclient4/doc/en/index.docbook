@@ -1,0 +1,1290 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
+  <!ENTITY knutclient '<application>KNutClient</application>'>
+  <!ENTITY kappname "&knutclient;"><!-- replace knutclient here -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE"><!-- change language only here -->
+
+  <!-- Do not define any other entities; instead, use the entities
+       from kde-genent.entities and $LANG/user.entities. -->
+]>
+<!-- kdoctemplate v0.8 October 1 1999
+     Minor update to "Credits and Licenses" section on August 24, 2000
+     Removed "Revision history" section on 22 January 2001   -->
+
+<!-- ................................................................ -->
+
+<!-- The language must NOT be changed here. -->
+
+<book lang="&language;">
+
+<!-- This header contains all of the meta-information for the document such
+as Authors, publish date, the abstract, and Keywords -->
+
+<bookinfo>
+<title>The KNutClient Handbook</title>
+
+<authorgroup>
+<author>
+<firstname>Daniel</firstname>
+<othername></othername>
+<surname>Prynych</surname>
+<affiliation>
+<address><email>Daniel@prynych.cz</email></address>
+</affiliation>
+</author>
+</authorgroup>
+
+
+<copyright>
+<year>2001</year>
+<year>2002</year>
+<year>2003</year>
+<year>2004</year>
+<year>2006</year>
+<year>2007</year>
+<year>2008</year>
+<year>2009</year>
+<year>2010</year>
+<year>2011</year>
+<year>2012</year>
+<year>2013</year>
+<holder>Daniel Prynych</holder>
+</copyright>
+
+<!-- Translators: put here the copyright notice of the translation -->
+<!-- Put here the FDL notice.  Read the explanation in fdl-notice.docbook
+     and in the FDL itself on how to use it. -->
+<legalnotice>&FDLNotice;</legalnotice>
+
+<!-- Date and version information of the documentation
+Don't forget to include this last date and this last revision number, we
+need them for translation coordination !
+Please respect the format of the date (DD/MM/YYYY) and of the version
+(V.MM.LL), it could be used by automation scripts.
+Do NOT change these in the translation. -->
+
+<date>09/12/2010</date>
+<releaseinfo>0.13.05</releaseinfo>
+
+<!-- Abstract about this handbook -->
+
+<abstract>
+<para>
+&knutclient; is GUI client for UPS system NUT.
+</para>
+<para>
+This document describes &knutclient; version 1.0.5
+</para>
+</abstract>
+
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>kdeutils</keyword>
+<keyword>KNutClient</keyword>
+<keyword>NUT</keyword>
+<keyword>UPS</keyword>
+</keywordset>
+
+</bookinfo>
+
+
+<chapter id="introduction">
+<title>Introduction</title>
+
+<para>
+The &knutclient; is the application that watches state of UPS for system NUT.
+</para>
+</chapter>
+
+<chapter id="using-knutclient">
+<title>Using KNutClient</title>
+
+<sect1 id="knutclient-mainwin">
+<title>Main window &knutclient;</title>
+
+
+
+<para>
+Main window applications &knutclient;
+</para>
+<para>
+The &knutclient; is the client graphics application for system NUT
+"Network Ups Tools". It enables to watch the state of UPS and to show
+values of variables which the choice UPS a its driver are supporting.
+</para>
+
+<para>
+From version 0.6.0 &knutclient; supports the running of instant command and
+enables the change of RW variables.
+</para>
+<para>
+From version 0.9.0 &knutclient; doesn't support protocol UDP.
+</para>
+
+<para>
+<screenshot>
+<screeninfo>Main window &knutclient;</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="knutclient-en.png" format="PNG"/>
+	  </imageobject>
+	</mediaobject>
+</screenshot>
+</para>
+<para>
+
+Main window is divided in two parts.
+</para>
+<para>
+The left part "Main panel" includes next dates which show the state of the UPS choice.
+On line, on battery, overload,replace battery,battery low, calibration,runtime.
+There are unchangeable dates in this panel, name of UPS, serial number,
+manufactured. This dates are reading only once, when you UPS choose.
+</para>
+<para>
+The right part includes analog panels. These panels show values of variables like
+input voltage, load UPS, battery charge, UPS temperature,  battery voltage.
+</para>
+<para>
+&knutclient; includes toolbar, with standard buttons and button for the UPS choice.
+</para>
+</sect1>
+
+<sect1 id="knutclient-kicker">
+<title>&knutclient; and KDE panel</title>
+
+<para>
+<screenshot>
+<screeninfo>&knutclient; and KDE panel</screeninfo>
+   <mediaobject>
+    <imageobject>
+      <imagedata fileref="tkicker-en.png" format="PNG"/>
+    </imageobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para>
+From 0.8.0 version &knutclient; docks in KDE panel. His icon is variable and shows
+information about UPS load, runtime and the charge of battery, depending on type of icons is selected.
+
+After moving the pointer of the mouse on the icon, information window "ToolTip" is showes up, 
+which includes more information about UPS, Name, UPS name ,Address, State, Runtime ..
+</para>
+</sect1>
+
+
+<sect1 id="knutclient-features">
+<title>More KNutClient features</title>
+<para>
+For connecting with server side of NUT (upsd), &knutclient; uses protocol TCP.
+When UPS is selected in toolbar, &knutclient; tries to read the data. When
+reading fails, reading is repeated. The maximum count of repetitions is five.
+Afterwards &knutclient; reads data in periodical sequences. The first reading
+reads all variables, next reading reads variables that analog panels,
+RUNTIME a state of UPS show only. Variables show UPS name, manufacturer, serial
+number ... are read only once, because their changes aren't probable.
+</para>
+
+<para>
+Errors which arise like answer from user actions are show in their own window.
+</para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="commands">
+<title>Command Reference</title>
+
+
+<sect1 id="knutclient-mainwindow">
+<title>The main KNutClient window</title>
+<para></para>
+
+<sect2>
+<title>The File Menu</title>
+<para>
+<variablelist>
+   <varlistentry>
+       <term><menuchoice>
+         <guimenu>File</guimenu>
+         <guimenuitem>Showing Ups variables and commands</guimenuitem>
+      </menuchoice></term>
+      <listitem><para><action>Shows Ups variables for selected Ups
+      </action></para></listitem>
+   </varlistentry>
+
+   <varlistentry>
+      <term><menuchoice>
+        <guimenu>File</guimenu>
+        <guimenuitem>Running instant command</guimenuitem>
+      </menuchoice></term>
+      <listitem><para><action>Runs selected instant command for selected UPS</action></para></listitem>
+   </varlistentry>
+
+   <varlistentry>
+     <term><menuchoice>
+       <guimenu>File</guimenu>
+       <guimenuitem>Setting RW variables</guimenuitem>
+     </menuchoice></term>
+     <listitem>
+     <para><action> Changes selected UPS RW variable</action></para>
+     </listitem>
+   </varlistentry>
+
+
+  <varlistentry>
+      <term><menuchoice>
+         <shortcut>
+            <keycombo><keycap>Ctrl</keycap><keycap>q</keycap></keycombo>
+         </shortcut>
+         <guimenu>File</guimenu>
+         <guimenuitem>Quit</guimenuitem>
+      </menuchoice></term>
+      <listitem><para><action>Quits program</action></para></listitem>
+   </varlistentry>
+</variablelist>
+</para>
+</sect2>
+
+
+<sect2>
+<title>Menu Connection</title>
+<para>
+<variablelist>
+   <varlistentry>
+      <term><menuchoice>
+         <shortcut>
+            <keycombo><keycap>F1</keycap></keycombo>
+         </shortcut>
+         <guimenu>Connection</guimenu>
+         <guimenuitem>Reconnect</guimenuitem>
+      </menuchoice></term>
+      <listitem><para><action>Restore connection (reconnect) to UPS server(upsd).
+      </action></para></listitem>
+   </varlistentry>
+</variablelist>
+</para>
+</sect2>
+
+
+
+<sect2>
+<title>Menu Settings</title>
+<para>
+<variablelist>
+   <varlistentry>
+      <term><menuchoice>
+         <guimenu>Settings</guimenu>
+         <guimenuitem>Show Toolbar</guimenuitem>
+      </menuchoice></term>
+      <listitem><para><action>Shows/Hides toolbar.</action></para></listitem>
+   </varlistentry>
+
+   <varlistentry>
+      <term><menuchoice>
+         <guimenu>Settings</guimenu>
+         <guimenuitem>Show Statusbar</guimenuitem>
+      </menuchoice></term>
+      <listitem><para><action>Shows/Hides statusbar.</action></para></listitem>
+   </varlistentry>
+
+  <varlistentry>
+      <term><menuchoice>
+         <guimenu>Settings</guimenu>
+         <guimenuitem>Configure Shortcuts... </guimenuitem>
+      </menuchoice></term>
+      <listitem>
+        <para><action>Opens dialog panels for configuration key/action associations.
+    </action></para>
+     </listitem>
+   </varlistentry>
+
+
+  <varlistentry>
+      <term><menuchoice>
+         <guimenu>Settings</guimenu>
+         <guimenuitem>Configure &knutclient; </guimenuitem>
+      </menuchoice></term>
+      <listitem>
+        <para><action>Opens main configuration dialog panels.
+    </action></para>
+     </listitem>
+   </varlistentry>
+
+  <varlistentry>
+      <term><menuchoice>
+         <guimenu>Settings</guimenu>
+         <guimenuitem>Using description</guimenuitem>
+      </menuchoice></term>
+      <listitem>
+        <para><action>Shows/Hides description showing for UPS variables and commands.
+       </action></para>
+     </listitem>
+   </varlistentry>
+
+</variablelist>
+</para>
+</sect2>
+</sect1>
+
+<sect1 id="knutclient-kicker-comm">
+<title>Icon in KDE panel</title>
+
+<para>
+<screenshot>
+<screeninfo>Menu of KDE panel's icon</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="mkicker-cs.png" format="PNG"/>
+    </imageobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+
+<sect2>
+<title>Menu</title>
+<para>
+<variablelist>
+  <varlistentry>
+    <term><menuchoice>
+       <guimenuitem>UPS</guimenuitem>
+    </menuchoice></term>
+    <listitem><para><action>Using for select Ups.</action></para></listitem>
+  </varlistentry>
+				 
+   <varlistentry>
+       <term><menuchoice>
+         <guimenuitem>Showing Ups variables and commands</guimenuitem>
+      </menuchoice></term>
+      <listitem><para><action>Shows Ups variables for selected Ups.
+      </action></para></listitem>
+   </varlistentry>
+
+
+   <varlistentry>
+      <term><menuchoice>
+        <guimenuitem>Running instant command</guimenuitem>
+      </menuchoice></term>
+      <listitem><para><action>Runs selected instant command for selected UPS.</action></para></listitem>
+   </varlistentry>
+
+   <varlistentry>
+     <term><menuchoice>
+       <guimenuitem>Setting RW variables</guimenuitem>
+     </menuchoice></term>
+     <listitem>
+     <para><action> Changes selected UPS RW variable.</action></para>
+     </listitem>
+   </varlistentry>
+
+
+   <varlistentry>
+      <term><menuchoice>
+         <guimenuitem>Reconnect</guimenuitem>
+      </menuchoice></term>
+      <listitem><para><action>Restore connection (reconnect) to UPS server(upsd).
+      </action></para></listitem>
+   </varlistentry>
+
+
+  <varlistentry>
+      <term><menuchoice>
+         <guimenuitem>Setting &knutclient; </guimenuitem>
+      </menuchoice></term>
+      <listitem>
+        <para><action>Opens configuration dialog panels.
+    </action></para>
+     </listitem>
+   </varlistentry>
+
+   <varlistentry>
+      <term><menuchoice>
+        <guimenuitem>About &knutclient;</guimenuitem>
+      </menuchoice></term>
+      <listitem>
+      <para><action>Shows information about aplication &knutclient;.</action></para></listitem>
+   </varlistentry>
+
+   <varlistentry>
+     <term><menuchoice>
+       <guimenuitem>Minimalize</guimenuitem>
+     </menuchoice></term>
+     <listitem>
+     <para><action>Closes main window.</action></para></listitem>
+   </varlistentry>
+
+  <varlistentry>
+      <term><menuchoice>
+         <guimenuitem>Quit</guimenuitem>
+      </menuchoice></term>
+      <listitem><para><action>Quits program.</action></para></listitem>
+   </varlistentry>
+
+  </variablelist>
+ </para>
+ </sect2>
+ </sect1>
+
+
+<sect1 id="knuclient-show-variables">
+<title>Showing variables</title>
+<para>
+This window shows list of all variables and instant commands, when exist for selected UPS.
+<screenshot>
+<screeninfo>Window of variables and instant commands</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="variables-cs.png" format="PNG"/>
+    </imageobject>
+  </mediaobject>
+</screenshot>
+</para>
+</sect1>
+						
+
+
+    <sect1 id="knuclient-instant-command">
+      <title>Instant commands</title>
+      <para>
+      Instant commands run in UPS, the NUT server puts the command selected driver and
+      driver will run the command in UPS. The control window offers commands, which
+      the driver supports.
+      </para>
+      <para>
+        <variablelist>
+	  <varlistentry>
+	    <term><guilabel>OK</guilabel></term>
+	    <listitem>
+	      <para>The button <guibutton>OK</guibutton> runs the selected commands.</para>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term><guilabel>Cancel</guilabel></term>
+	    <listitem>
+	      <para>The Button <guibutton>Cancel</guibutton> closes the window.</para>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term><guilabel>Command</guilabel></term>
+	    <listitem>
+	      <para>The command for running is selected here.</para>
+	    </listitem>
+	  </varlistentry>
+	</variablelist>
+      </para>
+    </sect1>
+
+   <sect1 id="knutclient-RW-values">
+      <title>User changed (RW) variables</title>
+      <para>
+      User changed variables are group of variables which  can be changed by the user.
+      Majority of them are equal to setting of UPS. There are two types of user 
+      changed variables, char or enumerated variables. Char variables are a string of
+      chars with maximal length. Enumerated variables are a list of right values
+      for setting these variables.
+      </para>
+      <para>
+      User changed variable is not changed on server NUT (upsd) but the server
+      puts command for change to driver, it changes the setting immediately. This
+      activity is not instant and it can wait a few seconds.
+      </para>
+      <para>
+      <variablelist>
+	  <varlistentry>
+	    <term><guilabel>OK</guilabel></term>
+	    <listitem>
+              <para>Button<guibutton>OK</guibutton> changes variable.</para>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term><guilabel>Cancel</guilabel></term>
+	    <listitem>
+              <para>Button <guibutton>Cancel</guibutton> close window.</para>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term><guilabel>Default</guilabel></term>
+	    <listitem>
+              <para>Button <guibutton>Default</guibutton> sets default values
+this variable.</para>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term><guilabel>Variable</guilabel></term>
+	    <listitem>
+	      <para>Variable for changed is selected here.
+              </para>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term><guilabel>Value</guilabel></term>
+	    <listitem>
+	      <para> Values for selected variable are selected here.
+	      Array for changed of value is changes on base type of variable.
+              </para>
+	    </listitem>
+	  </varlistentry>
+	</variablelist>
+        </para>
+    </sect1>
+
+
+<sect1 id="knutclient-configuration">
+<title>Setting &knutclient;</title>
+
+<para>
+The window for setting has got five parts Setting, UPS, Panel, Fonts and Analog.
+</para>
+   <sect2>
+   <title>Setting</title>
+   <para>
+    Part Setting is used for setting number of rows, analog panels, background color of the main window,
+    input voltage (120/230)V, frequency of input voltage (50/60)Hz and allowing of input.transfer's values (input.transfer.low and input.transfer.high)
+   </para>
+   <para>
+   <screenshot>
+      <screeninfo>&knutclient; </screeninfo>
+      <mediaobject>
+         <imageobject>
+            <imagedata fileref="msetting-en.png" format="PNG" />
+         </imageobject>
+      </mediaobject>
+   </screenshot>
+   </para>
+   <para>
+     <variablelist>
+	 <varlistentry>
+	    <term><guilabel>Number of columns</guilabel></term>
+	    <listitem>
+	       <para>This sets the maximum number of columns for analog panels</para>
+	    </listitem>
+	 </varlistentry>
+         <varlistentry>
+           <term><guilabel>Use custom background color</guilabel></term>
+	   <listitem>
+             <para>This allows to use the custom background color of the main window.
+             </para>
+           </listitem>
+	 </varlistentry>
+	 <varlistentry>
+	    <term><guilabel>Color of Background</guilabel></term>
+	    <listitem>
+	       <para>This selects the background color.</para>
+	    </listitem>
+	 </varlistentry>
+	    <varlistentry>
+	      <term><guilabel>Use dialog "Are you sure"</guilabel></term>
+	      <listitem>
+                <para>
+                This switches on dialog "Are you sure" when you want to end the program.
+                When you don't acknowledge dialog "Are you sure", program doesn't stop.</para>
+              </listitem>
+            </varlistentry>
+
+
+            <varlistentry>
+              <term><guilabel>Use Main window when program started</guilabel></term>
+               <listitem>
+               <para>Sets showing main window, when program started.</para> 
+               </listitem>
+           </varlistentry>
+  
+            <varlistentry>
+              <term><guilabel>Show message window, when program reports error</guilabel></term>
+               <listitem>
+               <para>Permits showing message window, what shows description of error. It's useful when docking of program isn't forbided.</para> 
+               </listitem>
+           </varlistentry>
+
+	    
+	    <varlistentry>
+	      <term><guilabel>Nominal Input Voltage</guilabel></term>
+	      <listitem>
+		<para> This selects nominal input (output) voltage from 230V or 120V. The selection isn't
+		useless of <guilabel>"Use High-Low input.transfer values"</guilabel> is switched on.
+		</para>
+	      </listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><guilabel>Nominal Input Frequency</guilabel></term>
+	      <listitem>
+		<para> This selects nominal input (output) frequency from 50Hz or 60Hz. The selection isn't
+		useless of<guilabel>"Use High-Low input.transfer values"</guilabel> is switched on.
+		</para>
+	      </listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><guilabel>Use High-Low input.transfer values</guilabel></term>
+	      <listitem>
+		<para>This sets nominal input (output) voltage and nominal input (output) frequency on based values in variables of NUT input.transfer.low (LOWXFER) and input.transfer.high (HIGHXFER)
+		These variables determine the range of value input voltage, which UPS can work with.
+		On the basis of thise values &knutclient; sets voltage and frequency for analog panels which use them.
+		These panels are input voltage, output voltage, input frequency, output frequency  and etc.
+               </para>
+	      </listitem>
+	    </varlistentry>
+      </variablelist>
+   </para>
+</sect2>
+
+<sect2>
+  <title>UPS</title>
+  <para>
+  The part UPS is used for setting the list of UPS and their parameters
+  The left part includes list of UPS. The right part includes  buttons for
+  adding, changed parameters and deleting the record of UPS.
+  </para>
+   <para>
+   <screenshot>
+      <screeninfo>&knutclient; </screeninfo>
+      <mediaobject>
+         <imageobject>
+            <imagedata fileref="usetting-en.png" format="PNG" />
+         </imageobject>
+      </mediaobject>
+   </screenshot>
+   </para>
+    <para>
+   <variablelist>
+      <varlistentry>
+         <term><guibutton>Add</guibutton></term>
+	 <listitem>
+	    <para>This adds into the list another UPS and sets its parameters.</para>
+	 </listitem>
+      </varlistentry>
+      <varlistentry>
+         <term><guibutton>Change</guibutton></term>
+	 <listitem>
+	    <para>This changes parametric selected UPS.</para>
+	 </listitem>
+      </varlistentry>
+      <varlistentry>
+	 <term><guibutton>Delete</guibutton></term>
+	 <listitem><para>This deletes UPS from list.</para>
+	 </listitem>
+      </varlistentry>
+   </variablelist>
+   </para>
+          <sect3>
+          <title>Setting of parameters</title>
+       <para>
+       This windows is used for setting parameters of UPS.
+       </para>
+       <para>
+       <screenshot>
+          <mediaobject>
+             <imageobject>
+               <imagedata fileref="new-en.png" format="PNG"/>
+             </imageobject>
+          </mediaobject>
+       </screenshot>
+       </para>
+	  <para>
+          <variablelist>
+	     <varlistentry>
+		<term><guilabel>Name</guilabel></term>
+		<listitem>
+		<para>This sets the name of UPS for the &knutclient; program.</para>
+		</listitem>
+	     </varlistentry>
+             <varlistentry>
+                <term><guilabel>UPS address</guilabel></term>
+                <listitem>
+                <para>
+		This sets name of PC. UPS is connected with this PC.
+                This name is UPS address on net.
+		Examples: ns.alo.cz, localhost, 192.168.1.12.
+                </para>
+                </listitem>
+             </varlistentry>
+
+
+             <varlistentry>
+                <term><guilabel>UPS name</guilabel></term>
+                <listitem>
+                <para>
+		This sets name of UPS as it is defined in NUT. When name is not defined
+		program uses the first name of NUT system list on this PC.
+		This is true when minimal version of upsd is 1.3. Look into NUT documentacion.
+		Examples: victron, myups, apc700.
+                </para>
+                </listitem>
+             </varlistentry>
+
+             <varlistentry>
+		<term><guilabel>Delay (ms)</guilabel></term>
+		<listitem>
+		<para>
+                This sets the interval between two transmitions of data (reading data) from the NUT system.
+                </para>
+		</listitem>
+	     </varlistentry>
+	      <varlistentry>
+		<term><guilabel>Password</guilabel></term>
+		<listitem>
+		  <para>This sets the password for the authorization of the user.</para>
+		</listitem>
+	      </varlistentry>
+	      <varlistentry>
+		<term><guilabel>Store NUT password in configuration file</guilabel></term>
+		<listitem>
+		  <para>
+                  When you select this selection, the password will be saved into the configuration file.
+		  Password saved in configuration file not crypt. When you don't select this selection,
+		  the password will be forgotten, when the program is ended.</para>
+		</listitem>
+	      </varlistentry>
+                <varlistentry>
+		<term><guilabel>UPS Variables</guilabel></term>
+		<listitem>
+		  <para>This selects variables which will show in analog panels
+		  in the right part main window.
+		  </para>
+		</listitem>
+	      </varlistentry>
+	  </variablelist>
+       </para>
+	  <para>
+          Parameters User Name and Password are used for instant command or change of RW variables only.
+	  For watching the state of UPS the User name and the Password aren't needed.
+	  The Password and The User name have got their equivalents in file upsd.users of the NUT system.
+         </para>
+	</sect3>
+  </sect2>
+
+<sect2>
+  <title>Panel</title>
+  <para>
+  The part Panel is used for selecting which information's parts of the main panel will show.
+  </para>
+   <para>
+   <screenshot>
+      <screeninfo>&knutclient; </screeninfo>
+      <mediaobject>
+         <imageobject>
+            <imagedata fileref="psetting-en.png" format="PNG" />
+         </imageobject>
+      </mediaobject>
+   </screenshot>
+   </para>
+    <para>
+   <variablelist>
+
+   <varlistentry>
+   <term><guilabel>Overloading</guilabel></term>
+   <listitem>
+   <para>
+   Shows/Hides showing overloading
+   </para>
+   </listitem>
+   </varlistentry>
+
+   <varlistentry>
+   <term><guilabel>UPS Battery low</guilabel></term>
+   <listitem>
+   <para>
+   Shows/Hides showing battery low.
+   </para>
+   </listitem>
+   </varlistentry>
+
+   <varlistentry>
+   <term><guilabel>Replace battery</guilabel></term>
+   <listitem>
+   <para>
+   Shows/Hides showing that battery needs to be replaced
+   </para>
+   </listitem>
+   </varlistentry>
+
+   <varlistentry>
+   <term><guilabel>Ups calibration</guilabel></term>
+   <listitem>
+   <para>
+   Shows/Hides showing UPS calibration.
+   </para>
+   </listitem>
+   </varlistentry>
+
+   <varlistentry>
+   <term><guilabel>Manufac. + Model</guilabel></term>
+   <listitem>
+   <para>
+   Shows/Hides showing Manufacturer and Model of UPS
+   </para>
+   </listitem>
+   </varlistentry>
+
+   <varlistentry>
+   <term><guilabel>Manufacturer</guilabel></term>
+   <listitem>
+   <para>
+   Shows/Hides showing Manufacturer of UPS.
+   </para>
+   </listitem>
+   </varlistentry>
+
+  <varlistentry>
+   <term><guilabel>Model</guilabel></term>
+   <listitem>
+   <para>
+   Shows/Hides showing Model of UPS.
+   </para>
+   </listitem>
+   </varlistentry>
+
+   <varlistentry>
+   <term><guilabel>Serial</guilabel></term>
+   <listitem>
+   <para>
+   Shows/Hides showing serial number.
+   </para>
+   </listitem>
+   </varlistentry>
+
+   <varlistentry>
+   <term><guilabel>Firm. rev.</guilabel></term>
+   <listitem>
+   <para>
+   Shows/Hides showing firmware's revision.
+   </para>
+   </listitem>
+   </varlistentry>
+
+   <varlistentry>
+   <term><guilabel>Runtime</guilabel></term>
+   <listitem>
+   <para>
+   Shows/Hides show the time of the runtime on battery without power.
+   </para>
+   </listitem>
+   </varlistentry>
+
+   <varlistentry>
+     <term><guilabel>Use custom background color</guilabel></term>
+     <listitem>
+       <para>This allows to use the custom background color of the main panel.
+       </para>
+     </listitem>
+   </varlistentry>
+
+   <varlistentry>
+     <term><guilabel>Color of background</guilabel></term>
+     <listitem>
+       <para>This selects the background color.</para>
+     </listitem>
+   </varlistentry>
+
+   </variablelist>
+   </para>
+</sect2>
+
+   <sect2>
+   <title>Fonts</title>
+   <para>
+   The part Fonts is used for selecting used fonts.
+   </para>
+   <para>
+   <screenshot>
+      <screeninfo>&knutclient; </screeninfo>
+      <mediaobject>
+         <imageobject>
+            <imagedata fileref="fsetting-en.png" format="PNG" />
+         </imageobject>
+      </mediaobject>
+   </screenshot>
+   </para>
+  <para>
+   <variablelist>
+   <varlistentry>
+   <term><guilabel>Use custom font</guilabel></term>
+   <listitem>
+   <para>
+   Shows/Hides allows to select custom fonts for the main panel and the analog panels.
+   </para>
+   </listitem>
+   </varlistentry>
+   <varlistentry>
+      <term><guilabel>Main panel / Analog panels</guilabel></term>
+      <listitem>
+	<para>This selects the panel for which the font is selected.</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term><guilabel>Font</guilabel></term>
+      <listitem>
+	<para>This selects the font for the selection panel.
+	This is used when select <guilabel>Use custom font</guilabel> is selected.
+	</para>
+      </listitem>
+    </varlistentry>
+   </variablelist>
+   </para>
+  </sect2>
+
+
+
+
+<sect2>
+  <title>Analog</title>
+  <para>
+  The part Analog is used for setting color for the analog panels.
+  </para>
+
+   <para>
+   <screenshot>
+      <screeninfo>&knutclient; </screeninfo>
+      <mediaobject>
+         <imageobject>
+            <imagedata fileref="asetting-en.png" format="PNG" />
+         </imageobject>
+      </mediaobject>
+   </screenshot>
+   </para>
+
+   <para>
+   <variablelist>
+
+  <varlistentry>
+     <term><guilabel>Use custom background color</guilabel></term>
+     <listitem>
+       <para>This allows to use custom background color for the analog panel.
+       </para>
+     </listitem>
+   </varlistentry>
+
+   <varlistentry>
+     <term><guilabel>Color of background</guilabel></term>
+     <listitem>
+       <para>This selects the background color of analog panel.</para>
+     </listitem>
+   </varlistentry>
+
+   <varlistentry>
+     <term><guilabel>Use custom other colors</guilabel></term>
+     <listitem>
+       <para>This allows to select custom color of the analog panel's other parts.
+       </para>
+      </listitem>
+   </varlistentry>
+
+   <varlistentry>
+     <term><guilabel>Color of pointer</guilabel></term>
+     <listitem>
+       <para>
+       This is used for selecting the color of analog panel's pointer (finger). Default color is black.
+      </para>
+     </listitem>
+   </varlistentry>
+
+  <varlistentry>
+     <term><guilabel>Color of OK range</guilabel></term>
+     <listitem>
+       <para>
+       This is used for selecting color of range OK for analog panel. Default color is green.
+      </para>
+     </listitem>
+   </varlistentry>
+
+   <varlistentry>
+     <term><guilabel>Color of warning range</guilabel></term>
+     <listitem>
+       <para>
+       This is used for selecting color of range warning for analog panel. Default color is yellow.
+       </para>
+     </listitem>
+   </varlistentry>
+
+   <varlistentry>
+     <term><guilabel>Color of error range</guilabel></term>
+     <listitem>
+       <para>
+       This is used for selecting color of range error for analog panel. Default color is red.
+       </para>
+     </listitem>
+   </varlistentry>
+
+   <varlistentry>
+     <term><guilabel>Color of scale</guilabel></term>
+     <listitem>
+       <para>
+       This is used for selecting color of scale for analog panel. Default color is black.
+       </para>
+     </listitem>
+   </varlistentry>
+
+   <varlistentry>
+     <term><guilabel>Color of font</guilabel></term>
+     <listitem>
+       <para>
+       This is used for selecting color of font for analog panel. Default color is black.
+       </para>
+     </listitem>
+   </varlistentry>
+
+
+
+   <varlistentry>
+     <term><guilabel>Digital processing of pointers</guilabel></term>
+     <listitem>
+       <para>
+       This is used for selecting type of graphics proccessing of pointers.
+       </para>
+     </listitem>
+   </varlistentry>
+
+
+   </variablelist>
+   </para>
+  </sect2>
+
+   <sect2>
+      <title>Docking</title>
+      <para>
+        The part DOCK is used for setting parameters of docking program.
+      </para>
+      <para>
+      <screenshot>
+      <screeninfo>&knutclient; </screeninfo>
+      <mediaobject>
+         <imageobject>
+            <imagedata fileref="ksetting-cs.png" format="PNG" />
+         </imageobject>
+      </mediaobject>
+      </screenshot>
+      </para>
+ 
+      <para>
+      Type of dock's showing (Dock is KDE panel).
+      </para>
+										    
+   <para>
+      <variablelist>
+
+      <varlistentry>
+        <term><guilabel>Picture</guilabel></term>
+      <listitem>
+        <para>
+	Sets picture type of icon.
+        </para>
+      </listitem>
+      </varlistentry>
+
+      <varlistentry>
+       <term><guilabel>General</guilabel></term>
+      <listitem>
+      <para>
+      Sets general type of icon, for specialist only.
+      </para>
+      </listitem>
+      </varlistentry>
+
+      </variablelist>
+      </para>
+
+      <para>
+      Items of ToolTip. (ToolTip is bubble help.)
+      </para>
+
+   <para>
+     <variablelist>
+       <varlistentry>
+         <term><guilabel>Manufacturer</guilabel></term>
+         <listitem>
+         <para>
+         Shows/Hides showing Manufacturer of UPS.
+         </para>
+         </listitem>
+       </varlistentry>
+
+       <varlistentry>
+         <term><guilabel>Model</guilabel></term>
+         <listitem>
+         <para>
+         Shows/Hides showing Model of UPS.
+         </para>
+         </listitem>
+       </varlistentry>
+
+
+       <varlistentry>
+         <term><guilabel>Serial</guilabel></term>
+         <listitem>
+         <para>
+         Shows/Hides showing serial number.
+         </para>
+         </listitem>
+       </varlistentry>
+
+       <varlistentry>
+         <term><guilabel>Firm. rev.</guilabel></term>
+         <listitem>
+         <para>
+         Shows/Hides showing firmware's revision.
+         </para>
+         </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><guilabel>Runtime</guilabel></term>
+        <listitem>
+        <para>
+        Shows/Hides showing the time of the runtime on battery without power.
+        </para>
+        </listitem>
+      </varlistentry>
+
+
+  <varlistentry>
+    <term><guilabel>Battery Charge</guilabel></term>
+    <listitem>
+    <para>
+    Shows/Hides showing the Battery Charge.
+    </para>
+    </listitem>
+  </varlistentry>
+
+   <varlistentry>
+      <term><guilabel>Load UPS</guilabel></term>
+      <listitem>
+      <para>
+       Shows/Hides showing the Load of UPS.
+      </para>
+      </listitem>
+   </varlistentry>
+
+
+
+   <varlistentry>
+     <term><guilabel>Use custom background color</guilabel></term>
+     <listitem>
+       <para>This allows to use the custom background color of KDE panel's icon, when type of icon in KDE panel is picture.
+     </para>
+     </listitem>
+   </varlistentry>
+
+   <varlistentry>
+     <term><guilabel>Color of background</guilabel></term>
+     <listitem>
+       <para>This selects the background color.</para>
+     </listitem>
+   </varlistentry>
+
+     </variablelist>
+     </para>
+     </sect2>
+
+
+</sect1>
+</chapter>
+
+<chapter id="faq">
+<title>Questions and Answers</title>
+
+&reporting.bugs;
+&updating.documentation;
+
+<qandaset id="faqlist">
+<qandaentry>
+<question>
+<para>
+The &knutclient; isn't working, but the upsc is. What shall I do ?
+</para>
+</question>
+<answer>
+<para>
+See the  setting number of port. From version 0.5 (NUT) the number of port is changed.
+</para>
+</answer>
+</qandaentry>
+</qandaset>
+</chapter>
+
+<chapter id="credits">
+
+<title>Credits and License</title>
+
+<para>
+&knutclient;
+</para>
+<para>
+Program copyright 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010 Daniel Prynych <email>Daniel@prynych.cz</email>
+</para>
+<para>
+Documentation copyright 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010 Daniel Prynych <email>Daniel@prynych.cz</email>
+</para>
+<para>
+Translations done by:
+<itemizedlist>
+<listitem>
+<para>Daniel Prynych <email>Daniel@prynych.cz</email> Eng</para>
+</listitem>
+</itemizedlist>
+</para>
+
+&underFDL;               <!-- FDL: do not remove -->
+&underGPL;        	 <!-- GPL License -->
+
+</chapter>
+
+<appendix id="installation">
+<title>Installation</title>
+
+<sect1 id="getting-knutclient">
+<title>How to obtain KNutClient</title>
+
+<para>
+&knutclient; is not part of the KDE project
+<ulink url="http://www.kde.org">http://www.kde.org</ulink>.
+&knutclient; can be found on
+<ulink
+url="ftp://ftp.buzuluk.cz/pub/alo/knutclient/">ftp://ftp.buzuluk.cz/pub/alo/knutclient/</ulink> </para>
+</sect1>
+
+<sect1 id="requirements">
+<title>Requirements</title>
+
+<para>
+In order to successfully use &knutclient;, you need KDE 4.3.x
+</para>
+
+<para>
+You can find a list of changes at <ulink
+url="http://www.knut.prynych.cz">http://www.knut.prynych.cz</ulink>.
+</para>
+</sect1>
+
+<sect1 id="compilation">
+<title>Compilation and installation</title>
+
+<para>
+In order to compile and install &knutclient; on your system, type the following 
+in the base
+directory of.
+<screen width="40">
+<prompt>%</prompt> <userinput>cmake ../. -DCMAKE_INSTALL_PREFIX=/usr/ -DCMAKE_BUILD_TYPE=Release</userinput>
+<prompt>%</prompt> <userinput>make</userinput>
+<prompt>%</prompt> <userinput>make install</userinput>
+</screen>
+</para>
+
+<para>Since KApp uses cmake you should have not trouble 
+compiling it :-)).
+Should you run into problems please report them to the KDE mailing lists.</para>
+</sect1>
+</appendix>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes: nil
+sgml-general-insert-case: lower
+End:
+-->

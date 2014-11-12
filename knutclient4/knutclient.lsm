@@ -1,0 +1,13 @@
+Begin3
+Title:          KNutClient 
+Version:        1.0.5
+Entered-date:   2013-01-09
+Description:    A graphic NUT client
+Keywords:       NUT UPS
+Author:         Daniel Prynych <Daniel@prynych.cz>
+Maintained-by:  Daniel Prynych <Daniel@prynych.cz>
+Primary-site:   ftp://ftp.buzuluk.cz/alo/knutclient/knutclient-1.0.5.tar.gz	
+Original-site:  
+Platforms:       KDE 4.x
+Copying-policy: GNU Public License
+End

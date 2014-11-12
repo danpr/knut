@@ -1,0 +1,929 @@
+# translation of cs.po to
+# Daniel Prynych <Daniel@prynych.cz>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: cs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-10 10:20+0100\n"
+"PO-Revision-Date: 2009-02-21 12:24+0100\n"
+"Last-Translator: Daniel Prynych <Daniel@prynych.cz>\n"
+"Language-Team:  <cs@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: knutclient.cpp:94
+msgid "Ready."
+msgstr "Připraven."
+
+#: knutclient.cpp:163
+msgid "The connection failed. The next connection will make after %1 sec."
+msgstr "Spojení bylo chybné. Následující spojení bude za %1 sekund."
+
+#: knutclient.cpp:481
+msgid "Data OK"
+msgstr "Data v pořádku"
+
+#: knutclient.cpp:576
+msgid "UPS is off."
+msgstr "UPS je vypnuta."
+
+#: knutclient.cpp:579
+msgid "UPS is back on."
+msgstr "UPS je připojena."
+
+#: knutclient.cpp:584
+msgid "Power is back online."
+msgstr "Síťové napájení obnoveno."
+
+#: knutclient.cpp:589
+msgid "UPS is on battery."
+msgstr "UPS běží na baterie."
+
+#: knutclient.cpp:594
+msgid "UPS battery is low."
+msgstr "Baterie je vybita."
+
+#: knutclient.cpp:597
+msgid "UPS battery is OK."
+msgstr "UPS baterie je v pořádku."
+
+#: knutclient.cpp:602
+msgid "UPS battery is bad and needs be replaced."
+msgstr "UPS baterie je špatná a je jí potřeba vyměnit."
+
+#: knutclient.cpp:607
+msgid "UPS is overloaded."
+msgstr "UPS je přetížena."
+
+#: knutclient.cpp:610
+msgid "UPS isn't overloaded."
+msgstr "UPS není přetížena."
+
+#: knutclient.cpp:615
+#, fuzzy
+msgid "UPS is performing calibration."
+msgstr "UPS provádí kalibraci."
+
+#: knutclient.cpp:618
+msgid "Calibration of UPS is ended."
+msgstr "Kalibrace UPS je ukončena."
+
+#: knutclient.cpp:623
+msgid "UPS is boosting incoming voltage."
+msgstr "UPS navyšuje vstupní napětí."
+
+#: knutclient.cpp:626
+msgid "Boosting of UPS is ended."
+msgstr "Navyšovaní napětí je ukončeno."
+
+#: knutclient.cpp:631
+msgid "UPS is trimming incoming voltage."
+msgstr "UPS uřezává vstupní napětí."
+
+#: knutclient.cpp:634
+msgid "Trimming of UPS is ended."
+msgstr "Ořezávaní napětí je ukončeno."
+
+#: knutclient.cpp:726
+msgid "The connection was renewed."
+msgstr "Spojení bylo obnoveno."
+
+#: knutclient.cpp:793
+msgid "The connection was closed by the second side (upsd)."
+msgstr "Spojení bylo uzavřeno druhou stranou (upsd)."
+
+#: knutclient.cpp:869 knutclient.cpp:877 knutclient.cpp:1021
+msgid "Switched"
+msgstr "Přepnuto"
+
+#: knutclient.cpp:1077 knutdock.cpp:621 knutmainwindow.cpp:749
+msgid "Reconnect"
+msgstr "Obnovit spojení"
+
+#: knutclient.cpp:1175
+msgid "Are you sure ?"
+msgstr "Jste si jistý ?"
+
+#: knutdock.cpp:416 knutdock.cpp:466 knutfrontpanel.cpp:184
+#: knutnewupsdlg.cpp:55 knutprintupsvar.cpp:50
+msgid "Name"
+msgstr "Název"
+
+#: knutdock.cpp:417 knutnewupsdlg.cpp:71
+msgid "UPS name"
+msgstr "Jméno UPS"
+
+#: knutdock.cpp:418 knutnewupsdlg.cpp:64
+msgid "UPS address"
+msgstr "Adresa UPS"
+
+#: knutdock.cpp:419 knutdock.cpp:440 knutdock.cpp:443 knutdock.cpp:446
+#: knutdock.cpp:449 knutdock.cpp:452 knutdock.cpp:455
+msgid "Status : "
+msgstr "Stav : "
+
+#: knutdock.cpp:422 knutvardata.cpp:235
+msgid "Connection doesn't exist."
+msgstr "Spojení neexistuje."
+
+#: knutdock.cpp:426 knutfrontpanel.cpp:70
+msgid "UPS On line"
+msgstr "Provoz na sít"
+
+#: knutdock.cpp:430 knutfrontpanel.cpp:83
+msgid "UPS On battery"
+msgstr "Provoz na baterie"
+
+#: knutdock.cpp:434
+msgid "UPS Of line"
+msgstr "Provoz na sít "
+
+#: knutdock.cpp:440
+msgid "UPS Battery is low"
+msgstr "Baterie je vybita."
+
+#: knutdock.cpp:443 knutfrontpanel.cpp:129
+msgid "Replace battery"
+msgstr "Vyměnit baterie"
+
+#: knutdock.cpp:446
+msgid "UPS is performing calibration"
+msgstr "UPS provádí kalibraci."
+
+#: knutdock.cpp:449
+msgid "UPS is Overload"
+msgstr "UPS je přetížena"
+
+#: knutdock.cpp:452
+msgid "UPS is trimming voltage"
+msgstr "UPS uřezává vstupní napětí"
+
+#: knutdock.cpp:455
+msgid "UPS is boosting voltage"
+msgstr "UPS navyšuje vstupní napětí"
+
+#: knutdock.cpp:461
+msgid "Error : "
+msgstr "Chyba : "
+
+#: knutdock.cpp:464 knutfrontpanel.cpp:173
+msgid "Manufac. : "
+msgstr "Výrobce : "
+
+#: knutdock.cpp:468
+msgid "Serial"
+msgstr "Sériové č."
+
+#: knutdock.cpp:470
+msgid "Firmware"
+msgstr "Verze Firmware"
+
+#: knutdock.cpp:474 knutfrontpanel.cpp:221
+msgid "Runtime"
+msgstr "Runtime"
+
+#: knutdock.cpp:474
+msgid " : %1:%2 min"
+msgstr " : %1:%2 min"
+
+#: knutdock.cpp:479 knutvardata.cpp:65
+msgid "Battery Charge"
+msgstr "Kapacita baterie"
+
+#: knutdock.cpp:484 knutvardata.cpp:68
+msgid "UPS Load"
+msgstr "Zatížení UPS"
+
+#: knutdock.cpp:617 knutmainwindow.cpp:729
+msgid "&Showing UPS variables and commands"
+msgstr "&Zobrazení UPS proměnných a příkazů"
+
+#: knutdock.cpp:618 knutmainwindow.cpp:733
+msgid "&Running instant commands"
+msgstr "&Spuštění okamžitých příkazů"
+
+#: knutdock.cpp:619 knutmainwindow.cpp:737
+msgid "Setting R&W variables"
+msgstr "&Nastavení UPS RW proměnných"
+
+#: knutdock.cpp:623
+msgid "&Preferences"
+msgstr "N&astavení"
+
+#: knutdock.cpp:625
+msgid "&About KNutClient"
+msgstr "&O aplikaci KNutClient"
+
+#: knutdock.cpp:627
+msgid "&Minimize"
+msgstr "&Minimalizovat"
+
+#: knutdock.cpp:629
+msgid "&Exit"
+msgstr "&Konec"
+
+#: knutfrontpanel.cpp:99
+msgid "UPS Overload"
+msgstr "Přetížení"
+
+#: knutfrontpanel.cpp:114
+msgid "UPS Battery low"
+msgstr "Baterie je vybita"
+
+#: knutfrontpanel.cpp:144
+msgid "UPS calibration"
+msgstr "Kalibrace UPS"
+
+#: knutfrontpanel.cpp:195
+msgid "Serial : "
+msgstr "Sériové č. : "
+
+#: knutfrontpanel.cpp:206
+msgid "Firm. rev. : "
+msgstr "Ver. firmware : "
+
+#: knutinstcomms.cpp:35
+msgid "Instant commands"
+msgstr "Okamžité příkazy"
+
+#: knutinstcomms.cpp:45
+msgid "RUN INSTANT COMMAND"
+msgstr "Spustit stálý příkaz"
+
+#: knutinstcomms.cpp:49
+msgid "Command:"
+msgstr "Příkaz:"
+
+#: knutinstcomms.cpp:53 knutnewupsdlg.cpp:92 knutrwvar.cpp:64
+msgid "User name:"
+msgstr "Uživatelské jméno:"
+
+#: knutinstcomms.cpp:54 knutnewupsdlg.cpp:99 knutrwvar.cpp:65
+msgid "Password:"
+msgstr "Heslo:"
+
+#: knutmainwindow.cpp:51
+msgid "test of conection from 5"
+msgstr "test připojení z "
+
+#: knutmainwindow.cpp:699
+#, fuzzy
+msgid "UPS Label"
+msgstr "Jméno UPS"
+
+#: knutmainwindow.cpp:703
+msgid "UPS ComboBox"
+msgstr ""
+
+#: knutmainwindow.cpp:725
+msgid "Quits the application"
+msgstr "Ukončí program"
+
+#: knutmainwindow.cpp:743
+msgid "&Using descriptions"
+msgstr "&Použít popis"
+
+#: knutmainwindow.cpp:753
+#, fuzzy
+msgid "Reconnect the application"
+msgstr "Ukončí program"
+
+#: knutnewupsdlg.cpp:78
+msgid "Delay (ms):"
+msgstr "Zpoždění (ms):"
+
+#: knutnewupsdlg.cpp:85
+msgid "Port:"
+msgstr "Port:"
+
+#: knutnewupsdlg.cpp:107
+msgid "Store NUT password in configuration file"
+msgstr "Uložit NUT heslo do konfiguračního souboru"
+
+#: knutnewupsdlg.cpp:115
+msgid "Availabled UPS values"
+msgstr "Dostupné UPS proměnné"
+
+#: knutnewupsdlg.cpp:116
+msgid "Selected UPS values"
+msgstr "Vybrané UPS proměnné"
+
+#: knutnewupsdlg.cpp:124
+msgid "UPS Variables"
+msgstr "UPS Proměnné"
+
+#: knutnewupsdlg.cpp:227
+msgid "No Name or UPS address"
+msgstr "Nezadané jméno nebo adresa UPS"
+
+#: knutnewupsdlg.cpp:235
+msgid "This Name exist"
+msgstr "Toto jméno již existuje"
+
+#: knutnewupsdlg.cpp:242
+msgid "Delay must be number"
+msgstr "Zpoždění musí být číslo"
+
+#: knutnewupsdlg.cpp:248
+msgid "Port must be number"
+msgstr "Port musí byt číslo"
+
+#: knutnewupsdlg.cpp:253
+msgid "Port must be from 1025 until 65535"
+msgstr "Port musí být v rozsahu od 1025 do 65535"
+
+#: knutnewupsdlg.cpp:258
+msgid "Delay is too small"
+msgstr "Zpoždění je příliš malé"
+
+#: knutprefdlg.cpp:47
+msgid "Preferences"
+msgstr "Nastavení UPS"
+
+#: knutprefdlg.cpp:693
+msgid "Setting"
+msgstr "Nastavení"
+
+#: knutprefdlg.cpp:694
+msgid "Main Setting"
+msgstr "Hlavní nastavení"
+
+#: knutprefdlg.cpp:702
+msgid "Number of columns :"
+msgstr "Počet sloupců :"
+
+#: knutprefdlg.cpp:706 knutprefdlg.cpp:906 knutprefdlg.cpp:988
+msgid "Use custom background color"
+msgstr "Použít vlastní barvu pozadí"
+
+#: knutprefdlg.cpp:708 knutprefdlg.cpp:908 knutprefdlg.cpp:990
+msgid "Color of background :"
+msgstr "Barva pozadí :"
+
+#: knutprefdlg.cpp:710
+msgid "Use dialog \"Are you sure\""
+msgstr "Použít dialog \"Jste si jistý\""
+
+#: knutprefdlg.cpp:712
+msgid "Use Main window when program is started"
+msgstr "Použít hlavní okno když program startuje"
+
+#: knutprefdlg.cpp:714
+msgid "Yes"
+msgstr ""
+
+#: knutprefdlg.cpp:715
+#, fuzzy
+msgid "No"
+msgstr "Žádný výběr"
+
+#: knutprefdlg.cpp:716
+msgid "Auto"
+msgstr "Automaticky"
+
+#: knutprefdlg.cpp:718
+msgid "Show message window, when program reports error"
+msgstr "Zobrazit okno zpráv, když program hlásí chybu"
+
+#: knutprefdlg.cpp:735
+msgid "Voltage/Frequency"
+msgstr "Napětí/Frekvence"
+
+#: knutprefdlg.cpp:738
+msgid "Nominal Input Voltage"
+msgstr "Vstupní napětí"
+
+#: knutprefdlg.cpp:740
+msgid "&230 V"
+msgstr "&230 V"
+
+#: knutprefdlg.cpp:741
+msgid "&120 V"
+msgstr "&120 V"
+
+#: knutprefdlg.cpp:745
+msgid "Nominal Input Frequency"
+msgstr "Vstupní frekvence"
+
+#: knutprefdlg.cpp:747
+msgid "&50 Hz"
+msgstr "&50 Hz"
+
+#: knutprefdlg.cpp:748
+msgid "&60 Hz"
+msgstr "&60 Hz"
+
+#: knutprefdlg.cpp:752
+msgid "&Use High-Low input.transfer values"
+msgstr "&Použít input.transfer hodnoty"
+
+#: knutprefdlg.cpp:770
+msgid "UPS"
+msgstr "UPS"
+
+#: knutprefdlg.cpp:771
+msgid "UPS Setting"
+msgstr "Nastavení UPS"
+
+#: knutprefdlg.cpp:792
+msgid "&Add"
+msgstr "Př&idat"
+
+#: knutprefdlg.cpp:793
+#, fuzzy
+msgid "&Edit"
+msgstr "&Konec"
+
+#: knutprefdlg.cpp:794
+msgid "&Delete"
+msgstr "&Smazat"
+
+#: knutprefdlg.cpp:813
+msgid "Dock bar"
+msgstr "Dokovací lišta"
+
+#: knutprefdlg.cpp:814
+msgid "Docking Setting"
+msgstr "Nastavení dokovaní"
+
+#: knutprefdlg.cpp:820
+msgid "Type of dock's showing"
+msgstr "Typ zobrazení v doku"
+
+#: knutprefdlg.cpp:824
+msgid "Items of tooltip"
+msgstr "Prvky ToolTipu"
+
+#: knutprefdlg.cpp:831
+msgid "&Picture"
+msgstr "&Obrázkové"
+
+#: knutprefdlg.cpp:832
+msgid "&General"
+msgstr "&Souhrnné"
+
+#: knutprefdlg.cpp:834 knutprefdlg.cpp:899
+msgid "M&anufacturer"
+msgstr "Výr&obce"
+
+#: knutprefdlg.cpp:835 knutprefdlg.cpp:900
+msgid "M&odel"
+msgstr "&Model"
+
+#: knutprefdlg.cpp:836 knutprefdlg.cpp:901
+msgid "&Serial"
+msgstr "&Sériové č."
+
+#: knutprefdlg.cpp:837 knutprefdlg.cpp:902
+msgid "&Firm. rev."
+msgstr "Verze &Firmware"
+
+#: knutprefdlg.cpp:838 knutprefdlg.cpp:903
+msgid "&Runtime"
+msgstr "&Runtime"
+
+#: knutprefdlg.cpp:839
+msgid "&Battery Charge"
+msgstr "&Kapacita baterie"
+
+#: knutprefdlg.cpp:840
+msgid "&UPS Load"
+msgstr "&Zatížení UPS"
+
+#: knutprefdlg.cpp:842
+msgid "Use custom icon's background color"
+msgstr "Použít vlastní barvu pozadí"
+
+#: knutprefdlg.cpp:845
+msgid "Color of icon's background :"
+msgstr "Barva pozadí pro ikonu :"
+
+#: knutprefdlg.cpp:878
+msgid "Panel"
+msgstr "Panel"
+
+#: knutprefdlg.cpp:879
+msgid "Panel Setting"
+msgstr "Nastavení hlavního panelu"
+
+#: knutprefdlg.cpp:894
+msgid "UPS &Overload"
+msgstr "&Přetížení"
+
+#: knutprefdlg.cpp:895
+msgid "UPS &Battery low"
+msgstr "&Baterie je vybita"
+
+#: knutprefdlg.cpp:896
+msgid "R&eplace battery"
+msgstr "&Vyměnit baterie"
+
+#: knutprefdlg.cpp:897
+msgid "Ups &calibration"
+msgstr "&Kalibrace UPS"
+
+#: knutprefdlg.cpp:898
+msgid "&Manufac. + Model"
+msgstr "Výrobce + M&odel"
+
+#: knutprefdlg.cpp:938
+msgid "Fonts"
+msgstr "Písmo"
+
+#: knutprefdlg.cpp:939
+msgid "Setting Fonts"
+msgstr "Nastavení písma"
+
+#: knutprefdlg.cpp:946
+msgid "&Use custom font"
+msgstr "&Použít vlastní písma"
+
+#: knutprefdlg.cpp:953
+msgid "Main panel"
+msgstr "Hlavní panel"
+
+#: knutprefdlg.cpp:954
+msgid "Analog panels"
+msgstr "Analogové panely"
+
+#: knutprefdlg.cpp:977
+msgid "Analog"
+msgstr "Analog"
+
+#: knutprefdlg.cpp:978
+msgid "Setting Analog panel"
+msgstr "Nastavení analogových panelů"
+
+#: knutprefdlg.cpp:992
+msgid "Use custom other colors"
+msgstr "Použít vlastní barvy"
+
+#: knutprefdlg.cpp:994
+msgid "Color of pointer :"
+msgstr "Barva ručičky :"
+
+#: knutprefdlg.cpp:996
+msgid "Color of OK range :"
+msgstr "Barva OK rozsahu :"
+
+#: knutprefdlg.cpp:998
+msgid "Color of warning range :"
+msgstr "Barva rozsahu varovaní :"
+
+#: knutprefdlg.cpp:1000
+msgid "Color of error range :"
+msgstr "Barva rozsahu chyby :"
+
+#: knutprefdlg.cpp:1002
+msgid "Color of scale :"
+msgstr "Barva stupnice :"
+
+#: knutprefdlg.cpp:1004
+msgid "Color of font :"
+msgstr "Barva písma :"
+
+#: knutprefdlg.cpp:1007
+msgid "Digital processing of pointers :"
+msgstr "Vylepšení zpracovaní ručičky :"
+
+#: knutprefdlg.cpp:1032
+msgid "Nothing processing"
+msgstr "Žádné"
+
+#: knutprefdlg.cpp:1033
+msgid "Fast antialiasing"
+msgstr "Rychlé"
+
+#: knutprefdlg.cpp:1034
+msgid "Fine antialiasing"
+msgstr "Vylepšené"
+
+#: knutprefdlg.cpp:1035
+msgid "Fast antialiasing and blur motion"
+msgstr "Rychlé a rozostření okrajů"
+
+#: knutprefdlg.cpp:1036
+msgid "Fine antialiasing and blur motion"
+msgstr "Vylepšené a rozostření okrajů"
+
+#: knutprintupsvar.cpp:41 knutrwvar.cpp:40
+msgid "UPS variables"
+msgstr "UPS proměnné"
+
+#: knutprintupsvar.cpp:43 knutrwvar.cpp:42
+msgid "Reload Vars"
+msgstr "Obnovit"
+
+#: knutprintupsvar.cpp:50
+msgid "Value"
+msgstr "Hodnota"
+
+#: knutprintupsvar.cpp:54
+msgid "Description"
+msgstr "Popis"
+
+#: knutprintupsvar.cpp:78
+msgid "Instant Commands"
+msgstr "Okamžité příkazy"
+
+#: knutprintupsvar.cpp:92
+msgid "Read/Write Variables"
+msgstr "Měnitelné hodnoty"
+
+#: knutprintupsvar.cpp:114
+msgid "Read Only Variables"
+msgstr "Stálé hodnoty"
+
+#: knutrwvar.cpp:50
+msgid "SET RW VARIABLE"
+msgstr "NASTAVIT RW PROMĚNOU"
+
+#: knutrwvar.cpp:55
+msgid "Variable:"
+msgstr "Proměnná"
+
+#: knutrwvar.cpp:58
+msgid "Value:"
+msgstr "Hodnota"
+
+#: knutvardata.cpp:63
+msgid "None"
+msgstr "Žádný výběr"
+
+#: knutvardata.cpp:64
+msgid "Input Voltage"
+msgstr "Vstupní napětí"
+
+#: knutvardata.cpp:66
+msgid "UPS Temperature"
+msgstr "Teplota UPS"
+
+#: knutvardata.cpp:67
+msgid "Input Frequency"
+msgstr "Vstupní frekvence"
+
+#: knutvardata.cpp:69
+msgid "Outside Temperature"
+msgstr "Vnější teplota"
+
+#: knutvardata.cpp:70
+msgid "Outside Humidity"
+msgstr "Vnější vlhkost"
+
+#: knutvardata.cpp:71
+msgid "Battery Voltage"
+msgstr "Napětí baterie"
+
+#: knutvardata.cpp:72
+msgid "Output Voltage"
+msgstr "Výstupní napětí"
+
+#: knutvardata.cpp:73
+msgid "Output Current"
+msgstr "Výstupní proud"
+
+#: knutvardata.cpp:74
+msgid "Output Frequency"
+msgstr "Výstupní frekvence"
+
+#: knutvardata.cpp:75
+msgid "Battery Temperature"
+msgstr "Teplota baterie"
+
+#: knutvardata.cpp:76
+msgid "Battery Current"
+msgstr "Proud baterie"
+
+#: knutvardata.cpp:77
+#, fuzzy
+msgid "Input Current"
+msgstr "Výstupní proud"
+
+#: knutvardata.cpp:78
+msgid "UPS Power"
+msgstr "Příkon UPS"
+
+#: knutvardata.cpp:209
+#, fuzzy
+msgid "No memory."
+msgstr "Není dostatek paměti"
+
+#: knutvardata.cpp:210
+msgid "No address."
+msgstr "Nezadaná adresa"
+
+#: knutvardata.cpp:211
+msgid "Unknown address."
+msgstr "Neznámá adresa"
+
+#: knutvardata.cpp:214
+msgid "Error of connection."
+msgstr "Chyba spojení"
+
+#: knutvardata.cpp:217
+msgid "Network error, maybe net cable was plugged out."
+msgstr "Síťová chyba, možná byl odpojen kabel."
+
+#: knutvardata.cpp:220
+msgid "No connection with server."
+msgstr "Neexistuje spojeni se serverem."
+
+#: knutvardata.cpp:222
+msgid "Server-client protocol or variables of NUT are unknown."
+msgstr "Protokol server-klient nebo nebo proměnné NUT-u jsou neznámé."
+
+#: knutvardata.cpp:223
+msgid "No UPS on this address."
+msgstr "Nezadaná adresa"
+
+#: knutvardata.cpp:224
+msgid "Connection was refused by server."
+msgstr "Spojeni bylo serverem odmítnuto."
+
+#: knutvardata.cpp:226
+msgid "Server doesn't receive data."
+msgstr "Server nepřijímá data."
+
+#: knutvardata.cpp:227
+msgid "Server doesn't send data."
+msgstr "Server neposílá data."
+
+#: knutvardata.cpp:228
+msgid "Server doesn't answer."
+msgstr "Server neodpovídá."
+
+#: knutvardata.cpp:230
+msgid "Server returns data with unknown format."
+msgstr "Server vrací data v neznámém formátu."
+
+#: knutvardata.cpp:231
+msgid "Server returns unknown data."
+msgstr "Server vrací neznámá data."
+
+#: knutvardata.cpp:232
+msgid "Command VER returns data with unknown format."
+msgstr "Příkaz VER vrací data v neznámém formátu."
+
+#: knutvardata.cpp:234
+msgid "No data."
+msgstr "Žádná data"
+
+#: knutvardata.cpp:238
+msgid "Access denied. Failed password ?"
+msgstr "Přístup odmítnut. Špatné heslo ?"
+
+#: knutvardata.cpp:239
+msgid "UPS doesn't sent data to server (Data Stale)."
+msgstr "UPS nemůže poslat data na server. (Data se nemění)"
+
+#: knutvardata.cpp:240
+msgid "Server doesn't know this command."
+msgstr "Server nezná tento příkaz."
+
+#: knutvardata.cpp:243
+msgid "UPS's driver isn't connected."
+msgstr "Ovladač pro UPS není připojen."
+
+#: knutvardata.cpp:245
+msgid "Server required password."
+msgstr "Server požaduje heslo."
+
+#: knutvardata.cpp:246
+msgid "Incorrect password."
+msgstr "Nesprávné heslo."
+
+#: knutvardata.cpp:247
+msgid "UPS doesn't response."
+msgstr "UPS neodpovídá."
+
+#: knutvardata.cpp:248
+msgid "Command failed."
+msgstr "Špatný příkaz."
+
+#: knutvardata.cpp:249
+msgid "UPS doesn't know this instant command."
+msgstr "UPS nezná tento okamžitý příkaz."
+
+#: knutvardata.cpp:250
+msgid "UPS doesn't support this instant command."
+msgstr "UPS nepodporuje tento okamžitý příkaz."
+
+#: knutvardata.cpp:251
+msgid "UPS doesn't known this variable."
+msgstr "UPS nezná tuto proměnou."
+
+#: knutvardata.cpp:252
+msgid "UPS doesn't support this variable."
+msgstr "UPS nepodporuje tuto proměnou."
+
+#: knutvardata.cpp:253
+msgid "UPS doesn't support this value in this variable."
+msgstr "UPS nepodporuje tuto hodnotu v této proměnné."
+
+#: knutvardata.cpp:254
+msgid "Name of UPS is unknown."
+msgstr "Jméno UPS-ky je neznámé ."
+
+#: knutvardata.cpp:256
+msgid "Username has been already entered."
+msgstr "Uživatelské jméno již byla zadáno."
+
+#: knutvardata.cpp:257
+msgid "Password has been already entered."
+msgstr "Heslo již bylo zadáno."
+
+#: knutvardata.cpp:259
+msgid "Server doesn't send list of variables."
+msgstr "Server neposílá seznam proměnných."
+
+#: knutvardata.cpp:262
+msgid "Unknown error."
+msgstr "Neznámá chyba"
+
+#: main.cpp:31
+msgid "Client for Network UPS Tool"
+msgstr "Klient pro UPS systém NUT"
+
+#: main.cpp:37
+msgid "KNutClient"
+msgstr "KNutClient"
+
+#: main.cpp:38
+msgid "(C) 2002 - 2013  Daniel Prynych"
+msgstr ""
+
+#: main.cpp:39
+msgid "Zajecov, Czech Republic"
+msgstr ""
+
+#: main.cpp:41
+msgid "Daniel Prynych"
+msgstr ""
+
+#: main.cpp:43
+msgid "Arnaud Quette"
+msgstr ""
+
+#: main.cpp:44
+msgid "MGE"
+msgstr ""
+
+#: main.cpp:48
+#, fuzzy
+msgid "Don't dock in SysTray"
+msgstr "Neumístit do doku (SysTray)"
+
+#. i18n: file: knutclientui.rc:4
+#. i18n: ectx: Menu (file)
+#: rc.cpp:3
+msgid "&File"
+msgstr "&Soubor"
+
+#. i18n: file: knutclientui.rc:9
+#. i18n: ectx: Menu (settings)
+#: rc.cpp:6
+#, fuzzy
+msgid "&Settings"
+msgstr "Nastavení"
+
+#. i18n: file: knutclientui.rc:13
+#. i18n: ectx: Menu (connection)
+#: rc.cpp:9
+msgid "&Connection"
+msgstr "Spojení"
+
+#: rc.cpp:10
+#, fuzzy
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Uživatelské jméno:"
+
+#: rc.cpp:11
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#~ msgid ""
+#~ "_: NAME OF TRANSLATORS\n"
+#~ "Your names"
+#~ msgstr "Daniel Prynych"
+
+#~ msgid ""
+#~ "_: EMAIL OF TRANSLATORS\n"
+#~ "Your emails"
+#~ msgstr "Daniel@prynych.cz"
+
+#~ msgid "upsd > 1.2 doesn't support UDP. Connection is switched to TCP"
+#~ msgstr "upsd > 1.2 nepodporuje UDP. Spojení je přepnuto na TCP."
+
+#~ msgid "New Ups"
+#~ msgstr "Nová UPS"
+
+#~ msgid "Variables"
+#~ msgstr "UPS Proměnné"
+
+#~ msgid "RW variables"
+#~ msgstr "UPS RW Proměnné"

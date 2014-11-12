@@ -1,0 +1,631 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-05 12:22+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: knsacladdress.cpp:48
+msgid "Interface for listening"
+msgstr ""
+
+#: knsacladdress.cpp:73 knsacladdress.cpp:80
+msgid "IP Address"
+msgstr ""
+
+#: knsacladdress.cpp:73 knsacladdress.cpp:87 knsaddups.cpp:108
+#: knsmodulesedit.cpp:47
+msgid "Port"
+msgstr ""
+
+#: knsacladdress.cpp:97 knsmodules.cpp:47 knsmodusrval.cpp:44
+#: knsmonsystems.cpp:53 knsusers.cpp:50
+msgid "Add"
+msgstr ""
+
+#: knsacladdress.cpp:100 knsmodules.cpp:48 knsmonnotify.cpp:70
+#: knsmonsystems.cpp:54 knsusers.cpp:51
+msgid "Edit"
+msgstr ""
+
+#: knsacladdress.cpp:103 knsmodules.cpp:49 knsmonsystems.cpp:55
+#: knsusers.cpp:52
+msgid "Delete"
+msgstr ""
+
+#: knsacladdress.cpp:106 knsmonnotify.cpp:73
+msgid "Default"
+msgstr ""
+
+#: knsacladdress.cpp:110 knsmodules.cpp:50 knsmonnotify.cpp:71
+#: knsmonsystems.cpp:57 knsusers.cpp:53
+msgid "OK"
+msgstr ""
+
+#: knsacladdress.cpp:113 knsmodules.cpp:51 knsmonnotify.cpp:72
+#: knsmonsystems.cpp:58 knsusers.cpp:54
+msgid "Cancel"
+msgstr ""
+
+#: knsacladdress.cpp:372
+msgid "Sorry. This address and port are existed."
+msgstr ""
+
+#: knsacl.cpp:27
+msgid "Maximal time for responding of driver (MAXAGE)"
+msgstr ""
+
+#: knsacl.cpp:34
+msgid "Maximal number allowed connections for ups system (MAXCONN)"
+msgstr ""
+
+#: knsacl.cpp:71
+msgid "Default of access"
+msgstr ""
+
+#: knsaddparam.cpp:49
+msgid "Add other parameter."
+msgstr ""
+
+#: knsaddparam.cpp:64 knsaddups.cpp:101 knsuseredit.cpp:51
+msgid "Name"
+msgstr ""
+
+#: knsaddparam.cpp:69
+msgid "Value"
+msgstr ""
+
+#: knsaddups.cpp:74
+msgid "Select manufacturer and model of UPS or driver."
+msgstr ""
+
+#: knsaddups.cpp:90
+msgid "Manufacturer"
+msgstr ""
+
+#: knsaddups.cpp:95
+msgid "Model"
+msgstr ""
+
+#: knsaddups.cpp:104 knsmodulesedit.cpp:45
+msgid "Driver"
+msgstr ""
+
+#: knsaddups.cpp:110 knsmodulesedit.cpp:56 knsmonsystems.cpp:50
+msgid "Type"
+msgstr ""
+
+#: knsaddups.cpp:113 knsmodulesedit.cpp:58
+msgid "Auto"
+msgstr ""
+
+#: knsaddups.cpp:257 knsaddups.cpp:260
+msgid "Common"
+msgstr ""
+
+#: knsaddups.cpp:396
+msgid "Model information :\n"
+msgstr ""
+
+#: knsaddups.cpp:410
+msgid "Driver information : \n"
+msgstr ""
+
+#: knsaddups.cpp:431 knsmodulesedit.cpp:191
+msgid "Serial"
+msgstr ""
+
+#: knsaddups.cpp:433 knsmodulesedit.cpp:194
+msgid "USB"
+msgstr ""
+
+#: knshelper.cpp:173 knshelper.cpp:179
+msgid "I can't run upsdrvctl command"
+msgstr ""
+
+#: knshelper.cpp:235 knshelper.cpp:237
+msgid "I can't restart upsd daemon"
+msgstr ""
+
+#: knshelper.cpp:247 knshelper.cpp:253 knshelper.cpp:263 knshelper.cpp:270
+msgid "I can't start upsd daemon"
+msgstr ""
+
+#: knshelper.cpp:292 knshelper.cpp:296
+msgid "I can't restart upsmon client"
+msgstr ""
+
+#: knshelper.cpp:315 knshelper.cpp:324 knshelper.cpp:335 knshelper.cpp:342
+msgid "I can't start upsmon client"
+msgstr ""
+
+#: knsmodstdval.cpp:39
+msgid "Order of UPS"
+msgstr ""
+
+#: knsmodstdval.cpp:41
+msgid "No lock"
+msgstr ""
+
+#: knsmodstdval.cpp:43
+msgid "Maximum delay of UPS's start"
+msgstr ""
+
+#: knsmodstdval.cpp:45 knsmonnotify.cpp:65
+msgid "Description"
+msgstr ""
+
+#: knsmodulesedit.cpp:68
+msgid "Standard part of setting"
+msgstr ""
+
+#: knsmodulesedit.cpp:75
+msgid "Driver part of setting"
+msgstr ""
+
+#: knsmodulesedit.cpp:82
+msgid "User part of setting"
+msgstr ""
+
+#: knsmodulesedit.cpp:180
+msgid "Driver %1 for this module isn't defined in list of drivers."
+msgstr ""
+
+#: knsmodulesedit.cpp:197 knsmodulesedit.cpp:200
+msgid "Unknown"
+msgstr ""
+
+#: knsmonitoring.cpp:37
+msgid "Monitoring of UPS setting"
+msgstr ""
+
+#: knsmonitoring.cpp:40
+msgid "Properties setting"
+msgstr ""
+
+#: knsmonitoring.cpp:43
+msgid "Notification setting"
+msgstr ""
+
+#: knsmonitoring.cpp:45
+msgid "Default of monitoring"
+msgstr ""
+
+#: knsmonnotify.cpp:34
+msgid "UPS is back online."
+msgstr ""
+
+#: knsmonnotify.cpp:35
+msgid "UPS is on battery."
+msgstr ""
+
+#: knsmonnotify.cpp:36
+msgid "UPS has a low battery (if also on battery, it's critical)."
+msgstr ""
+
+#: knsmonnotify.cpp:37
+msgid "UPS is being shutdown by the master system (FSD = Forced Shutdown)."
+msgstr ""
+
+#: knsmonnotify.cpp:38
+msgid "Communications established with the UPS."
+msgstr ""
+
+#: knsmonnotify.cpp:39
+msgid "Communications lost to the UPS."
+msgstr ""
+
+#: knsmonnotify.cpp:40
+msgid "The system is being shutdown."
+msgstr ""
+
+#: knsmonnotify.cpp:41
+msgid "The UPS battery is bad and needs to be replaced."
+msgstr ""
+
+#: knsmonnotify.cpp:42
+msgid "A UPS is unavailable (can't be contacted for monitoring)."
+msgstr ""
+
+#: knsmonnotify.cpp:54
+msgid "Message"
+msgstr ""
+
+#: knsmonnotify.cpp:58
+msgid "Possibilities"
+msgstr ""
+
+#: knsmonnotify.cpp:60
+msgid "Write to syslog"
+msgstr ""
+
+#: knsmonnotify.cpp:61
+msgid "Write to all users"
+msgstr ""
+
+#: knsmonnotify.cpp:62
+msgid "Exec command"
+msgstr ""
+
+#: knsmonnotify.cpp:63
+msgid "Don't do anything"
+msgstr ""
+
+#: knsmonnotify.cpp:74
+msgid "Default of all notifications"
+msgstr ""
+
+#: knsmonnotify.cpp:169
+msgid "UPS is on line"
+msgstr ""
+
+#: knsmonnotify.cpp:170
+msgid "UPS is on battery"
+msgstr ""
+
+#: knsmonnotify.cpp:171
+msgid "UPS has a low battery"
+msgstr ""
+
+#: knsmonnotify.cpp:172
+msgid "Forced shutdown"
+msgstr ""
+
+#: knsmonnotify.cpp:173
+msgid "Communications OK"
+msgstr ""
+
+#: knsmonnotify.cpp:174
+msgid "Communications last"
+msgstr ""
+
+#: knsmonnotify.cpp:175
+msgid "Shutdown"
+msgstr ""
+
+#: knsmonnotify.cpp:176
+msgid "UPS battery is bad"
+msgstr ""
+
+#: knsmonnotify.cpp:177
+msgid "No communications"
+msgstr ""
+
+#: knsmonnotify.cpp:203
+msgid "Description of notification."
+msgstr ""
+
+#: knsmonsystems.cpp:50 knsmonsystems.cpp:63
+msgid "UPS name"
+msgstr ""
+
+#: knsmonsystems.cpp:50 knsmonsystems.cpp:68
+msgid "Host name"
+msgstr ""
+
+#: knsmonsystems.cpp:50 knsmonsystems.cpp:72
+msgid "Number of power"
+msgstr ""
+
+#: knsmonsystems.cpp:50 knsmonsystems.cpp:79
+msgid "User name"
+msgstr ""
+
+#: knsmonsystems.cpp:50 knsmonsystems.cpp:85 knsuseredit.cpp:52
+msgid "Password"
+msgstr ""
+
+#: knsmonsystems.cpp:56
+msgid "Default for monitoring"
+msgstr ""
+
+#: knsmonsystems.cpp:90
+msgid "Type of UPS"
+msgstr ""
+
+#: knsmonsystems.cpp:91
+msgid "Local UPS"
+msgstr ""
+
+#: knsmonvalues.cpp:36
+msgid "Minimum number of power supplies for running system"
+msgstr ""
+
+#: knsmonvalues.cpp:39
+msgid "Shutdown command"
+msgstr ""
+
+#: knsmonvalues.cpp:42
+msgid "Notification command"
+msgstr ""
+
+#: knsmonvalues.cpp:46
+msgid "Polling frequency"
+msgstr ""
+
+#: knsmonvalues.cpp:50
+msgid "Polling alert frequency"
+msgstr ""
+
+#: knsmonvalues.cpp:54
+msgid "Interval to wait before disconnect slave host"
+msgstr ""
+
+#: knsmonvalues.cpp:57
+msgid "Interval to wait before declaring UPS like dead"
+msgstr ""
+
+#: knsmonvalues.cpp:60
+msgid "Name of powerdown flag"
+msgstr ""
+
+#: knsmonvalues.cpp:63
+msgid "Replace batt. warning time"
+msgstr ""
+
+#: knsmonvalues.cpp:67
+msgid "No communications warning time"
+msgstr ""
+
+#: knsmonvalues.cpp:71
+msgid "Sleep interval before shutting down the system"
+msgstr ""
+
+#: knsmonvalues.cpp:75
+msgid "Default of monitoring's properties"
+msgstr ""
+
+#: knsuseredit.cpp:47
+msgid "User Setting"
+msgstr ""
+
+#: knsuseredit.cpp:56
+msgid "Type of section"
+msgstr ""
+
+#: knsuseredit.cpp:57
+msgid "User"
+msgstr ""
+
+#: knsuseredit.cpp:58 knutsetting.cpp:145
+msgid "Monitoring"
+msgstr ""
+
+#: knsuseredit.cpp:59
+msgid "Instant Commands"
+msgstr ""
+
+#: knsuseredit.cpp:60
+msgid "Actions"
+msgstr ""
+
+#: knsuseredit.cpp:61
+msgid "Allow the change variables"
+msgstr ""
+
+#: knsuseredit.cpp:62
+msgid "Set forced shutdown flag"
+msgstr ""
+
+#: knsuseredit.cpp:64 knutsetting.cpp:161
+msgid "UPS monitoring"
+msgstr ""
+
+#: knsuseredit.cpp:65
+msgid "Master"
+msgstr ""
+
+#: knsuseredit.cpp:66
+msgid "Slave"
+msgstr ""
+
+#: knsusers.cpp:58
+msgid "Default of users"
+msgstr ""
+
+#: knsusers.cpp:243
+msgid "Sorry. This name of user is existed."
+msgstr ""
+
+#: knutsetting.cpp:99
+msgid "KNutSetting Version 0.2 Hossk"
+msgstr ""
+
+#: knutsetting.cpp:100
+msgid "Program for setting UPS system NUT"
+msgstr ""
+
+#: knutsetting.cpp:101
+msgid "Copyright 2011 Daniel Prynych"
+msgstr ""
+
+#: knutsetting.cpp:102
+msgid "Daniel Prynych"
+msgstr ""
+
+#: knutsetting.cpp:142
+msgid "Modules"
+msgstr ""
+
+#: knutsetting.cpp:143
+msgid "Accesses"
+msgstr ""
+
+#: knutsetting.cpp:144
+msgid "Users"
+msgstr ""
+
+#: knutsetting.cpp:146
+msgid "Paths"
+msgstr ""
+
+#: knutsetting.cpp:160
+msgid "UPS daemon"
+msgstr ""
+
+#: knutsetting.cpp:162
+msgid "UPS connection"
+msgstr ""
+
+#: knutsetting.cpp:168
+msgid "Start/Restart UPSD"
+msgstr ""
+
+#: knutsetting.cpp:169
+msgid "Restarts UPS Daemon"
+msgstr ""
+
+#: knutsetting.cpp:173
+msgid "Start/Restart UPS monitoring"
+msgstr ""
+
+#: knutsetting.cpp:174
+msgid "Restarts UPS Monitoring Daemon"
+msgstr ""
+
+#: knutsetting.cpp:327
+msgid "Config directory"
+msgstr ""
+
+#: knutsetting.cpp:330
+msgid "UPS information server path (upsd)"
+msgstr ""
+
+#: knutsetting.cpp:333
+msgid "UPS monitoring client path (upsmon)"
+msgstr ""
+
+#: knutsetting.cpp:336
+msgid "UPS driver controler path (upsdrvctl)"
+msgstr ""
+
+#: knutsetting.cpp:342
+msgid "Selected distribution"
+msgstr ""
+
+#: knutsetting.cpp:424 knutsetting.cpp:568 knutsetting.cpp:1711
+#: knutsetting.cpp:1740
+msgid "Unable to authenticate/execute the action: %1, %2"
+msgstr ""
+
+#: knutsetting.cpp:588
+msgid "Helpful information about the <h1>knutsetting</h1> module."
+msgstr ""
+
+#: knutsetting.cpp:613
+msgid "None/Unknown"
+msgstr ""
+
+#: knutsetting.cpp:849
+msgid "The configure path is empty."
+msgstr ""
+
+#: knutsetting.cpp:852
+msgid "The configure path isn't selected."
+msgstr ""
+
+#: knutsetting.cpp:856
+msgid "The configure path is not directory."
+msgstr ""
+
+#: knutsetting.cpp:861
+msgid "The path for information server (upsd) is empty."
+msgstr ""
+
+#: knutsetting.cpp:864
+msgid "The path for information server (upsd) isn't selected."
+msgstr ""
+
+#: knutsetting.cpp:869
+msgid "\"%1\" must be file. Information server (upsd) cannot be run."
+msgstr ""
+
+#: knutsetting.cpp:875
+msgid "The path for monitoring client (upsmon) is empty."
+msgstr ""
+
+#: knutsetting.cpp:878
+msgid "The path for monitoring client (upsmon) isn't selected."
+msgstr ""
+
+#: knutsetting.cpp:883
+msgid "\"%1\" must be file. Monitoring client (upsmon) cannot be run."
+msgstr ""
+
+#: knutsetting.cpp:888
+msgid "The path for driver controler (upsdrvctl) is empty."
+msgstr ""
+
+#: knutsetting.cpp:891
+msgid "The path for driver controler (upsdrvctl) isn't selected."
+msgstr ""
+
+#: knutsetting.cpp:896
+msgid "\"%1\" must be file. Driver controler (usbdrvctl) cannot be run."
+msgstr ""
+
+#: knutsetting.cpp:901
+msgid "You must set path."
+msgstr ""
+
+#: knutsetting.cpp:1634
+msgid "UPS connection is up"
+msgstr ""
+
+#: knutsetting.cpp:1645
+msgid "UPS connection is broken"
+msgstr ""
+
+#: knutsetting.cpp:1655
+msgid "Restart ups"
+msgstr ""
+
+#: knutsetting.cpp:1659
+msgid "UPS daemon is running"
+msgstr ""
+
+#: knutsetting.cpp:1664
+msgid "Start  ups"
+msgstr ""
+
+#: knutsetting.cpp:1668
+msgid "UPS daemon isn't running."
+msgstr ""
+
+#: knutsetting.cpp:1674
+msgid "Restart UPS monitoring"
+msgstr ""
+
+#: knutsetting.cpp:1678
+msgid "UPS monitoring is running."
+msgstr ""
+
+#: knutsetting.cpp:1683
+msgid "Start UPS monitoring"
+msgstr ""
+
+#: knutsetting.cpp:1687
+msgid "UPS monitoring isn't running."
+msgstr ""
+
+#: rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#: rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""

@@ -1,0 +1,976 @@
+# translation of fr.po to Français
+# translation of fr.po to
+# translation of fr.po to Czech
+# translation of fr.po to français
+# Copyright (C) 2003, 2004 Free Software Foundation, Inc.
+# Daniel Prynych <Daniel.Prynych@alo.cz>, 2003, 2004.
+#
+# Arnaud Quette <arnaud.quette@free.fr>, 2003, 2004, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: fr\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-10 10:20+0100\n"
+"PO-Revision-Date: 2010-03-10 22:05+0100\n"
+"Last-Translator: Arnaud Quette <arnaud.quette@free.fr>\n"
+"Language-Team: French <fr@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: knutclient.cpp:94
+msgid "Ready."
+msgstr "Prêt."
+
+#: knutclient.cpp:163
+msgid "The connection failed. The next connection will make after %1 sec."
+msgstr "La connexion a échoué. Nouvelle tentative dans %1·sec."
+
+#: knutclient.cpp:481
+msgid "Data OK"
+msgstr "Données OK"
+
+#: knutclient.cpp:576
+msgid "UPS is off."
+msgstr "Onduleur arrêté"
+
+#: knutclient.cpp:579
+msgid "UPS is back on."
+msgstr "Onduleur démarré"
+
+#: knutclient.cpp:584
+msgid "Power is back online."
+msgstr "Retour secteur"
+
+#: knutclient.cpp:589
+msgid "UPS is on battery."
+msgstr "Onduleur sur batterie"
+
+#: knutclient.cpp:594
+msgid "UPS battery is low."
+msgstr "Onduleur Batterie basse"
+
+#: knutclient.cpp:597
+msgid "UPS battery is OK."
+msgstr "Batterie OK"
+
+#: knutclient.cpp:602
+msgid "UPS battery is bad and needs be replaced."
+msgstr "La batterie doit être remplacée."
+
+#: knutclient.cpp:607
+msgid "UPS is overloaded."
+msgstr "L'onduleur est en surcharge."
+
+#: knutclient.cpp:610
+msgid "UPS isn't overloaded."
+msgstr "L'onduleur n'est pas en surcharge."
+
+#: knutclient.cpp:615
+msgid "UPS is performing calibration."
+msgstr "UPS is performing calibration.d'étalonnage."
+
+#: knutclient.cpp:618
+msgid "Calibration of UPS is ended."
+msgstr "Calibrage onduleur terminé."
+
+#: knutclient.cpp:623
+msgid "UPS is boosting incoming voltage."
+msgstr "L'onduleur est en redressement de la tension d'entrée."
+
+#: knutclient.cpp:626
+msgid "Boosting of UPS is ended."
+msgstr "Redressement de la tension d'entrée terminé."
+
+#: knutclient.cpp:631
+msgid "UPS is trimming incoming voltage."
+msgstr "L'onduleur est en rabaissement de la tension d'entrée."
+
+#: knutclient.cpp:634
+msgid "Trimming of UPS is ended."
+msgstr "Rabaissement de la tension d'entrée terminé."
+
+#: knutclient.cpp:726
+msgid "The connection was renewed."
+msgstr "La connexion a été renouvelé."
+
+#: knutclient.cpp:793
+msgid "The connection was closed by the second side (upsd)."
+msgstr "La connexion a été fermé par la seconde partie (upsd)."
+
+#: knutclient.cpp:869 knutclient.cpp:877 knutclient.cpp:1021
+msgid "Switched"
+msgstr "Basculé"
+
+#: knutclient.cpp:1077 knutdock.cpp:621 knutmainwindow.cpp:749
+msgid "Reconnect"
+msgstr "Reconnexion"
+
+#: knutclient.cpp:1175
+msgid "Are you sure ?"
+msgstr "Êtes vous sûr ?"
+
+#: knutdock.cpp:416 knutdock.cpp:466 knutfrontpanel.cpp:184
+#: knutnewupsdlg.cpp:55 knutprintupsvar.cpp:50
+msgid "Name"
+msgstr "Nom"
+
+#: knutdock.cpp:417 knutnewupsdlg.cpp:71
+msgid "UPS name"
+msgstr "Onduleur"
+
+#: knutdock.cpp:418 knutnewupsdlg.cpp:64
+msgid "UPS address"
+msgstr "Adresse Onduleur"
+
+#: knutdock.cpp:419 knutdock.cpp:440 knutdock.cpp:443 knutdock.cpp:446
+#: knutdock.cpp:449 knutdock.cpp:452 knutdock.cpp:455
+msgid "Status : "
+msgstr "Statut : "
+
+#: knutdock.cpp:422 knutvardata.cpp:235
+msgid "Connection doesn't exist."
+msgstr "Cette connexion n'existe pas."
+
+#: knutdock.cpp:426 knutfrontpanel.cpp:70
+msgid "UPS On line"
+msgstr "Sur secteur"
+
+#: knutdock.cpp:430 knutfrontpanel.cpp:83
+msgid "UPS On battery"
+msgstr "Sur batterie"
+
+#: knutdock.cpp:434
+msgid "UPS Of line"
+msgstr "Onduleur arrêté"
+
+#: knutdock.cpp:440
+msgid "UPS Battery is low"
+msgstr "Niveau batterie basse"
+
+#: knutdock.cpp:443 knutfrontpanel.cpp:129
+msgid "Replace battery"
+msgstr "Remplacer la batterie"
+
+#: knutdock.cpp:446
+msgid "UPS is performing calibration"
+msgstr "Calibrage onduleur en cours"
+
+#: knutdock.cpp:449
+msgid "UPS is Overload"
+msgstr "En surcharge"
+
+#: knutdock.cpp:452
+msgid "UPS is trimming voltage"
+msgstr "L'onduleur rabaisse la tension"
+
+#: knutdock.cpp:455
+msgid "UPS is boosting voltage"
+msgstr "L'onduleur redresse la tension"
+
+#: knutdock.cpp:461
+msgid "Error : "
+msgstr "Erreur : "
+
+#: knutdock.cpp:464 knutfrontpanel.cpp:173
+msgid "Manufac. : "
+msgstr "Fabricant : "
+
+#: knutdock.cpp:468
+msgid "Serial"
+msgstr "N° de série"
+
+#: knutdock.cpp:470
+msgid "Firmware"
+msgstr "Vers. Fw."
+
+#: knutdock.cpp:474 knutfrontpanel.cpp:221
+msgid "Runtime"
+msgstr "Autonomie"
+
+#: knutdock.cpp:474
+msgid " : %1:%2 min"
+msgstr " : %1:%2 min"
+
+#: knutdock.cpp:479 knutvardata.cpp:65
+msgid "Battery Charge"
+msgstr "Charge de la batterie"
+
+#: knutdock.cpp:484 knutvardata.cpp:68
+msgid "UPS Load"
+msgstr "Charge de l'onduleur"
+
+#: knutdock.cpp:617 knutmainwindow.cpp:729
+msgid "&Showing UPS variables and commands"
+msgstr "&Voir les variables et commandes onduleurs"
+
+#: knutdock.cpp:618 knutmainwindow.cpp:733
+msgid "&Running instant commands"
+msgstr "Commandes &instantanées"
+
+#: knutdock.cpp:619 knutmainwindow.cpp:737
+msgid "Setting R&W variables"
+msgstr "Configurer les &variables de l'onduleur"
+
+#: knutdock.cpp:623
+msgid "&Preferences"
+msgstr "&Préférences"
+
+#: knutdock.cpp:625
+msgid "&About KNutClient"
+msgstr "&A propos de KNutClient"
+
+#: knutdock.cpp:627
+msgid "&Minimize"
+msgstr "&Réduire"
+
+#: knutdock.cpp:629
+msgid "&Exit"
+msgstr "&Sortir"
+
+#: knutfrontpanel.cpp:99
+msgid "UPS Overload"
+msgstr "En surcharge"
+
+#: knutfrontpanel.cpp:114
+msgid "UPS Battery low"
+msgstr "Niveau batterie bas"
+
+#: knutfrontpanel.cpp:144
+msgid "UPS calibration"
+msgstr "Calibrage onduleur"
+
+#: knutfrontpanel.cpp:195
+msgid "Serial : "
+msgstr "N° série : "
+
+#: knutfrontpanel.cpp:206
+msgid "Firm. rev. : "
+msgstr "Vers. Fw. : "
+
+#: knutinstcomms.cpp:35
+msgid "Instant commands"
+msgstr "Commandes directes"
+
+#: knutinstcomms.cpp:45
+msgid "RUN INSTANT COMMAND"
+msgstr "Lancer Commande Directe"
+
+#: knutinstcomms.cpp:49
+msgid "Command:"
+msgstr "Commande :"
+
+#: knutinstcomms.cpp:53 knutnewupsdlg.cpp:92 knutrwvar.cpp:64
+msgid "User name:"
+msgstr "Utilisateur :"
+
+#: knutinstcomms.cpp:54 knutnewupsdlg.cpp:99 knutrwvar.cpp:65
+msgid "Password:"
+msgstr "Mot de passe :"
+
+#: knutmainwindow.cpp:51
+msgid "test of conection from 5"
+msgstr "test de connexion depuis 5"
+
+#: knutmainwindow.cpp:699
+msgid "UPS Label"
+msgstr "Label onduleur"
+
+#: knutmainwindow.cpp:703
+msgid "UPS ComboBox"
+msgstr "ComboBox onduleur"
+
+#: knutmainwindow.cpp:725
+msgid "Quits the application"
+msgstr "Quitter l'application."
+
+#: knutmainwindow.cpp:743
+msgid "&Using descriptions"
+msgstr "&Utiliser les descriptions"
+
+#: knutmainwindow.cpp:753
+msgid "Reconnect the application"
+msgstr "Reconnecter l'application"
+
+#: knutnewupsdlg.cpp:78
+msgid "Delay (ms):"
+msgstr "Délai (ms):"
+
+#: knutnewupsdlg.cpp:85
+msgid "Port:"
+msgstr "Port :"
+
+#: knutnewupsdlg.cpp:107
+msgid "Store NUT password in configuration file"
+msgstr "Stocker le mot de passe NUT dans le fichier de configuration"
+
+#: knutnewupsdlg.cpp:115
+msgid "Availabled UPS values"
+msgstr "Valeurs disponibles"
+
+#: knutnewupsdlg.cpp:116
+msgid "Selected UPS values"
+msgstr "Valeurs sélectionnées"
+
+#: knutnewupsdlg.cpp:124
+msgid "UPS Variables"
+msgstr "Variables de l'onduleur"
+
+#: knutnewupsdlg.cpp:227
+msgid "No Name or UPS address"
+msgstr "Pas de nom ou d'adresse pour l'onduleur"
+
+#: knutnewupsdlg.cpp:235
+msgid "This Name exist"
+msgstr "Ce nom existe"
+
+#: knutnewupsdlg.cpp:242
+msgid "Delay must be number"
+msgstr "Le délai doit être un nombre"
+
+#: knutnewupsdlg.cpp:248
+msgid "Port must be number"
+msgstr "Le port doit être un nombre"
+
+#: knutnewupsdlg.cpp:253
+msgid "Port must be from 1025 until 65535"
+msgstr "Le port doit valoir de 1025 à 65535"
+
+#: knutnewupsdlg.cpp:258
+msgid "Delay is too small"
+msgstr "Le délai est trop faible"
+
+#: knutprefdlg.cpp:47
+msgid "Preferences"
+msgstr "Préférences"
+
+#: knutprefdlg.cpp:693
+msgid "Setting"
+msgstr "Paramètres"
+
+#: knutprefdlg.cpp:694
+msgid "Main Setting"
+msgstr "Paramètres principaux"
+
+#: knutprefdlg.cpp:702
+msgid "Number of columns :"
+msgstr "Nombre de colonnes :"
+
+#: knutprefdlg.cpp:706 knutprefdlg.cpp:906 knutprefdlg.cpp:988
+msgid "Use custom background color"
+msgstr "Utiliser une couleur de fond personnalisée :"
+
+#: knutprefdlg.cpp:708 knutprefdlg.cpp:908 knutprefdlg.cpp:990
+msgid "Color of background :"
+msgstr "Couleur de fond :"
+
+#: knutprefdlg.cpp:710
+msgid "Use dialog \"Are you sure\""
+msgstr "Utiliser la boite de dialogue \"Êtes vous sûr\""
+
+#: knutprefdlg.cpp:712
+msgid "Use Main window when program is started"
+msgstr "Utiliser la Fenêtre Principale au démarrage du programme"
+
+#: knutprefdlg.cpp:714
+msgid "Yes"
+msgstr "Oui"
+
+#: knutprefdlg.cpp:715
+msgid "No"
+msgstr "Non"
+
+#: knutprefdlg.cpp:716
+msgid "Auto"
+msgstr "Auto"
+
+#: knutprefdlg.cpp:718
+msgid "Show message window, when program reports error"
+msgstr ""
+"Afficher la fenêtre de message, lorsque le programme rapporte une erreur"
+
+#: knutprefdlg.cpp:735
+msgid "Voltage/Frequency"
+msgstr "Tension/Fréquence"
+
+#: knutprefdlg.cpp:738
+msgid "Nominal Input Voltage"
+msgstr "Tension d'entrée nominale"
+
+#: knutprefdlg.cpp:740
+msgid "&230 V"
+msgstr "&230 V"
+
+#: knutprefdlg.cpp:741
+msgid "&120 V"
+msgstr "&120 V"
+
+#: knutprefdlg.cpp:745
+msgid "Nominal Input Frequency"
+msgstr "Fréquence d'entrée nominale"
+
+#: knutprefdlg.cpp:747
+msgid "&50 Hz"
+msgstr "&50 Hz"
+
+#: knutprefdlg.cpp:748
+msgid "&60 Hz"
+msgstr "&60 Hz"
+
+#: knutprefdlg.cpp:752
+msgid "&Use High-Low input.transfer values"
+msgstr "&Utiliser les valeurs High-Low.input.transfer"
+
+#: knutprefdlg.cpp:770
+msgid "UPS"
+msgstr "Onduleur"
+
+#: knutprefdlg.cpp:771
+msgid "UPS Setting"
+msgstr "Paramètres de l'onduleur"
+
+#: knutprefdlg.cpp:792
+msgid "&Add"
+msgstr "&Ajouter"
+
+#: knutprefdlg.cpp:793
+msgid "&Edit"
+msgstr "&Editer"
+
+#: knutprefdlg.cpp:794
+msgid "&Delete"
+msgstr "&Supprimer"
+
+#: knutprefdlg.cpp:813
+msgid "Dock bar"
+msgstr "Dock"
+
+#: knutprefdlg.cpp:814
+msgid "Docking Setting"
+msgstr "Paramètres du dock"
+
+#: knutprefdlg.cpp:820
+msgid "Type of dock's showing"
+msgstr "Type d'affichage du dock"
+
+#: knutprefdlg.cpp:824
+msgid "Items of tooltip"
+msgstr "Eléments de l'aide contextuelle"
+
+#: knutprefdlg.cpp:831
+msgid "&Picture"
+msgstr "&Image"
+
+#: knutprefdlg.cpp:832
+msgid "&General"
+msgstr "&Général"
+
+#: knutprefdlg.cpp:834 knutprefdlg.cpp:899
+msgid "M&anufacturer"
+msgstr "F&abricant"
+
+#: knutprefdlg.cpp:835 knutprefdlg.cpp:900
+msgid "M&odel"
+msgstr "M&odèle"
+
+#: knutprefdlg.cpp:836 knutprefdlg.cpp:901
+msgid "&Serial"
+msgstr "N°&Série"
+
+#: knutprefdlg.cpp:837 knutprefdlg.cpp:902
+msgid "&Firm. rev."
+msgstr "&Vers. Fw."
+
+#: knutprefdlg.cpp:838 knutprefdlg.cpp:903
+msgid "&Runtime"
+msgstr "&Autonomie"
+
+#: knutprefdlg.cpp:839
+msgid "&Battery Charge"
+msgstr "&Charge de la batterie"
+
+#: knutprefdlg.cpp:840
+msgid "&UPS Load"
+msgstr "Charge de l'&onduleur"
+
+#: knutprefdlg.cpp:842
+msgid "Use custom icon's background color"
+msgstr "Utiliser une couleur de fond personnalisée pour les icones :"
+
+#: knutprefdlg.cpp:845
+msgid "Color of icon's background :"
+msgstr "Couleur de fond des icones :"
+
+#: knutprefdlg.cpp:878
+msgid "Panel"
+msgstr "Panneau"
+
+#: knutprefdlg.cpp:879
+msgid "Panel Setting"
+msgstr "Paramètres du panneau"
+
+#: knutprefdlg.cpp:894
+msgid "UPS &Overload"
+msgstr "En &Surcharge"
+
+#: knutprefdlg.cpp:895
+msgid "UPS &Battery low"
+msgstr "&Batterie faible"
+
+#: knutprefdlg.cpp:896
+msgid "R&eplace battery"
+msgstr "R&emplacer la batterie"
+
+#: knutprefdlg.cpp:897
+msgid "Ups &calibration"
+msgstr "&Calibration de l'onduleur"
+
+#: knutprefdlg.cpp:898
+msgid "&Manufac. + Model"
+msgstr "&Fabricant. + Modèle"
+
+#: knutprefdlg.cpp:938
+msgid "Fonts"
+msgstr "Polices"
+
+#: knutprefdlg.cpp:939
+msgid "Setting Fonts"
+msgstr "Paramètres des Polices"
+
+#: knutprefdlg.cpp:946
+msgid "&Use custom font"
+msgstr "&Utiliser les polices personnalisées"
+
+#: knutprefdlg.cpp:953
+msgid "Main panel"
+msgstr "Panneau principal"
+
+#: knutprefdlg.cpp:954
+msgid "Analog panels"
+msgstr "Panneau analogique"
+
+#: knutprefdlg.cpp:977
+msgid "Analog"
+msgstr "Analogique"
+
+#: knutprefdlg.cpp:978
+msgid "Setting Analog panel"
+msgstr "Paramètres du panneau analogique"
+
+#: knutprefdlg.cpp:992
+msgid "Use custom other colors"
+msgstr "Utiliser d'autres couleurs personnalisées"
+
+#: knutprefdlg.cpp:994
+msgid "Color of pointer :"
+msgstr "Couleur du pointeur :"
+
+#: knutprefdlg.cpp:996
+msgid "Color of OK range :"
+msgstr "Couleur pour \"OK\" :"
+
+#: knutprefdlg.cpp:998
+msgid "Color of warning range :"
+msgstr "Couleur des avertissements :"
+
+#: knutprefdlg.cpp:1000
+msgid "Color of error range :"
+msgstr "Couleur des erreurs :"
+
+#: knutprefdlg.cpp:1002
+msgid "Color of scale :"
+msgstr "Couleur de l'échelle :"
+
+#: knutprefdlg.cpp:1004
+msgid "Color of font :"
+msgstr "Couleur des polices :"
+
+#: knutprefdlg.cpp:1007
+msgid "Digital processing of pointers :"
+msgstr "Traitement numérique des pointeurs :"
+
+#: knutprefdlg.cpp:1032
+msgid "Nothing processing"
+msgstr "Aucun traitement"
+
+#: knutprefdlg.cpp:1033
+msgid "Fast antialiasing"
+msgstr "Anti crénelage rapide"
+
+#: knutprefdlg.cpp:1034
+msgid "Fine antialiasing"
+msgstr "Anti crénelage fin"
+
+#: knutprefdlg.cpp:1035
+msgid "Fast antialiasing and blur motion"
+msgstr "Anti crénelage rapide et fondu animé"
+
+#: knutprefdlg.cpp:1036
+msgid "Fine antialiasing and blur motion"
+msgstr "Anti crénelage fin et fondu animé"
+
+#: knutprintupsvar.cpp:41 knutrwvar.cpp:40
+msgid "UPS variables"
+msgstr "Variables de l'onduleur"
+
+#: knutprintupsvar.cpp:43 knutrwvar.cpp:42
+msgid "Reload Vars"
+msgstr "Recharger les variables"
+
+#: knutprintupsvar.cpp:50
+msgid "Value"
+msgstr "Valeur"
+
+#: knutprintupsvar.cpp:54
+msgid "Description"
+msgstr "Descriptions"
+
+#: knutprintupsvar.cpp:78
+msgid "Instant Commands"
+msgstr "Commandes directes"
+
+#: knutprintupsvar.cpp:92
+msgid "Read/Write Variables"
+msgstr "Variables en lecture/écriture"
+
+#: knutprintupsvar.cpp:114
+msgid "Read Only Variables"
+msgstr "Variables en lecture seule"
+
+#: knutrwvar.cpp:50
+msgid "SET RW VARIABLE"
+msgstr "Affecter une variable"
+
+#: knutrwvar.cpp:55
+msgid "Variable:"
+msgstr "Variables :"
+
+#: knutrwvar.cpp:58
+msgid "Value:"
+msgstr "Valeur"
+
+#: knutvardata.cpp:63
+msgid "None"
+msgstr "Aucun"
+
+#: knutvardata.cpp:64
+msgid "Input Voltage"
+msgstr "Tension d'entrée"
+
+#: knutvardata.cpp:66
+msgid "UPS Temperature"
+msgstr "Température de l'onduleur"
+
+#: knutvardata.cpp:67
+msgid "Input Frequency"
+msgstr "Fréquence d'entrée"
+
+#: knutvardata.cpp:69
+msgid "Outside Temperature"
+msgstr "Température extérieure"
+
+#: knutvardata.cpp:70
+msgid "Outside Humidity"
+msgstr "Humidité extérieure"
+
+#: knutvardata.cpp:71
+msgid "Battery Voltage"
+msgstr "Tension de la batterie"
+
+#: knutvardata.cpp:72
+msgid "Output Voltage"
+msgstr "Tension de sortie"
+
+#: knutvardata.cpp:73
+msgid "Output Current"
+msgstr "Courant de sortie"
+
+#: knutvardata.cpp:74
+msgid "Output Frequency"
+msgstr "Fréquence de Sortie"
+
+#: knutvardata.cpp:75
+msgid "Battery Temperature"
+msgstr "Température de la batterie"
+
+#: knutvardata.cpp:76
+msgid "Battery Current"
+msgstr "Courant de la batterie"
+
+#: knutvardata.cpp:77
+msgid "Input Current"
+msgstr "Courant d'entrée"
+
+#: knutvardata.cpp:78
+msgid "UPS Power"
+msgstr "Puissance de l'onduleur"
+
+#: knutvardata.cpp:209
+msgid "No memory."
+msgstr "Pas de mémoire."
+
+#: knutvardata.cpp:210
+msgid "No address."
+msgstr "Pas d'adresse."
+
+#: knutvardata.cpp:211
+msgid "Unknown address."
+msgstr "Adresse inconnue."
+
+#: knutvardata.cpp:214
+msgid "Error of connection."
+msgstr "Erreur de connexion."
+
+#: knutvardata.cpp:217
+msgid "Network error, maybe net cable was plugged out."
+msgstr "Erreur réseau, le cable réseau a peut être été débranché."
+
+#: knutvardata.cpp:220
+msgid "No connection with server."
+msgstr "Pas de connexion avec le serveur."
+
+#: knutvardata.cpp:222
+msgid "Server-client protocol or variables of NUT are unknown."
+msgstr "Le protocole Client-Server ou les variables NUT sont inconnues."
+
+#: knutvardata.cpp:223
+msgid "No UPS on this address."
+msgstr "Pas d'onduleur Ã  cette adresse."
+
+#: knutvardata.cpp:224
+msgid "Connection was refused by server."
+msgstr "La connexion a été refusée par le serveur."
+
+#: knutvardata.cpp:226
+msgid "Server doesn't receive data."
+msgstr "Le serveur n'a pas reçu les  données."
+
+#: knutvardata.cpp:227
+msgid "Server doesn't send data."
+msgstr "Le serveur n'a pas renvoyé de données."
+
+#: knutvardata.cpp:228
+msgid "Server doesn't answer."
+msgstr "Le serveur ne réponds pas."
+
+#: knutvardata.cpp:230
+msgid "Server returns data with unknown format."
+msgstr "Le serveur a retournÃ© des donnÃ©es dans un format inconnu."
+
+#: knutvardata.cpp:231
+msgid "Server returns unknown data."
+msgstr "Le serveur a retourné des données inconnues."
+
+#: knutvardata.cpp:232
+msgid "Command VER returns data with unknown format."
+msgstr "La commande VER a retournÃ© des donnÃ©es dans un format inconnu."
+
+#: knutvardata.cpp:234
+msgid "No data."
+msgstr "Pas de données"
+
+#: knutvardata.cpp:238
+msgid "Access denied. Failed password ?"
+msgstr "Accès refusé : mot de passe invalide ?"
+
+#: knutvardata.cpp:239
+msgid "UPS doesn't sent data to server (Data Stale)."
+msgstr "L'onduleur ne communique pas avec le serveur (Données Périmées)"
+
+#: knutvardata.cpp:240
+msgid "Server doesn't know this command."
+msgstr "Le serveur ne connaît pas cette commande."
+
+#: knutvardata.cpp:243
+msgid "UPS's driver isn't connected."
+msgstr "Le pilote de cet onduleur n'est pas connecté."
+
+#: knutvardata.cpp:245
+msgid "Server required password."
+msgstr "Le serveur requiert un mot de passe."
+
+#: knutvardata.cpp:246
+msgid "Incorrect password."
+msgstr "Mot de passe incorrect."
+
+#: knutvardata.cpp:247
+msgid "UPS doesn't response."
+msgstr "L'onduleur ne réponds pas."
+
+#: knutvardata.cpp:248
+msgid "Command failed."
+msgstr "La commande a échoué."
+
+#: knutvardata.cpp:249
+msgid "UPS doesn't know this instant command."
+msgstr "L'onduleur ne connaît pas cette commande directe."
+
+#: knutvardata.cpp:250
+msgid "UPS doesn't support this instant command."
+msgstr "L'onduleur ne supporte pas cette commande directe."
+
+#: knutvardata.cpp:251
+msgid "UPS doesn't known this variable."
+msgstr "L'onduleur ne connaît pas cette variable."
+
+#: knutvardata.cpp:252
+msgid "UPS doesn't support this variable."
+msgstr "L'onduleur ne supporte pas cette variable."
+
+#: knutvardata.cpp:253
+msgid "UPS doesn't support this value in this variable."
+msgstr "L'onduleur ne supporte pas cette valeur pour cette variable."
+
+#: knutvardata.cpp:254
+msgid "Name of UPS is unknown."
+msgstr "Cette onduleur est inconnu."
+
+#: knutvardata.cpp:256
+msgid "Username has been already entered."
+msgstr "Le nom d'utilisateur a déjà été entré."
+
+#: knutvardata.cpp:257
+msgid "Password has been already entered."
+msgstr "Le mot de passe a déjà été entré."
+
+#: knutvardata.cpp:259
+msgid "Server doesn't send list of variables."
+msgstr "Le serveur n'a pas renvoyé la liste de variables."
+
+#: knutvardata.cpp:262
+msgid "Unknown error."
+msgstr "Erreur inconnue."
+
+#: main.cpp:31
+msgid "Client for Network UPS Tool"
+msgstr "Client pour Network UPS Tools"
+
+#: main.cpp:37
+msgid "KNutClient"
+msgstr "KNutClient"
+
+#: main.cpp:38
+#, fuzzy
+msgid "(C) 2002 - 2013  Daniel Prynych"
+msgstr "(C) 2002 - 2010  Daniel Prynych"
+
+#: main.cpp:39
+msgid "Zajecov, Czech Republic"
+msgstr "Zajecov, République Tchèque "
+
+#: main.cpp:41
+msgid "Daniel Prynych"
+msgstr "Daniel Prynych"
+
+#: main.cpp:43
+msgid "Arnaud Quette"
+msgstr "Arnaud Quette"
+
+#: main.cpp:44
+msgid "MGE"
+msgstr "MGE"
+
+#: main.cpp:48
+msgid "Don't dock in SysTray"
+msgstr "Ne pas docker dans la barre d'état système"
+
+#. i18n: file: knutclientui.rc:4
+#. i18n: ectx: Menu (file)
+#: rc.cpp:3
+msgid "&File"
+msgstr "&Fichier"
+
+#. i18n: file: knutclientui.rc:9
+#. i18n: ectx: Menu (settings)
+#: rc.cpp:6
+msgid "&Settings"
+msgstr "&Paramètres"
+
+#. i18n: file: knutclientui.rc:13
+#. i18n: ectx: Menu (connection)
+#: rc.cpp:9
+msgid "&Connection"
+msgstr "&Connection"
+
+#: rc.cpp:10
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Votre nom"
+
+#: rc.cpp:11
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "Vos courriers électroniques"
+
+#~ msgid "color of the background"
+#~ msgstr "Couleur de l'arrière plan :"
+
+#~ msgid "color of the foreground"
+#~ msgstr "Couleur de l'avant plan :"
+
+#~ msgid "size of a ball"
+#~ msgstr "taille d'une balle"
+
+#~ msgid "Background color:"
+#~ msgstr "Couleur d'arrière plan :"
+
+#~ msgid "Choose a new background color"
+#~ msgstr "Choisir une nouvelle couleur d'arrière plan"
+
+#~ msgid "Project age:"
+#~ msgstr "Age du projet :"
+
+#~ msgid "Foreground color:"
+#~ msgstr "Couleur d'avant plan :"
+
+#~ msgid "Choose a new foreground color"
+#~ msgstr "Choisir une nouvelle couleur d'avant plan :"
+
+#~ msgid "Set the project age (in days)"
+#~ msgstr "Fixer l'âge du projet (en jours)"
+
+#~ msgid "Change the project age (in days) by choosing a new number of days."
+#~ msgstr ""
+#~ "Changer l'age du projet (en jours) en sélectionnant un nouveau nombre de "
+#~ "jours."
+
+#~ msgid "&Use High-Low XFER"
+#~ msgstr "&Utiliser Niveau Transfert Haut-Bas"
+
+#~ msgid ""
+#~ "_: NAME OF TRANSLATORS\n"
+#~ "Your names"
+#~ msgstr "Arnaud de Lorbeau,Arnaud Quette"
+
+#~ msgid ""
+#~ "_: EMAIL OF TRANSLATORS\n"
+#~ "Your emails"
+#~ msgstr "adelorbeau@mandrakesoft.com,arnaud.quette@free.fr"
+
+#~ msgid "upsd > 1.2 doesn't support UDP. Connection is switched to TCP"
+#~ msgstr "upsd > 1.2 ne supporte pas UDP. La connexion est basculÃ© en TCP"
+
+#~ msgid "New Ups"
+#~ msgstr "Nouvel Onduleur"
+
+#~ msgid "Variables"
+#~ msgstr "Variables"
+
+#~ msgid "RW variables"
+#~ msgstr "Variables en lecture/écriture"
+
+#~ msgid "Toggle the toolbar..."
+#~ msgstr "Afficher la barre d'outils..."
+
+#~ msgid "Toggle the statusbar..."
+#~ msgstr "Afficher la barre d'état..."
+
+#~ msgid "Protocol"
+#~ msgstr "Protocole"
+
+#~ msgid "UDP"
+#~ msgstr "UDP"
+
+#~ msgid "TCP"
+#~ msgstr "TCP"

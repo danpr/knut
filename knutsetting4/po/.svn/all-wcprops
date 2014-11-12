@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/325/trunk/knutsetting4/po
+END
+knutsetting.pot
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/649/trunk/knutsetting4/po/knutsetting.pot
+END
+cs.po
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/649/trunk/knutsetting4/po/cs.po
+END
+extract-messages.sh
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/621/trunk/knutsetting4/po/extract-messages.sh
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/629/trunk/knutsetting4/po/CMakeLists.txt
+END

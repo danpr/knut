@@ -1,0 +1,141 @@
+0.1   First version
+
+0.2   Switched preferences in style KDE 2.2
+      Added save/load configuration file
+
+0.3   Added OUTPUT CURRENT
+      Added RUNTIME on panel
+      Added switch 230/120V and 50/60Hz
+      Added read XFER from UPS
+      Added more members on main (front) panel
+
+0.3.2 Added German localization    - Crissi
+      Added Italian localization   - Andrea
+      Added Tool Tip in main (front) panel
+
+0.4.0 Added setting font for main (front) a analog panels
+      Added BATT_CURRENT
+      Added BATT_TEMP
+
+0.4.1 First revision for KDE 3
+
+0.5.0 Added autorange for output current, battery current and battery voltage
+      Added new UPS dialog (autosizing)
+      Added view of all UPS(NUT) variables
+      Added French localization
+      Cleaning code
+
+0.6.0 Added change color for background of main panel
+      Added change color for background of main window
+      Added change color of analog panels (background, finger, font ...)
+      Changes in knutnet. I started clean code in knutnet.
+      First version of manual, now in Czech language only. Sorry.
+      Changed in view if all UPS(NUT) variables
+      Added running instant commands
+      Added setting RW variables
+
+0.6.1 Added list of error to statusbar.
+      New (faster) version of KNutNet class.
+      First version of manual in English language.
+ 
+0.7.0 Added support for new protocol client-sever and new versions of variables.
+      New version window for showing variables.
+      New version of core. Core were divided on two parts, the core and the main window.
+      Added Russian localization.   - Oleg Shevchenko
+      Added Ukrainian localization.   - Oleg Shevchenko
+      Added quicker return from lost connection to data OK.
+      Added correct for connection on bad line, when protocol UDP is used.
+      Changed in preferences window. Main protocol is TCP now.
+      Corrected a few small mistakes.
+
+0.7.1 Correct dead-lock of knutclient when upsd crashed
+
+0.7.2 New version of Handbook (only Czech language).
+      New showing runtime.
+      Corrected problem witch Handbook for KDE 3.1.x.
+         http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=210962
+      New Handbook for Czech language.
+      Changed for add/delete the first ups.
+
+0.7.3 New version of Handbook.
+      Corrected frequence/frequency error
+
+0.8.0 New showing of runtime, when connection is down (-:--)
+      Small changes in code.
+      Zeroing analog panels when connection is down.
+      Corrected knutnet.h for FreeBSD
+         (Carlos Fernando Assis Paniago)
+      New icons
+      Corrected "save properties" for KDE Logout
+
+0.8.1 New look
+      Added shortcut, dialog for configuring key settings.
+        (Laurent Montel)
+
+0.8.2 Changed code for KDE 3.2.x, correct QPallete problem
+      Corrected connect (...) in KNutMessageManager class
+
+0.8.2.1 Corrected for gcc-3.4
+          (Andrea Joachens)     
+
+0.8.3 Corrected version number for Debian
+      Corrected French localization
+
+0.8.4 Added refresh connection (reconnect)
+
+0.8.5 Corrected maximum values for battery voltage, battery current and output current
+      when big UPS (Powerware 9305, ......) is used.
+
+0.8.6 Correct German localization
+
+0.9.0 Made new net layer.
+      Connecting is asynchrone now.
+      End of supporting UDP protocol.
+      KDE older then 3.0.0 already is not supported.
+
+0.9.1 Added checkbox for turn on/off of error message window
+0.9.2 Added support for automake 1.8 and 1.9
+      Added Spanish localization. 
+         (Sir Mad)
+      New categories for knutclient are 'Qt;KDE;System;Monitor;'
+         (Sir Mad)
+0.9.3 Corrected error for x86_64 environment
+               (Alexey Sidorov)
+0.9.4 Made facelift of analog pointers
+      Added: click on dock makes or activates main window
+      Added: Show message when KNC is connected on NUT server again.
+      Added  New error message AlreadySetUsername
+      Added: New analog panel "Output frequency".
+      Added: New error message NoListVars.
+      Corrected: All message window have timeout now and use message manager.
+      Corrected: Icon in dock has transparent background now.
+      Corrected: New message window rewrites older message window when has same priority
+      Corrected: Corrected problem with logon when was switched on other NUT server
+      Corrected: Corrected problem when values of status was "WAIT"
+      Corrected: Corrected error in knutdock.h
+                 (Sunil)
+0.9.5
+      Added  Polish localization  - Tomasz Walach
+      Added: Into ComboBox, for setting main window, was added values "Auto".
+      Added: New icons for preference window.
+      Changed: KNC is running on KDE 4 /on distribution which uses KDE4 a has
+      support for aplication from KDE3 / a little better.
+      Changed: Window for select of UPS values was changed.
+      Changed: Index file for czech language uses UTF8, older versions use iso-8859-2
+      Corrected: Font for  analog meter's values is changed/repainted immediately.
+1.0
+      The first version for KDE 4
+      Added: Analog panels for "UPS power" and "Input current".
+      Changed: Range of Battery Current 
+ 
+1.0.1
+      Corrected: CMakeLists.txt
+      Corrected: Switching icons in dock
+
+1.0.2
+      Corrected: Russian localization
+1.0.3
+      Changed: Changed index.docbook for new meinproc4 version 4.4.5
+             ( Eli Wapniarski)
+1.0.4  Corrected: Removed warning
+1.0.5 Changed: New version of Italian localization Vincenzo 

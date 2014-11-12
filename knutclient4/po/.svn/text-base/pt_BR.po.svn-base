@@ -1,0 +1,957 @@
+# translation of pt_BR.po to Czech
+# tradução de knutclient.po para Brazilian Portuguese
+# translation of pt_BR.po to Brazilian Portuguese
+# translation of knutclient.po to Brazilian Portuguese
+# Copyright (C) 2008 Free Software Foundation, Inc.
+# Wellington Terumi Uemura <wellingtonuemura@gmail.com>, 2008.
+# Lisiane Sztoltz Teixeira <lisiane@kdemail.net>, 2004.
+# Daniel Prynych <Daniel.Prynych@alo.cz>, 2004.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pt_BR\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-10 10:20+0100\n"
+"PO-Revision-Date: 2008-05-29 14:32+0200\n"
+"Last-Translator: Wellington Terumi Uemura <wellingtonuemura@gmail.com>\n"
+"Language-Team: Czech <cs@li.org>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: gedit 2.22.0\n"
+
+#: knutclient.cpp:94
+msgid "Ready."
+msgstr "Pronto."
+
+#: knutclient.cpp:163
+msgid "The connection failed. The next connection will make after %1 sec."
+msgstr "A conexão falhou. Uma nova conexão será feita depois de %1 segundos."
+
+#: knutclient.cpp:481
+msgid "Data OK"
+msgstr "Dados OK"
+
+#: knutclient.cpp:576
+msgid "UPS is off."
+msgstr "O no-break está desligado."
+
+#: knutclient.cpp:579
+msgid "UPS is back on."
+msgstr "O no-break está ligado."
+
+#: knutclient.cpp:584
+msgid "Power is back online."
+msgstr "A força retornou."
+
+#: knutclient.cpp:589
+msgid "UPS is on battery."
+msgstr "O no-break está funcionado com bateria."
+
+#: knutclient.cpp:594
+msgid "UPS battery is low."
+msgstr "A bateria do no-break está fraca."
+
+#: knutclient.cpp:597
+msgid "UPS battery is OK."
+msgstr "A bateria do no-break está OK."
+
+#: knutclient.cpp:602
+msgid "UPS battery is bad and needs be replaced."
+msgstr "A bateria do no-break está com problemas e precisa ser trocada."
+
+#: knutclient.cpp:607
+msgid "UPS is overloaded."
+msgstr "O no-break está sobrecarregado."
+
+#: knutclient.cpp:610
+msgid "UPS isn't overloaded."
+msgstr "O no-break não está sobrecarregado."
+
+#: knutclient.cpp:615
+#, fuzzy
+msgid "UPS is performing calibration."
+msgstr "O no-break está sendo calibrado"
+
+#: knutclient.cpp:618
+msgid "Calibration of UPS is ended."
+msgstr "A calibração do no-break foi finalizada."
+
+#: knutclient.cpp:623
+msgid "UPS is boosting incoming voltage."
+msgstr "O no-break está aumentando a voltagem de entrada."
+
+#: knutclient.cpp:626
+msgid "Boosting of UPS is ended."
+msgstr "O aumento de voltagem de entrada do no-break terminou."
+
+#: knutclient.cpp:631
+msgid "UPS is trimming incoming voltage."
+msgstr "O no-break está ajustando a voltagem de entrada."
+
+#: knutclient.cpp:634
+msgid "Trimming of UPS is ended."
+msgstr "O ajuste da entrada da voltagem do no-break terminou."
+
+#: knutclient.cpp:726
+msgid "The connection was renewed."
+msgstr "A conexão foi fechada pelo no-break (upsd)."
+
+#: knutclient.cpp:793
+msgid "The connection was closed by the second side (upsd)."
+msgstr "A conexão foi fechada pelo no-break (upsd)"
+
+#: knutclient.cpp:869 knutclient.cpp:877 knutclient.cpp:1021
+msgid "Switched"
+msgstr "Comutado"
+
+#: knutclient.cpp:1077 knutdock.cpp:621 knutmainwindow.cpp:749
+msgid "Reconnect"
+msgstr "Reconectar"
+
+#: knutclient.cpp:1175
+msgid "Are you sure ?"
+msgstr "Você tem certeza?"
+
+#: knutdock.cpp:416 knutdock.cpp:466 knutfrontpanel.cpp:184
+#: knutnewupsdlg.cpp:55 knutprintupsvar.cpp:50
+msgid "Name"
+msgstr "Nome"
+
+#: knutdock.cpp:417 knutnewupsdlg.cpp:71
+msgid "UPS name"
+msgstr "Nome do No-break"
+
+#: knutdock.cpp:418 knutnewupsdlg.cpp:64
+msgid "UPS address"
+msgstr "Endereço do No-break"
+
+#: knutdock.cpp:419 knutdock.cpp:440 knutdock.cpp:443 knutdock.cpp:446
+#: knutdock.cpp:449 knutdock.cpp:452 knutdock.cpp:455
+msgid "Status : "
+msgstr "Status :"
+
+#: knutdock.cpp:422 knutvardata.cpp:235
+msgid "Connection doesn't exist."
+msgstr "A conexão não existe."
+
+#: knutdock.cpp:426 knutfrontpanel.cpp:70
+msgid "UPS On line"
+msgstr "No-break Ativo"
+
+#: knutdock.cpp:430 knutfrontpanel.cpp:83
+msgid "UPS On battery"
+msgstr "No-break Usando Bateria"
+
+#: knutdock.cpp:434
+msgid "UPS Of line"
+msgstr "No-break desconectado"
+
+#: knutdock.cpp:440
+msgid "UPS Battery is low"
+msgstr "A bateria do no-break está fraca"
+
+#: knutdock.cpp:443 knutfrontpanel.cpp:129
+msgid "Replace battery"
+msgstr "Troque a bateria"
+
+#: knutdock.cpp:446
+msgid "UPS is performing calibration"
+msgstr "O no-break está sendo calibrado"
+
+#: knutdock.cpp:449
+msgid "UPS is Overload"
+msgstr "O no-break está sobrecarregado"
+
+#: knutdock.cpp:452
+msgid "UPS is trimming voltage"
+msgstr "O no-break está ajustando a voltagem"
+
+#: knutdock.cpp:455
+msgid "UPS is boosting voltage"
+msgstr "O no-break está aumentando a voltagem"
+
+#: knutdock.cpp:461
+msgid "Error : "
+msgstr "Erro : "
+
+#: knutdock.cpp:464 knutfrontpanel.cpp:173
+msgid "Manufac. : "
+msgstr "Fabric. : "
+
+#: knutdock.cpp:468
+msgid "Serial"
+msgstr "No. de série"
+
+#: knutdock.cpp:470
+msgid "Firmware"
+msgstr "Firmware"
+
+#: knutdock.cpp:474 knutfrontpanel.cpp:221
+msgid "Runtime"
+msgstr "Em Execução"
+
+#: knutdock.cpp:474
+msgid " : %1:%2 min"
+msgstr " : %1:%2 min"
+
+#: knutdock.cpp:479 knutvardata.cpp:65
+msgid "Battery Charge"
+msgstr "Carga da Bateria"
+
+#: knutdock.cpp:484 knutvardata.cpp:68
+msgid "UPS Load"
+msgstr "Carga do No-break"
+
+#: knutdock.cpp:617 knutmainwindow.cpp:729
+msgid "&Showing UPS variables and commands"
+msgstr "&Mostrar os comandos e variáveis do no-break"
+
+#: knutdock.cpp:618 knutmainwindow.cpp:733
+msgid "&Running instant commands"
+msgstr "&Executar comandos instantâneos"
+
+#: knutdock.cpp:619 knutmainwindow.cpp:737
+msgid "Setting R&W variables"
+msgstr "Definir variáveis de &Leit./Escr."
+
+#: knutdock.cpp:623
+msgid "&Preferences"
+msgstr "&Configurações"
+
+#: knutdock.cpp:625
+msgid "&About KNutClient"
+msgstr "&Sobre o KNutClient"
+
+#: knutdock.cpp:627
+msgid "&Minimize"
+msgstr "&Minimizar"
+
+#: knutdock.cpp:629
+msgid "&Exit"
+msgstr "S&air"
+
+#: knutfrontpanel.cpp:99
+msgid "UPS Overload"
+msgstr "Sobrecarga do No-break"
+
+#: knutfrontpanel.cpp:114
+msgid "UPS Battery low"
+msgstr "No-break com Bateria Fraca"
+
+#: knutfrontpanel.cpp:144
+msgid "UPS calibration"
+msgstr "Calibragem do No-break"
+
+#: knutfrontpanel.cpp:195
+msgid "Serial : "
+msgstr "Serial : "
+
+#: knutfrontpanel.cpp:206
+msgid "Firm. rev. : "
+msgstr "Vers. do Firm.:"
+
+#: knutinstcomms.cpp:35
+msgid "Instant commands"
+msgstr "Comandos instantâneos"
+
+#: knutinstcomms.cpp:45
+msgid "RUN INSTANT COMMAND"
+msgstr "EXECUTAR COMANDO INSTANTÂNEO"
+
+#: knutinstcomms.cpp:49
+msgid "Command:"
+msgstr "Comando:"
+
+#: knutinstcomms.cpp:53 knutnewupsdlg.cpp:92 knutrwvar.cpp:64
+msgid "User name:"
+msgstr "Nome do usuário:"
+
+#: knutinstcomms.cpp:54 knutnewupsdlg.cpp:99 knutrwvar.cpp:65
+msgid "Password:"
+msgstr "Senha:"
+
+#: knutmainwindow.cpp:51
+msgid "test of conection from 5"
+msgstr "teste de conexão à partir de 5"
+
+#: knutmainwindow.cpp:699
+#, fuzzy
+msgid "UPS Label"
+msgstr "Nome do No-break"
+
+#: knutmainwindow.cpp:703
+msgid "UPS ComboBox"
+msgstr ""
+
+#: knutmainwindow.cpp:725
+msgid "Quits the application"
+msgstr "Finalizar o aplicação"
+
+#: knutmainwindow.cpp:743
+msgid "&Using descriptions"
+msgstr "&Usar descrições"
+
+#: knutmainwindow.cpp:753
+#, fuzzy
+msgid "Reconnect the application"
+msgstr "Finalizar o aplicação"
+
+#: knutnewupsdlg.cpp:78
+msgid "Delay (ms):"
+msgstr "Atraso (ms):"
+
+#: knutnewupsdlg.cpp:85
+msgid "Port:"
+msgstr "Porta: "
+
+#: knutnewupsdlg.cpp:107
+msgid "Store NUT password in configuration file"
+msgstr "Armazenar a senha do NUT no arquivo de configuração"
+
+#: knutnewupsdlg.cpp:115
+msgid "Availabled UPS values"
+msgstr ""
+
+#: knutnewupsdlg.cpp:116
+msgid "Selected UPS values"
+msgstr ""
+
+#: knutnewupsdlg.cpp:124
+msgid "UPS Variables"
+msgstr "Variáveis do No-break"
+
+#: knutnewupsdlg.cpp:227
+msgid "No Name or UPS address"
+msgstr "Sem Nome ou Endereço do No-break"
+
+#: knutnewupsdlg.cpp:235
+msgid "This Name exist"
+msgstr "Este nome já existe"
+
+#: knutnewupsdlg.cpp:242
+msgid "Delay must be number"
+msgstr "O valor de Atraso deve ser numérico"
+
+#: knutnewupsdlg.cpp:248
+msgid "Port must be number"
+msgstr "O valor da Porta deve ser numérico"
+
+#: knutnewupsdlg.cpp:253
+msgid "Port must be from 1025 until 65535"
+msgstr "O valor da Porta deve conter um valor de 1025 até 65535"
+
+#: knutnewupsdlg.cpp:258
+msgid "Delay is too small"
+msgstr "O Atraso é muito pequeno"
+
+#: knutprefdlg.cpp:47
+msgid "Preferences"
+msgstr "Preferências"
+
+#: knutprefdlg.cpp:693
+msgid "Setting"
+msgstr "Configuração"
+
+#: knutprefdlg.cpp:694
+msgid "Main Setting"
+msgstr "Configuração Principal"
+
+#: knutprefdlg.cpp:702
+msgid "Number of columns :"
+msgstr "Quantidade de colunas:"
+
+#: knutprefdlg.cpp:706 knutprefdlg.cpp:906 knutprefdlg.cpp:988
+msgid "Use custom background color"
+msgstr "Utilizar cor do plano de fundo personalizado"
+
+#: knutprefdlg.cpp:708 knutprefdlg.cpp:908 knutprefdlg.cpp:990
+msgid "Color of background :"
+msgstr "Cor do plano de fundo:"
+
+#: knutprefdlg.cpp:710
+msgid "Use dialog \"Are you sure\""
+msgstr "Usar diálogo \"Você tem certeza?\" :"
+
+#: knutprefdlg.cpp:712
+msgid "Use Main window when program is started"
+msgstr "Usar janela principal quando o programa iniciar"
+
+#: knutprefdlg.cpp:714
+msgid "Yes"
+msgstr ""
+
+#: knutprefdlg.cpp:715
+#, fuzzy
+msgid "No"
+msgstr "Nenhum"
+
+#: knutprefdlg.cpp:716
+msgid "Auto"
+msgstr ""
+
+#: knutprefdlg.cpp:718
+msgid "Show message window, when program reports error"
+msgstr "Mostrar janela de mensagem quando o programa reportar um erro"
+
+#: knutprefdlg.cpp:735
+msgid "Voltage/Frequency"
+msgstr "Voltagem/Freqüência"
+
+#: knutprefdlg.cpp:738
+msgid "Nominal Input Voltage"
+msgstr "Entrada de Voltagem Nominal"
+
+#: knutprefdlg.cpp:740
+msgid "&230 V"
+msgstr "&230 V"
+
+#: knutprefdlg.cpp:741
+msgid "&120 V"
+msgstr "&120 V"
+
+#: knutprefdlg.cpp:745
+msgid "Nominal Input Frequency"
+msgstr "Freqüência de entrada nominal"
+
+#: knutprefdlg.cpp:747
+msgid "&50 Hz"
+msgstr "&50 Hz"
+
+#: knutprefdlg.cpp:748
+msgid "&60 Hz"
+msgstr "&60 Hz"
+
+#: knutprefdlg.cpp:752
+msgid "&Use High-Low input.transfer values"
+msgstr ""
+
+#: knutprefdlg.cpp:770
+msgid "UPS"
+msgstr "No-break"
+
+#: knutprefdlg.cpp:771
+msgid "UPS Setting"
+msgstr "Configuração do No-break"
+
+#: knutprefdlg.cpp:792
+msgid "&Add"
+msgstr "&Adicionar"
+
+#: knutprefdlg.cpp:793
+#, fuzzy
+msgid "&Edit"
+msgstr "S&air"
+
+#: knutprefdlg.cpp:794
+msgid "&Delete"
+msgstr ""
+
+#: knutprefdlg.cpp:813
+#, fuzzy
+msgid "Dock bar"
+msgstr "Encaixar"
+
+#: knutprefdlg.cpp:814
+msgid "Docking Setting"
+msgstr "Configuração do encaixe"
+
+#: knutprefdlg.cpp:820
+msgid "Type of dock's showing"
+msgstr "Mostrar os tipos de encaixe"
+
+#: knutprefdlg.cpp:824
+msgid "Items of tooltip"
+msgstr "Itens da ferramenta de dicas"
+
+#: knutprefdlg.cpp:831
+msgid "&Picture"
+msgstr "&Figura"
+
+#: knutprefdlg.cpp:832
+msgid "&General"
+msgstr "&Geral"
+
+#: knutprefdlg.cpp:834 knutprefdlg.cpp:899
+msgid "M&anufacturer"
+msgstr "F&abricante"
+
+#: knutprefdlg.cpp:835 knutprefdlg.cpp:900
+msgid "M&odel"
+msgstr "M&odelo"
+
+#: knutprefdlg.cpp:836 knutprefdlg.cpp:901
+msgid "&Serial"
+msgstr "No de &série"
+
+#: knutprefdlg.cpp:837 knutprefdlg.cpp:902
+msgid "&Firm. rev."
+msgstr "&Ver. do Firm.: "
+
+#: knutprefdlg.cpp:838 knutprefdlg.cpp:903
+msgid "&Runtime"
+msgstr "Em E&xecução"
+
+#: knutprefdlg.cpp:839
+msgid "&Battery Charge"
+msgstr "Carga da &Bateria"
+
+#: knutprefdlg.cpp:840
+msgid "&UPS Load"
+msgstr "Carga do &No-break"
+
+#: knutprefdlg.cpp:842
+msgid "Use custom icon's background color"
+msgstr "Utilizar ícones com cor do plano de fundo personalizado"
+
+#: knutprefdlg.cpp:845
+msgid "Color of icon's background :"
+msgstr "Cor de plano de fundo do ícone:"
+
+#: knutprefdlg.cpp:878
+msgid "Panel"
+msgstr "Painel"
+
+#: knutprefdlg.cpp:879
+msgid "Panel Setting"
+msgstr "Configuração do painel"
+
+#: knutprefdlg.cpp:894
+msgid "UPS &Overload"
+msgstr "&Carga do No-break"
+
+#: knutprefdlg.cpp:895
+msgid "UPS &Battery low"
+msgstr "&Bateria do No-break com pouca carga"
+
+#: knutprefdlg.cpp:896
+msgid "R&eplace battery"
+msgstr "Tro&que a bateria"
+
+#: knutprefdlg.cpp:897
+msgid "Ups &calibration"
+msgstr "&Calibragem do No-break"
+
+#: knutprefdlg.cpp:898
+msgid "&Manufac. + Model"
+msgstr "Fabricante + &Modelo"
+
+#: knutprefdlg.cpp:938
+msgid "Fonts"
+msgstr ""
+
+#: knutprefdlg.cpp:939
+msgid "Setting Fonts"
+msgstr "Configuração de Fontes"
+
+#: knutprefdlg.cpp:946
+msgid "&Use custom font"
+msgstr "&Utilizar fonte personalizada"
+
+#: knutprefdlg.cpp:953
+msgid "Main panel"
+msgstr "Painel principal"
+
+#: knutprefdlg.cpp:954
+msgid "Analog panels"
+msgstr "Painel analógico"
+
+#: knutprefdlg.cpp:977
+msgid "Analog"
+msgstr "Analógico"
+
+#: knutprefdlg.cpp:978
+msgid "Setting Analog panel"
+msgstr "Configuração do painel analógico"
+
+#: knutprefdlg.cpp:992
+msgid "Use custom other colors"
+msgstr "Utilizar outras cores personalizadas"
+
+#: knutprefdlg.cpp:994
+msgid "Color of pointer :"
+msgstr "Cor do ponteiro:"
+
+#: knutprefdlg.cpp:996
+msgid "Color of OK range :"
+msgstr "Cor do limite OK:"
+
+#: knutprefdlg.cpp:998
+msgid "Color of warning range :"
+msgstr "Cor do limite de aviso:"
+
+#: knutprefdlg.cpp:1000
+msgid "Color of error range :"
+msgstr "Cor do limite de erro:"
+
+#: knutprefdlg.cpp:1002
+msgid "Color of scale :"
+msgstr "Cor da escala :"
+
+#: knutprefdlg.cpp:1004
+msgid "Color of font :"
+msgstr "Cor da fonte :"
+
+#: knutprefdlg.cpp:1007
+msgid "Digital processing of pointers :"
+msgstr "Cor do ponteiro:"
+
+#: knutprefdlg.cpp:1032
+msgid "Nothing processing"
+msgstr "Nada sendo processado"
+
+#: knutprefdlg.cpp:1033
+msgid "Fast antialiasing"
+msgstr "Suavização rápida de amostra"
+
+#: knutprefdlg.cpp:1034
+msgid "Fine antialiasing"
+msgstr "Suavização fina de amostra"
+
+#: knutprefdlg.cpp:1035
+msgid "Fast antialiasing and blur motion"
+msgstr "Suavização rápida de amostra e desfoque gaussiano"
+
+#: knutprefdlg.cpp:1036
+msgid "Fine antialiasing and blur motion"
+msgstr "Suavização fina de amostra e desfoque gaussiano"
+
+#: knutprintupsvar.cpp:41 knutrwvar.cpp:40
+msgid "UPS variables"
+msgstr "Variáveis do No-break"
+
+#: knutprintupsvar.cpp:43 knutrwvar.cpp:42
+msgid "Reload Vars"
+msgstr "Recarregar variáveis"
+
+#: knutprintupsvar.cpp:50
+msgid "Value"
+msgstr "Valor"
+
+#: knutprintupsvar.cpp:54
+msgid "Description"
+msgstr "Descrição"
+
+#: knutprintupsvar.cpp:78
+msgid "Instant Commands"
+msgstr "Comandos Instantâneos"
+
+#: knutprintupsvar.cpp:92
+msgid "Read/Write Variables"
+msgstr "Variáveis de Leitura/Escrita"
+
+#: knutprintupsvar.cpp:114
+msgid "Read Only Variables"
+msgstr "Variáveis Apenas de Leitura"
+
+#: knutrwvar.cpp:50
+msgid "SET RW VARIABLE"
+msgstr "DEFINIR VARIÁVEL DE LEIT./ESCR."
+
+#: knutrwvar.cpp:55
+msgid "Variable:"
+msgstr "Variável:"
+
+#: knutrwvar.cpp:58
+msgid "Value:"
+msgstr "Valor:"
+
+#: knutvardata.cpp:63
+msgid "None"
+msgstr "Nenhum"
+
+#: knutvardata.cpp:64
+msgid "Input Voltage"
+msgstr "Voltagem de Entrada"
+
+#: knutvardata.cpp:66
+msgid "UPS Temperature"
+msgstr "Temperatura do No-break"
+
+#: knutvardata.cpp:67
+msgid "Input Frequency"
+msgstr "Freqüência de Entrada"
+
+#: knutvardata.cpp:69
+msgid "Outside Temperature"
+msgstr "Temperatura Exterior"
+
+#: knutvardata.cpp:70
+msgid "Outside Humidity"
+msgstr "Umidade Exterior"
+
+#: knutvardata.cpp:71
+msgid "Battery Voltage"
+msgstr "Voltagem da Bateria"
+
+#: knutvardata.cpp:72
+msgid "Output Voltage"
+msgstr "Voltagem de Saída"
+
+#: knutvardata.cpp:73
+msgid "Output Current"
+msgstr "Corrente de Saída"
+
+#: knutvardata.cpp:74
+msgid "Output Frequency"
+msgstr "Freqüência de Saída"
+
+#: knutvardata.cpp:75
+msgid "Battery Temperature"
+msgstr "Temperatura da Bateria"
+
+#: knutvardata.cpp:76
+msgid "Battery Current"
+msgstr "Corrente da Bateria"
+
+#: knutvardata.cpp:77
+#, fuzzy
+msgid "Input Current"
+msgstr "Corrente de Saída"
+
+#: knutvardata.cpp:78
+msgid "UPS Power"
+msgstr ""
+
+#: knutvardata.cpp:209
+#, fuzzy
+msgid "No memory."
+msgstr "Sem Memória."
+
+#: knutvardata.cpp:210
+msgid "No address."
+msgstr "Sem endereço."
+
+#: knutvardata.cpp:211
+msgid "Unknown address."
+msgstr "Endereço desconhecido."
+
+#: knutvardata.cpp:214
+msgid "Error of connection."
+msgstr "Erro de Conexão."
+
+#: knutvardata.cpp:217
+msgid "Network error, maybe net cable was plugged out."
+msgstr ""
+
+#: knutvardata.cpp:220
+msgid "No connection with server."
+msgstr "Sem conexão com o servidor."
+
+#: knutvardata.cpp:222
+msgid "Server-client protocol or variables of NUT are unknown."
+msgstr "Protocolo cliente-servidor ou variáveis do NUT são desconhecidas."
+
+#: knutvardata.cpp:223
+msgid "No UPS on this address."
+msgstr "Não há nenhum no-break neste endereço."
+
+#: knutvardata.cpp:224
+msgid "Connection was refused by server."
+msgstr "Conexão foi recusada pelo servidor."
+
+#: knutvardata.cpp:226
+msgid "Server doesn't receive data."
+msgstr "O servidor não está recebendo dados."
+
+#: knutvardata.cpp:227
+msgid "Server doesn't send data."
+msgstr "O servidor não está enviando dados."
+
+#: knutvardata.cpp:228
+msgid "Server doesn't answer."
+msgstr "O servidor não está respondendo."
+
+#: knutvardata.cpp:230
+msgid "Server returns data with unknown format."
+msgstr "O servidor retornou dados com um formato desconhecido."
+
+#: knutvardata.cpp:231
+msgid "Server returns unknown data."
+msgstr "O servidor retornou dados desconhecidos."
+
+#: knutvardata.cpp:232
+msgid "Command VER returns data with unknown format."
+msgstr "O comando VER retornou dados com um formato desconhecido."
+
+#: knutvardata.cpp:234
+msgid "No data."
+msgstr "Sem dados."
+
+#: knutvardata.cpp:238
+msgid "Access denied. Failed password ?"
+msgstr "Acesso negado. Senha errada?"
+
+#: knutvardata.cpp:239
+msgid "UPS doesn't sent data to server (Data Stale)."
+msgstr "O no-break não consegue enviar dados para o servidor (pane de dados)."
+
+#: knutvardata.cpp:240
+msgid "Server doesn't know this command."
+msgstr "O servidor desconhece este comando."
+
+#: knutvardata.cpp:243
+msgid "UPS's driver isn't connected."
+msgstr "O driver do no-break não está conectado."
+
+#: knutvardata.cpp:245
+msgid "Server required password."
+msgstr "O servidor precisa de uma senha."
+
+#: knutvardata.cpp:246
+msgid "Incorrect password."
+msgstr "Senha incorreta."
+
+#: knutvardata.cpp:247
+msgid "UPS doesn't response."
+msgstr "O no-break não responde."
+
+#: knutvardata.cpp:248
+msgid "Command failed."
+msgstr "O comando falhou."
+
+#: knutvardata.cpp:249
+msgid "UPS doesn't know this instant command."
+msgstr "O no-break desconhece este comando instantâneo."
+
+#: knutvardata.cpp:250
+msgid "UPS doesn't support this instant command."
+msgstr "O no-break não tem suporte para este comando instantâneo."
+
+#: knutvardata.cpp:251
+msgid "UPS doesn't known this variable."
+msgstr "O no-break desconhece esta variável."
+
+#: knutvardata.cpp:252
+msgid "UPS doesn't support this variable."
+msgstr "O no-break não tem suporte para esta variável."
+
+#: knutvardata.cpp:253
+msgid "UPS doesn't support this value in this variable."
+msgstr "O no-break não tem suporte para este valor nesta variável."
+
+#: knutvardata.cpp:254
+msgid "Name of UPS is unknown."
+msgstr "O nome do no-break é desconhecido."
+
+#: knutvardata.cpp:256
+msgid "Username has been already entered."
+msgstr "O nome de usuário já foi alterado."
+
+#: knutvardata.cpp:257
+msgid "Password has been already entered."
+msgstr "A senha já foi informada."
+
+#: knutvardata.cpp:259
+msgid "Server doesn't send list of variables."
+msgstr "O servidor não envia a lista de variáveis."
+
+#: knutvardata.cpp:262
+msgid "Unknown error."
+msgstr "Erro desconhecido."
+
+#: main.cpp:31
+msgid "Client for Network UPS Tool"
+msgstr "Cliente para No-break de Rede"
+
+#: main.cpp:37
+msgid "KNutClient"
+msgstr "KNutClient"
+
+#: main.cpp:38
+msgid "(C) 2002 - 2013  Daniel Prynych"
+msgstr ""
+
+#: main.cpp:39
+msgid "Zajecov, Czech Republic"
+msgstr ""
+
+#: main.cpp:41
+msgid "Daniel Prynych"
+msgstr ""
+
+#: main.cpp:43
+msgid "Arnaud Quette"
+msgstr ""
+
+#: main.cpp:44
+msgid "MGE"
+msgstr ""
+
+#: main.cpp:48
+#, fuzzy
+msgid "Don't dock in SysTray"
+msgstr "Não encaixar no painel"
+
+#. i18n: file: knutclientui.rc:4
+#. i18n: ectx: Menu (file)
+#: rc.cpp:3
+msgid "&File"
+msgstr ""
+
+#. i18n: file: knutclientui.rc:9
+#. i18n: ectx: Menu (settings)
+#: rc.cpp:6
+#, fuzzy
+msgid "&Settings"
+msgstr "Configuração"
+
+#. i18n: file: knutclientui.rc:13
+#. i18n: ectx: Menu (connection)
+#: rc.cpp:9
+msgid "&Connection"
+msgstr "&Conexão"
+
+#: rc.cpp:10
+#, fuzzy
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Nome do usuário:"
+
+#: rc.cpp:11
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#, fuzzy
+#~ msgid "color of the background"
+#~ msgstr "Cor do plano de fundo:"
+
+#, fuzzy
+#~ msgid "color of the foreground"
+#~ msgstr "Cor do plano de fundo:"
+
+#, fuzzy
+#~ msgid "Background color:"
+#~ msgstr "Utilizar cor do plano de fundo personalizado"
+
+#, fuzzy
+#~ msgid "Choose a new background color"
+#~ msgstr "Utilizar cor do plano de fundo personalizado"
+
+#~ msgid "&Use High-Low XFER"
+#~ msgstr "&Usar XFER Baixo/Alto"
+
+#~ msgid ""
+#~ "_: NAME OF TRANSLATORS\n"
+#~ "Your names"
+#~ msgstr "Wellington Terumi Uemura"
+
+#~ msgid ""
+#~ "_: EMAIL OF TRANSLATORS\n"
+#~ "Your emails"
+#~ msgstr "wellingtonuemura@gmail.com"
+
+#~ msgid "upsd > 1.2 doesn't support UDP. Connection is switched to TCP"
+#~ msgstr ""
+#~ "upsd > 1.2 não tem suporte para UDP. A conexão foi alternada para TCP"
+
+#~ msgid "New Ups"
+#~ msgstr "Novo No-break"
+
+#~ msgid "Variables"
+#~ msgstr "Variáveis"
+
+#~ msgid "RW variables"
+#~ msgstr "Variáveis de Leit./Escr."

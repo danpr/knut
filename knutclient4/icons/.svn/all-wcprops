@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/312/trunk/knutclient4/icons
+END
+lo16-app-knutclient.png
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/125/trunk/knutclient4/icons/lo16-app-knutclient.png
+END
+hi22-app-knutclient.png
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/140/trunk/knutclient4/icons/hi22-app-knutclient.png
+END
+hi32-app-knutclient.png
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/125/trunk/knutclient4/icons/hi32-app-knutclient.png
+END
+hi16-app-knutclient.png
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/125/trunk/knutclient4/icons/hi16-app-knutclient.png
+END
+hi48-app-knutclient.png
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/125/trunk/knutclient4/icons/hi48-app-knutclient.png
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/312/trunk/knutclient4/icons/CMakeLists.txt
+END
+lo32-app-knutclient.png
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/125/trunk/knutclient4/icons/lo32-app-knutclient.png
+END

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE policyconfig PUBLIC
+"-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
+"http://www.freedesktop.org/standards/PolicyKit/1.0/policyconfig.dtd">
+<policyconfig>
+<vendor>UPS configuration</vendor>
+<icon_name>knutsetting</icon_name>
+   <action id="org.kde.kcontrol.knutsetting.exec" >
+      <description>Execute command</description>
+      <description xml:lang="cs">Provede prikaz</description>
+      <message>The system restarts upsd or upsmon</message>
+      <defaults>
+         <allow_inactive>no</allow_inactive>
+         <allow_active>auth_admin_keep</allow_active>
+      </defaults>
+   </action>
+   <action id="org.kde.kcontrol.knutsetting.load" >
+      <description>Load configuration data</description>
+      <description xml:lang="cs">Nahraje data nastaveni</description>
+      <message>The system is loading data</message>
+      <defaults>
+         <allow_inactive>no</allow_inactive>
+         <allow_active>auth_admin_keep</allow_active>
+      </defaults>
+   </action>
+   <action id="org.kde.kcontrol.knutsetting.save" >
+      <description>Save configuration data</description>
+      <description xml:lang="cs">Ulozi data nastaveni</description>
+      <message>The system is saving data</message>
+      <defaults>
+         <allow_inactive>no</allow_inactive>
+         <allow_active>auth_admin_keep</allow_active>
+      </defaults>
+   </action>
+</policyconfig>

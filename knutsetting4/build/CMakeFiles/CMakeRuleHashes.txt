@@ -1,0 +1,7 @@
+# Hashes of file build rules.
+62d07283196452a8b15746592ffcd202 CMakeFiles/actions for org.kde.kcontrol.knutsetting
+4d7be2c5bf92ac644655fd5fd49ff330 CMakeFiles/uninstall
+8f2222ea18216ac774b80266b33df50c org.kde.kcontrol.knutsetting.policy
+a31b322867fb4b0edf28f7b03d01ac7c po/CMakeFiles/translations
+9ae7e348ed211fd3a3c4515963868529 src/CMakeFiles/kcm_knutsetting_automoc
+748f9dc42baa3873525abfe13c32ad0a src/CMakeFiles/kcmknutsettinghelper_automoc

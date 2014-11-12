@@ -1,0 +1,133 @@
+/****************************************************************************
+** Meta object code from reading C++ file 'knutclient.h'
+**
+** Created: Wed Feb 16 11:44:58 2011
+**      by: The Qt Meta Object Compiler version 62 (Qt 4.6.3)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#include "../../src/knutclient.h"
+#if !defined(Q_MOC_OUTPUT_REVISION)
+#error "The header file 'knutclient.h' doesn't include <QObject>."
+#elif Q_MOC_OUTPUT_REVISION != 62
+#error "This file was generated using the moc from 4.6.3. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+QT_BEGIN_MOC_NAMESPACE
+static const uint qt_meta_data_KNutClient[] = {
+
+ // content:
+       4,       // revision
+       0,       // classname
+       0,    0, // classinfo
+      20,   14, // methods
+       0,    0, // properties
+       0,    0, // enums/sets
+       0,    0, // constructors
+       0,       // flags
+       0,       // signalCount
+
+ // slots: signature, parameters, type, tag, flags
+      12,   11,   11,   11, 0x08,
+      47,   40,   11,   11, 0x08,
+      81,   11,   11,   11, 0x08,
+     109,  103,   11,   11, 0x08,
+     134,   11,   11,   11, 0x08,
+     165,   11,   11,   11, 0x08,
+     179,   11,   11,   11, 0x08,
+     202,   11,   11,   11, 0x08,
+     231,  226,   11,   11, 0x08,
+     254,   11,   11,   11, 0x08,
+     288,  274,   11,   11, 0x08,
+     308,   11,   11,   11, 0x08,
+     327,   11,   11,   11, 0x08,
+     343,   11,   11,   11, 0x08,
+     356,   11,   11,   11, 0x08,
+     378,   11,   11,   11, 0x08,
+     404,   11,   11,   11, 0x08,
+     427,   11,   11,   11, 0x08,
+     449,   11,   11,   11, 0x08,
+     478,  464,   11,   11, 0x08,
+
+       0        // eod
+};
+
+static const char qt_meta_stringdata_KNutClient[] = {
+    "KNutClient\0\0slotTryFirstConnection(int)\0"
+    "number\0slotTryReepatFirstConnection(int)\0"
+    "slotFirstConnection()\0error\0"
+    "slotErrorConnection(int)\0"
+    "slotConnectionClosedByServer()\0"
+    "slotTimeout()\0slotReconnectTimeout()\0"
+    "slotRefreshConnection()\0name\0"
+    "slotSetNewUPS(QString)\0slotPreferenceUps()\0"
+    "changeSetting\0slotSetConfig(uint)\0"
+    "slotPrintUPSVars()\0slotInstComms()\0"
+    "slotRWVars()\0slotCloseMainWindow()\0"
+    "slotMainWindowDestroyed()\0"
+    "slotActiveMainWindow()\0slotExitApplication()\0"
+    "slotSaveConf()\0message,event\0"
+    "slotSendMessage(QString,QString)\0"
+};
+
+const QMetaObject KNutClient::staticMetaObject = {
+    { &QWidget::staticMetaObject, qt_meta_stringdata_KNutClient,
+      qt_meta_data_KNutClient, 0 }
+};
+
+#ifdef Q_NO_DATA_RELOCATION
+const QMetaObject &KNutClient::getStaticMetaObject() { return staticMetaObject; }
+#endif //Q_NO_DATA_RELOCATION
+
+const QMetaObject *KNutClient::metaObject() const
+{
+    return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
+}
+
+void *KNutClient::qt_metacast(const char *_clname)
+{
+    if (!_clname) return 0;
+    if (!strcmp(_clname, qt_meta_stringdata_KNutClient))
+        return static_cast<void*>(const_cast< KNutClient*>(this));
+    if (!strcmp(_clname, "KSessionManager"))
+        return static_cast< KSessionManager*>(const_cast< KNutClient*>(this));
+    return QWidget::qt_metacast(_clname);
+}
+
+int KNutClient::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+{
+    _id = QWidget::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        switch (_id) {
+        case 0: slotTryFirstConnection((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 1: slotTryReepatFirstConnection((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 2: slotFirstConnection(); break;
+        case 3: slotErrorConnection((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 4: slotConnectionClosedByServer(); break;
+        case 5: slotTimeout(); break;
+        case 6: slotReconnectTimeout(); break;
+        case 7: slotRefreshConnection(); break;
+        case 8: slotSetNewUPS((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 9: slotPreferenceUps(); break;
+        case 10: slotSetConfig((*reinterpret_cast< uint(*)>(_a[1]))); break;
+        case 11: slotPrintUPSVars(); break;
+        case 12: slotInstComms(); break;
+        case 13: slotRWVars(); break;
+        case 14: slotCloseMainWindow(); break;
+        case 15: slotMainWindowDestroyed(); break;
+        case 16: slotActiveMainWindow(); break;
+        case 17: slotExitApplication(); break;
+        case 18: slotSaveConf(); break;
+        case 19: slotSendMessage((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
+        default: ;
+        }
+        _id -= 20;
+    }
+    return _id;
+}
+QT_END_MOC_NAMESPACE

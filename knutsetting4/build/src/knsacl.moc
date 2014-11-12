@@ -1,0 +1,123 @@
+/****************************************************************************
+** Meta object code from reading C++ file 'knsacl.h'
+**
+** Created: Fri Dec 21 09:08:31 2012
+**      by: The Qt Meta Object Compiler version 62 (Qt 4.6.3)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#include "../../src/knsacl.h"
+#if !defined(Q_MOC_OUTPUT_REVISION)
+#error "The header file 'knsacl.h' doesn't include <QObject>."
+#elif Q_MOC_OUTPUT_REVISION != 62
+#error "This file was generated using the moc from 4.6.3. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+QT_BEGIN_MOC_NAMESPACE
+static const uint qt_meta_data_KNSAcl[] = {
+
+ // content:
+       4,       // revision
+       0,       // classname
+       0,    0, // classinfo
+      10,   14, // methods
+       0,    0, // properties
+       0,    0, // enums/sets
+       0,    0, // constructors
+       0,       // flags
+       3,       // signalCount
+
+ // signals: signature, parameters, type, tag, flags
+       8,    7,    7,    7, 0x05,
+      18,    7,    7,    7, 0x05,
+      48,   35,    7,    7, 0x05,
+
+ // slots: signature, parameters, type, tag, flags
+      80,    7,    7,    7, 0x0a,
+      98,    7,    7,    7, 0x08,
+     121,    7,    7,    7, 0x08,
+     145,    7,    7,    7, 0x08,
+     169,    7,    7,    7, 0x08,
+     194,    7,    7,    7, 0x08,
+     214,    7,    7,    7, 0x08,
+
+       0        // eod
+};
+
+static const char qt_meta_stringdata_KNSAcl[] = {
+    "KNSAcl\0\0changed()\0addressChanged()\0"
+    "oldName,name\0addressRenamed(QString,QString)\0"
+    "setStandardSlot()\0maxAgeChangedSlot(int)\0"
+    "maxAgeCheckedSlot(bool)\0maxConnChangedSlot(int)\0"
+    "maxConnCheckedSlot(bool)\0correctAccessSlot()\0"
+    "sendChangedSlot()\0"
+};
+
+const QMetaObject KNSAcl::staticMetaObject = {
+    { &QLabel::staticMetaObject, qt_meta_stringdata_KNSAcl,
+      qt_meta_data_KNSAcl, 0 }
+};
+
+#ifdef Q_NO_DATA_RELOCATION
+const QMetaObject &KNSAcl::getStaticMetaObject() { return staticMetaObject; }
+#endif //Q_NO_DATA_RELOCATION
+
+const QMetaObject *KNSAcl::metaObject() const
+{
+    return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
+}
+
+void *KNSAcl::qt_metacast(const char *_clname)
+{
+    if (!_clname) return 0;
+    if (!strcmp(_clname, qt_meta_stringdata_KNSAcl))
+        return static_cast<void*>(const_cast< KNSAcl*>(this));
+    return QLabel::qt_metacast(_clname);
+}
+
+int KNSAcl::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+{
+    _id = QLabel::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        switch (_id) {
+        case 0: changed(); break;
+        case 1: addressChanged(); break;
+        case 2: addressRenamed((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
+        case 3: setStandardSlot(); break;
+        case 4: maxAgeChangedSlot((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 5: maxAgeCheckedSlot((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 6: maxConnChangedSlot((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 7: maxConnCheckedSlot((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 8: correctAccessSlot(); break;
+        case 9: sendChangedSlot(); break;
+        default: ;
+        }
+        _id -= 10;
+    }
+    return _id;
+}
+
+// SIGNAL 0
+void KNSAcl::changed()
+{
+    QMetaObject::activate(this, &staticMetaObject, 0, 0);
+}
+
+// SIGNAL 1
+void KNSAcl::addressChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 1, 0);
+}
+
+// SIGNAL 2
+void KNSAcl::addressRenamed(const QString _t1, const QString _t2)
+{
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)) };
+    QMetaObject::activate(this, &staticMetaObject, 2, _a);
+}
+QT_END_MOC_NAMESPACE
