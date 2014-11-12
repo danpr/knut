@@ -1,6 +1,0 @@
-/home/dan/Projekty/knut/knutclient4/build/doc/cs/CMakeFiles/cs-handbook.dir
-/home/dan/Projekty/knut/knutclient4/build/doc/en/CMakeFiles/en-handbook.dir
-/home/dan/Projekty/knut/knutclient4/build/src/CMakeFiles/knutclient.dir
-/home/dan/Projekty/knut/knutclient4/build/src/CMakeFiles/knutclient_automoc.dir
-/home/dan/Projekty/knut/knutclient4/build/po/CMakeFiles/translations.dir
-/home/dan/Projekty/knut/knutclient4/build/CMakeFiles/uninstall.dir
