@@ -1,4 +1,0 @@
-[D-BUS Service]
-Name=org.kde.kcontrol.knutsetting
-Exec=/usr/lib/kde4/libexec/kcmknutsettinghelper
-User=root

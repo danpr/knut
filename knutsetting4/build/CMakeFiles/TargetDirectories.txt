@@ -1,7 +1,0 @@
-/home/dan/Projekty/knut/knutsetting4/build/CMakeFiles/actions for org.kde.kcontrol.knutsetting.dir
-/home/dan/Projekty/knut/knutsetting4/build/src/CMakeFiles/kcm_knutsetting.dir
-/home/dan/Projekty/knut/knutsetting4/build/src/CMakeFiles/kcm_knutsetting_automoc.dir
-/home/dan/Projekty/knut/knutsetting4/build/src/CMakeFiles/kcmknutsettinghelper.dir
-/home/dan/Projekty/knut/knutsetting4/build/src/CMakeFiles/kcmknutsettinghelper_automoc.dir
-/home/dan/Projekty/knut/knutsetting4/build/po/CMakeFiles/translations.dir
-/home/dan/Projekty/knut/knutsetting4/build/CMakeFiles/uninstall.dir
