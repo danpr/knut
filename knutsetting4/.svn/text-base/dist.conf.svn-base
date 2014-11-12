@@ -1,9 +1,0 @@
-Debian |/etc/nut|/sbin/upsd|/sbin/upsmon|/sbin/upsdrvctl
-Mandrive |/etc/ups|/usr/sbin/upsd|/usr/sbin/upsmon|/usr/bin/upsdrvctl
-Fedora Core|/etc/ups|/usr/sbin/upsd|/usr/sbin/upsmon|/sbin/upsdrvctl
-Suse Enterprise |/etc/ups|/usr/sbin/upsd|/usr/sbin/upsmon|/usr/lib/ups/driver/upsdrvctl
-RedHat|/etc/ups|/usr/sbin/upsd|/usr/sbin/upsmon|/usr/bin/upsdrvctl
-Mandrake|/etc/ups|/usr/sbin/upsd|/usr/sbin/upsmon|/usr/bin/upsdrvctl
-Compiled - /usr|/etc/ups|/usr/sbin/upsd|/usr/sbin/upsmon|/usr/bin/upsdrvctl
-Compiled - /usr/local|/usr/local/etc|/usr/local/sbin/upsd|/usr/local/sbin/upsmon|/usr/local/bin/upsdrvctl
-Compiled - /usr/local/ups|/usr/local/ups/etc|/usr/local/ups/sbin/upsd|/usr/local/ups/sbin/upsmon|/usr/local/ups/bin/upsdrvctl
