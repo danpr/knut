@@ -17,14 +17,11 @@
 
 #include "knutnet.h"
 
-#include <QtCore/QString>
-#include <QtCore/QTimer>
-
-#include <QtCore/QByteArray>
-#include <QtCore/QTextStream>
-#include <QtNetwork/QTcpSocket>
-
-//#include <iostream>
+#include <QString>
+#include <QTimer>
+#include <QByteArray>
+#include <QTextStream>
+#include <QTcpSocket>
 
 
 
@@ -33,7 +30,7 @@ KNutNet::KNutNet (const QString upsAddress, const QString upsName, const unsigne
         : QObject(), m_upsAddress(upsAddress), m_upsName(upsName), m_countRepeat(countRepeat), m_port(port), m_delay(delay)  {
 
 
-qDebug ("KNutNet::Constructor");
+  qDebug ("KNutNet::Constructor");
 
   m_state = Idle;  //idle is value
   m_numberVars = 0;
@@ -75,10 +72,13 @@ KNutNet::~KNutNet(){
 
 void KNutNet::slotDisconnected (void) {
 
+
+  qDebug("KNutNet::slotDisconnected");
   m_state = UnConnected ;
   m_unConnectTimer->stop();
 //  emit connectionClosed();
   }
+
 
 
 void KNutNet::close (void) {
@@ -111,20 +111,30 @@ void KNutNet::open (void) {
 
   qDebug ("KNutNet::open %d", m_state);
 
+
   while (m_state == HostLookup ) {
+  qDebug("Sorry : KNutNet -HostLookup");
     KNutSleep::msleep(100);
     }
+
+
   if ((m_state == Connected) || (m_state == Connecting)) close(); // close connetion when is existed
   else {
     while (m_state == Closing ) {
        KNutSleep::msleep(100);
       }
     }
+
   if (m_upsAddress != "") {
+
+
     if ( m_commandSocket->state() != QAbstractSocket::ConnectingState ) {
       m_firstConnect=true;
       m_numberConnection=0;
       m_state = HostLookup;
+
+
+
       emit tryFirstConnection(m_countRepeat); // how many times we can try to connect with ups server /upsd/
 
       m_commandSocket->connectToHost(m_upsAddress,m_port);
@@ -501,7 +511,7 @@ int KNutNet::existName ( const QString name ) {
 
 
 int KNutNet::version (int countRepeat, const int delay) {
-qDebug("KNutNet::version");
+  qDebug("KNutNet::version");
 
   QByteArray  inBuffer;
   QString  outBuffer;
@@ -561,10 +571,12 @@ KNutNet::NetError KNutNet::getFirstUpsName (QString& firstUpsName) {
   QString  varOutBuffer;
   int lenString;
 
+  qDebug("KNutNet::getFirstUpsName");
+
   m_errorState=NoError;
   inBuffer = "LIST UPS\n";
   if ((m_errorState=getUpsData (inBuffer,outBuffer,"END LIST UPS"))== NoError) {
-
+//dan
     QString inLine, upsNameRet, varName, value;
     int key, typeValue;
     bool beginList = false;
@@ -572,19 +584,23 @@ KNutNet::NetError KNutNet::getFirstUpsName (QString& firstUpsName) {
     while (!(inLine = varInputStream.readLine()).isNull()) {
       key = parseLine (inLine, upsNameRet, varName, value, typeValue, lenString);
       switch (key) {
-        case BEGIN_LIST_UPS: {
-          beginList = true;;
+        case BEGIN_LIST_UPS:
+          beginList = true;
           break;
-          }
         case UPS:
          if (beginList ) {
            firstUpsName = upsNameRet;
            return NoError;
            }
+	 else {
+          firstUpsName = "";
+          m_errorState=NoUpsHere;
+          return m_errorState;
+	 }
         case END_LIST_UPS:
           firstUpsName = "";
-            m_errorState=NoUpsHere;
-            return m_errorState;
+          m_errorState=NoUpsHere;
+          return m_errorState;
         case ERR:
           m_errorState = upsTranslateError(value);
           return m_errorState;
@@ -977,7 +993,7 @@ void KNutNet::deleteVars (void) {
   }
 
 void KNutNet::genStatusFlags (QString value) {
-qDebug("KNutNet::genStatusFlags");
+  qDebug("KNutNet::genStatusFlags");
   m_upsStatusVar = 0;
   QTextStream inputStream(&value);
   QString word;
@@ -1163,7 +1179,17 @@ KNutNet::NetError KNutNet::getUpsVars1 ( void) {
           break;
         case 2:
           count++;
-          if ((word.length() > 0) && word.startsWith("@")) break;
+          if ((word.length() > 0) && word.startsWith("@")) {
+	    break;
+	    }
+	  else
+            {
+            // pridame polozku do tabulky
+            upsSetType(upsVar, word);
+            m_listVars.push_back(upsVar);
+            m_numberVars++;
+	    break;
+	    }		    
           default:
           // pridame polozku do tabulky
           upsSetType(upsVar, word);
@@ -1210,10 +1236,15 @@ KNutNet::NetError KNutNet::getUpsVars1 ( void) {
              return m_errorState;
              }
           break;
-          case 2:
-          count++;
-          if ((word.length() > 0) && word.startsWith("@")) break;
+//          case 2:
+//          count++;
+//          if ((word.length() > 0) && word.startsWith("@")) break;
           default:
+          if (count == 2) {
+	    count++;
+            if ((word.length() > 0) && word.startsWith("@")) break;
+            }
+
           // Zpracujeme polozku v tabulce
           // zjistime informaci o promene
           inBuffer="VARTYPE " + word.toLocal8Bit();
@@ -1363,10 +1394,14 @@ KNutNet::NetError KNutNet::getUpsVars1 ( void) {
              return m_errorState;
              }
           break;
-          case 2:
-          count++;
-          if ((word.length() > 0) && word.startsWith("@")) break;
+//          case 2:
+//          count++;
+//          if ((word.length() > 0) && word.startsWith("@")) break;
           default:
+          if (count == 2) { 
+	    count++;
+            if ((word.length() > 0) && word.startsWith("@")) break;
+            }
           // Zpracujeme polozku v tabulky
           upsIComm.upsCommName=word;
           upsIComm.upsDescription="";
@@ -1395,7 +1430,7 @@ KNutNet::NetError KNutNet::getUpsVars2 ( void) {
   int lenString;
   int varMax=0;
 
-qDebug("KNutNet::getUpsVars2");
+  qDebug("KNutNet::getUpsVars2");
 
   QVector<QString>* enumString=0;
   inBuffer = "LIST VAR " + m_upsName.toLocal8Bit() + "\n";
@@ -1412,7 +1447,7 @@ qDebug("KNutNet::getUpsVars2");
           if (upsNameRet == m_upsName) beginList = true;
         break;
         case VAR:
-         if (beginList ) {
+         if ( beginList ) {
            upsSetType(upsVar, varName, value);
 
            if (varName == "ups.status") genStatusFlags(value);
@@ -1428,14 +1463,14 @@ qDebug("KNutNet::getUpsVars2");
                     upsVar.upsValueType=false;
                     // nacteme enumValues
                     inBuffer = "LIST ENUM " + m_upsName.toLocal8Bit() + " " + varName.toLocal8Bit() +"\n";
-                    if ((m_errorState=getUpsData (inBuffer,varOutBuffer,"END LIST ENUM")) = NoError) {
-                  //    bool beginEnumList = false;
+                    if ((m_errorState=getUpsData (inBuffer,varOutBuffer,"END LIST ENUM")) == NoError) {
+                   /*   bool beginEnumList = false;  */
                       QTextStream varInputStream(&varOutBuffer);
                       while (!(inLine = varInputStream.readLine()).isNull()) {
                         key = parseLine (inLine, upsNameRet, varName, value, typeValue, lenString);
                         switch (key) {
                           case BEGIN_LIST_ENUM:
-                  //          beginEnumList = true;
+                         /*   beginEnumList = true; */
                             varMax=0;
                                  enumString = new QVector<QString>;
                             enumString->clear();
@@ -1546,7 +1581,7 @@ KNutNet::NetError KNutNet::getUpsValues1 (const bool allVars ) {// allVars = tru
 
   // Nacte hodnotu promenych
   // reads value of variables
-qDebug("KNutNet::getUpsValues1");
+  qDebug("KNutNet::getUpsValues1");
 
 
     emit getVarDesc (m_numberVars, 0);
@@ -1648,7 +1683,7 @@ KNutNet::NetError KNutNet::getUpsValues2 (const bool allVars ) {// allVars = tru
   QString  outBuffer;
   QVector<upsVarDef>::iterator it;
 
-qDebug ("KNutNet::getUpsValues2");
+  qDebug ("KNutNet::getUpsValues2");
   emit getVarDesc (m_numberVars, 0);
    int numberVar  = 0;
   for (it = m_listVars.begin(); it != m_listVars.end(); it++) {
@@ -1816,7 +1851,7 @@ KNutNet::NetError KNutNet::upsOldTranslateError (const QString string) {
 
 
 void KNutNet::slotConnectionError(QAbstractSocket::SocketError socketError) {
-qDebug ("KNutNet::slotConnectionError");
+  qDebug ("KNutNet::slotConnectionError");
 
   m_unConnectTimer->stop();
 
@@ -1830,7 +1865,7 @@ qDebug ("KNutNet::slotConnectionError");
     if (m_firstConnect) {
       if (m_numberConnection < m_countRepeat) {
         m_numberConnection++;
-        m_unConnectTimer->setSingleShot( TRUE );
+        m_unConnectTimer->setSingleShot( true );
         m_unConnectTimer->start( m_delay );
         }
       else  {
@@ -1843,7 +1878,7 @@ qDebug ("KNutNet::slotConnectionError");
     else {
       // connecting is down, try repeated connection
 
-      m_unConnectTimer->setSingleShot (TRUE);
+      m_unConnectTimer->setSingleShot ( true );
       m_unConnectTimer->start( m_delay);
       }
     return;
@@ -1895,7 +1930,8 @@ qDebug ("KNutNet::slotConnectionError");
 
 
 void KNutNet::slotConnected(void) {
-qDebug ("KNutNet::slotConnected");
+  qDebug ("KNutNet::slotConnected");
+
   int n;
 
     if ((n = version (m_countRepeat, m_delay)) == 0) { // 0 OK, 0> error
@@ -1909,6 +1945,7 @@ qDebug ("KNutNet::slotConnected");
         return;
         }
       if ((m_nutProtocol == 2) && m_upsName.isEmpty()) {
+
       // if upsName is empty reads first ups name from upsd server 
         if ((m_errorState =KNutNet::getFirstUpsName (m_upsName)) != NoError) { // reading first upsName
           // upsd server doesn't support any ups
@@ -1930,7 +1967,6 @@ qDebug ("KNutNet::slotConnected");
   }
 
 void KNutNet::slotHostFound(void) {
-
   qDebug("KNutNet::slotHostFound");
   m_state = Connecting;
   emit hostFound();
@@ -1938,19 +1974,19 @@ void KNutNet::slotHostFound(void) {
 
 
 void KNutNet::slotTimerReconnect(void) {
-qDebug("KNutNet::slotTimerReconnect");
-
- m_unConnectTimer->stop();
+  qDebug("KNutNet::slotTimerReconnect");
+  m_unConnectTimer->stop();
   if (m_commandSocket->state()==QAbstractSocket::UnconnectedState) {
      emit tryRepeatFirstConnection(m_numberConnection);
 //    m_state=Connecting;
-    if ( m_commandSocket->state() != QAbstractSocket::ConnectingState )
+    if ( m_commandSocket->state() != QAbstractSocket::ConnectingState ) {
       m_state = HostLookup;
-      m_commandSocket->connectToHost(m_upsAddress,m_port);
+    } /* dan */
+    m_commandSocket->connectToHost(m_upsAddress,m_port);
     }
   }
 
 
 
 
-#include "knutnet.moc"
+#include "moc_knutnet.cpp"

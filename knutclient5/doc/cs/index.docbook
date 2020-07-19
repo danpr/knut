@@ -1,0 +1,1323 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
+  <!ENTITY knutclient '<application>KNutClient</application>'>
+  <!ENTITY kappname "&knutclient;"><!-- replace knutclient here -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Czech "INCLUDE"><!-- change language only here -->
+
+  <!-- Do not define any other entities; instead, use the entities
+       from kde-genent.entities and $LANG/user.entities. -->
+]>
+
+<!-- ................................................................ -->
+
+<!-- The language must NOT be changed here. -->
+
+<book lang="&language;">
+
+<!-- This header contains all of the meta-information for the document such
+as Authors, publish date, the abstract, and Keywords -->
+
+<bookinfo>
+<title>Příručka pro &knutclient; </title>
+
+<authorgroup>
+<author>
+<firstname>Daniel</firstname>
+<othername></othername>
+<surname>Prynych</surname>
+<affiliation>
+<address><email>Daniel@prynych.cz</email></address>
+</affiliation>
+</author>
+</authorgroup>
+
+
+<copyright>
+<year>2001-2020</year>
+<holder>Daniel Prynych</holder>
+</copyright>
+<!-- Translators: put here the copyright notice of the translation -->
+<!-- Put here the FDL notice.  Read the explanation in fdl-notice.docbook
+     and in the FDL itself on how to use it. -->
+<legalnotice>&FDLNotice;</legalnotice>
+
+<!-- Date and version information of the documentation
+Don't forget to include this last date and this last revision number, we
+need them for translation coordination !
+Please respect the format of the date (DD/MM/YYYY) and of the version
+(V.MM.LL), it could be used by automation scripts.
+Do NOT change these in the translation. -->
+
+<date>09/12/2010</date>
+<releaseinfo>0.14.0</releaseinfo>
+
+<!-- Abstract about this handbook -->
+
+<abstract>
+<para>
+&knutclient; je grafická klientská aplikace pro UPS systém NUT.
+</para>
+<para>
+Tento dokument popisuje aplikaci &knutclient; verze 1.1.0
+</para>
+</abstract>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>kdeutils</keyword>
+<keyword>KNutClient</keyword>
+<keyword>NUT</keyword>
+<keyword>UPS</keyword>
+</keywordset>
+
+</bookinfo>
+
+
+<chapter id="introduction">
+<title>Úvod</title>
+
+<para>
+&knutclient; je program který umožňuje sledovat stav UPS-ek systému NUT.
+</para>
+
+</chapter>
+<chapter id="using-knutclient">
+<title>Použití &knutclient;</title>
+
+
+<sect1 id="knutclient-mainwin">
+<title>Hlavní okno aplikace &knutclient;</title>
+
+<para>&knutclient; je klientská grafická aplikace pro systém NUT
+"Network UPS Tools". Umožňuje sledovat stav UPS-ek a zobrazovat
+hodnoty proměnných které vybraná UPS-ka a její ovladač podporuje.
+</para>
+
+<para>
+Od verze 0.6.0 &knutclient; podporuje spouštění okamžitých příkazů,
+a možnost změny RW proměnných.
+</para>
+<para>
+Od verze 0.9.0 nepodporuje &knutclient; protokol UDP. 
+</para>
+
+<para>
+<screenshot>
+<screeninfo>Hlavní okno aplikace &knutclient;</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="knutclient-cs.png" format="PNG"/>
+	  </imageobject>
+	</mediaobject>
+</screenshot>
+</para>
+<para>
+Hlavní okno programu je rozděleno na dvě části.
+</para>
+<para>
+Levé část "Hlavní panel" obsahuje následující údaje indikující stav vybrané
+UPS-ky.
+Provoz na síť, provoz na baterie, přetížení, nutnost vyměnit
+baterii, vybití baterie, kalibraci baterie, údaj o  dobu běhu
+po odpojení sítě (RUNTIME) a pod. Déle jsou zde neměnné údaje, to jsou údaje
+které se za provozu nemění a jsou proto přečteny jen jednou při výběru UPS-ky,
+například jméno UPS-ky, její sériové číslo, výrobce a pod.
+</para>
+<para>Pravá část obsahuje analogové panely (měřáky), které udávají hodnotu 
+proměnných
+veličin jako je vstupní napětí, zatížení UPS-ky, kapacitu baterie, teplotu
+UPS-ky,
+napětí baterie apod.
+</para>
+<para>
+&knutclient; obsahuje nástrojovou lištu (toolbar) ze standardními tlačítky a
+tlačítko pro výběr sledované UPS-ky.
+</para>
+
+</sect1>
+
+
+<sect1 id="knutclient-kicker">
+<title>&knutclient; a panel KDE</title>
+
+<para>
+<screenshot>
+<screeninfo>&knutclient; a panel KDE</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="tkicker-cs.png" format="PNG"/>
+	  </imageobject>
+	</mediaobject>
+</screenshot>
+</para>
+<para>
+Od verze 0.8.0 &knutclient; dokuje v panelu KDE. Jeho icona je proměnná a zobrazuje
+informace o zatížení UPS, runtime a a kapacitě baterie, podle toho který typ icony je vybrán. 
+Po přesunu ukazatele myši na ikonu se zobrazí informační okno "ToolTip" které obsahuje více
+informací o UPS, Nazev, Jméno, Adresu, Stav, Runtime ...
+</para>
+</sect1>
+
+
+<sect1 id="knutclient-features">
+<title>Více o vlastnostech &knutclient;</title>
+
+<para>
+Pro spojení se serverovou části NUT-u (upsd) používá &knutclient; 
+protokol, TCP.Po vybraní UPS-ky v nástrojové liště se
+&knutclient; pokusí přečíst data, pokud se mu to nepodaří, pokus opakuje
+a to maximálně 2 krát. &knutclient; poté čte data v pravidelných
+intervalech. Při prvním čtení čte všechny vybrané proměnné, v dalších
+již jen proměnné které zobrazují analogové panely, RUNTIME a stav
+UPS-ky. Proměnné zobrazující jméno UPS-ky, výrobce, sériové číslo a pod
+se tedy čtou jen jednou protože se nepředpokládá jejich změna. 
+</para>
+<para>
+Novější verze upsd (od verze 1.3), již nepodporují protokol UDP.
+</para>
+
+<para>
+Chyby vznikající za běhu programu se zobrazují ve stavové lište. Do stavové
+lišty
+je vnořen seznam (ComboBox), ktery obsahuje hlašení chyb, a to včetne datumu,
+času a nazvy UPS-ky. Maximální délka seznamu je 50 řádek.
+</para>
+<para>
+Chyby vznikající jako odezva na činnost uživatele jsou zobrazeny ve
+zvláštním okně.
+</para>
+</sect1>
+</chapter>
+
+<chapter id="commands">
+<title>Popis příkazů</title>
+
+<sect1 id="knutclient-mainwindow">
+<title>Hlavní okno aplikace &knutclient;</title>
+<para></para>
+
+<sect2>
+<title>Menu Soubor</title>
+<para>
+<variablelist>
+   <varlistentry>
+      <term><menuchoice>
+         <guimenu>Soubor</guimenu>
+         <guimenuitem>Zobrazení Ups proměnných a příkazů</guimenuitem>
+      </menuchoice></term>
+      <listitem><para><action>Vypíše Ups proměnné pro zvolenou
+UPS-ku</action></para></listitem>
+   </varlistentry>
+   <varlistentry>
+      <term><menuchoice>
+        <guimenu>Soubor</guimenu>
+        <guimenuitem>Spuštění okamžitých příkazů</guimenuitem>
+      </menuchoice></term>
+      <listitem><para><action>Provede na UPS daný okamžitý
+příkaz</action></para></listitem>
+   </varlistentry>
+   <varlistentry>
+     <term><menuchoice>
+       <guimenu>Soubor</guimenu>
+       <guimenuitem>Nastavení UPS RW proměnných</guimenuitem>
+     </menuchoice></term>
+     <listitem>
+     <para><action>Provede změnu UPS RW proměnné</action></para></listitem>
+   </varlistentry>
+   <varlistentry>
+      <term><menuchoice>
+         <shortcut>
+            <keycombo><keycap>Ctrl</keycap><keycap>q</keycap></keycombo>
+         </shortcut>
+         <guimenu>Soubor</guimenu>
+         <guimenuitem>Ukončit</guimenuitem>
+      </menuchoice></term>
+      <listitem><para><action>Ukončí činnost programu</action></para></listitem>
+   </varlistentry>
+</variablelist>
+</para>
+</sect2>
+
+
+<sect2>
+<title>Menu Spojení</title>
+<para>
+<variablelist>
+   <varlistentry>
+      <term><menuchoice>
+         <shortcut>
+            <keycombo><keycap>F1</keycap></keycombo>
+         </shortcut>
+         <guimenu>Spojení</guimenu>
+         <guimenuitem>Obnovit Spojeni</guimenuitem>
+      </menuchoice></term>
+      <listitem><para><action>Obnoví spojení s UPS serverem (upsd).
+      </action></para></listitem>
+   </varlistentry>
+</variablelist>
+</para>
+</sect2>
+
+
+
+<sect2>
+<title>Menu Nastavení</title>
+<para>
+<variablelist>
+   <varlistentry>
+      <term><menuchoice>
+         <guimenu>Nastavení</guimenu>
+         <guimenuitem>Zobrazovat nástrojovou lištu</guimenuitem>
+      </menuchoice></term>
+      <listitem><para><action>Zapne/Vypne zobrazení nástrojové lišty
+(Toolbar)</action></para></listitem>
+   </varlistentry>
+
+   <varlistentry>
+      <term><menuchoice>
+         <guimenu>Nastavení</guimenu>
+         <guimenuitem>Zobrazovat stavovou lištu</guimenuitem>
+      </menuchoice></term>
+      <listitem><para><action>Zapne/Vypne zobrazování nástrojové
+lišty</action></para></listitem>
+   </varlistentry>
+
+
+   <varlistentry>
+      <term><menuchoice>
+         <guimenu>Nastavení</guimenu>
+         <guimenuitem>Nastavení klávesových zkratek...</guimenuitem>
+      </menuchoice></term>
+      <listitem>
+        <para><action>Otevře konfigurační dialog pro přiřazení klávesy k akci.</action></para>
+     </listitem>
+   </varlistentry>
+
+
+   <varlistentry>
+      <term><menuchoice>
+         <guimenu>Nastavení</guimenu>
+         <guimenuitem>Nastavit &knutclient; </guimenuitem>
+      </menuchoice></term>
+      <listitem>
+        <para><action>Otevře hlavni konfigurační dialog</action></para>
+     </listitem>
+   </varlistentry>
+
+   <varlistentry>
+      <term><menuchoice>
+         <guimenu>Nastavení</guimenu>
+         <guimenuitem>Použít popis</guimenuitem>
+      </menuchoice></term>
+      <listitem>
+        <para><action>Zapne/Vypne používání popisů u zobrazení UPS proměnných a příkazů.
+       </action></para>
+     </listitem>
+   </varlistentry>
+
+</variablelist>
+</para>
+</sect2>
+</sect1>
+
+
+<sect1 id="knutclient-kicker-comm">
+<title>Icona v panelu KDE</title>
+
+<para>
+<screenshot>
+<screeninfo>Menu icony v KDE panelu</screeninfo>
+        <mediaobject>
+           <imageobject>
+             <imagedata fileref="mkicker-cs.png" format="PNG"/>
+           </imageobject>
+        </mediaobject>
+</screenshot>
+</para>
+
+
+
+
+
+<sect2>
+<title>Menu</title>
+<para>
+<variablelist>
+   <varlistentry>
+      <term><menuchoice>
+         <guimenuitem>UPS</guimenuitem>
+      </menuchoice></term>
+      <listitem><para><action>Slouží pro výběr UPS-ky</action></para></listitem>
+   </varlistentry>
+
+
+
+   <varlistentry>
+      <term><menuchoice>
+         <guimenuitem>Zobrazení Ups proměnných a příkazů</guimenuitem>
+      </menuchoice></term>
+      <listitem><para><action>Vypíše Ups proměnné pro zvolenou
+UPS-ku</action></para></listitem>
+   </varlistentry>
+
+   <varlistentry>
+      <term><menuchoice>
+        <guimenuitem>Spuštění okamžitých příkazů</guimenuitem>
+      </menuchoice></term>
+      <listitem><para><action>Provede na UPS daný okamžitý
+příkaz</action></para></listitem>
+   </varlistentry>
+
+   <varlistentry>
+     <term><menuchoice>
+       <guimenuitem>Nastavení UPS RW proměnných</guimenuitem>
+     </menuchoice></term>
+     <listitem>
+     <para><action>Provede změnu UPS RW proměnné</action></para></listitem>
+   </varlistentry>
+
+   <varlistentry>
+      <term><menuchoice>
+         <guimenuitem>Obnovit Spojeni</guimenuitem>
+      </menuchoice></term>
+      <listitem>
+      <para><action>Obnoví spojení s UPS serverem (upsd)</action></para></listitem>
+   </varlistentry>
+
+   <varlistentry>
+      <term><menuchoice>
+         <guimenu>Nastavení</guimenu>
+         <guimenuitem>Nastavit &knutclient; </guimenuitem>
+      </menuchoice></term>
+      <listitem>
+        <para><action>Aktivuje konfigurační dialog</action></para>
+     </listitem>
+   </varlistentry>
+
+   <varlistentry>
+      <term><menuchoice>
+         <guimenuitem>O aplikaci &knutclient;</guimenuitem>
+      </menuchoice></term>
+      <listitem>
+      <para><action>Zobrazí informace o aplikaci &knutclient;</action></para></listitem>
+   </varlistentry>
+
+   <varlistentry>
+      <term><menuchoice>
+         <guimenuitem>Minimalizovat</guimenuitem>
+      </menuchoice></term>
+      <listitem>
+      <para><action>Zavře hlavní okno</action></para></listitem>
+   </varlistentry>
+
+   <varlistentry>
+      <term><menuchoice>
+         <guimenuitem>Konec</guimenuitem>
+      </menuchoice></term>
+      <listitem><para><action>Ukončí činnost programu</action></para></listitem>
+   </varlistentry>
+
+</variablelist>
+</para>
+</sect2>
+</sect1>
+
+
+<sect1 id="knuclient-show-variables">
+<title>Zobrazení proměnných</title>
+<para>
+Toto okno zobrazý seznam všech proměnných a okamžitých příkazů, které existují pro zvolenou UPS-ku.
+
+<screenshot>
+<screeninfo>Okno proměnných a okamžitých příkazů</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="variables-cs.png" format="PNG"/>
+          </imageobject>
+        </mediaobject>
+</screenshot>
+</para>
+</sect1>
+
+
+    <sect1 id="knuclient-instant-command">
+      <title>Okamžité příkazy</title>
+      <para>
+      Okamžité příkazy jsou vykonávány přímo na na UPS-ce, NUT server
+      předává požadavek na příkaz příslušnému ovladači (driveru) a ten
+      pak příkaz vyvolá na UPS-ce. Okno pro ovládaní Vám nabízí ty
+      příkazy, které příslušný ovladač (driver) podporuje.
+      </para>
+      <para>
+        <variablelist>
+	  <varlistentry>
+	    <term><guilabel>OK</guilabel></term>
+	    <listitem>
+              <para>Tlačítko <guibutton>OK</guibutton> provede vybraný příkaz.</para>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term><guilabel>Zrušit</guilabel></term>
+	    <listitem>
+              <para>Tlačítko <guibutton>zrušit</guibutton> zavře okno.</para>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term><guilabel>Příkaz</guilabel></term>
+	    <listitem>
+	      <para>Zde je možno vybrat příkaz který je pak následně vykonán</para>
+	    </listitem>
+	  </varlistentry>
+	</variablelist>
+      </para>
+    </sect1>
+
+    <sect1 id="knutclient-RW-values">
+      <title>Uživatelsky měnitelné (RW) proměnné</title>
+      <para> Uživatelsky měnitelné (RW) proměnné jsou skupinou
+      proměnných které muže měnit přímo uživatel, většina z nich je
+      přímo ekvivalentní nastavení příslušné UPS-ky. Uživatelsky
+      měnitelné proměnné jsou dvojího typu znakové (CHAR) a výčtové (ENUM).
+      Znakové proměnné jsou prostý řetězec znaků o definované maximální
+      délce. Výčtové proměnné je seznam povolených hodnot na které muže
+      být proměnná nastavená.
+     </para>
+      <para>
+      Uživatelsky měnitelné proměnná není změněna na serveru NUT-u
+      (upsd) ale sever pouze dá příslušnému ovladači (driveru) příkaz ke změně,
+      ten ihned  provede změnu nastavení UPS-ky. Tato činnost není okamžitá a
+      může trvat i několik sekund.
+      </para>
+      <para>
+      <variablelist>
+	  <varlistentry>
+	    <term><guilabel>OK</guilabel></term>
+	    <listitem>
+	      <para>Tlačítkem <guibutton>OK</guibutton> je změna proměnné provedena.</para>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term><guilabel>Zrušit</guilabel></term>
+	    <listitem>
+	      <para>Tlačítkem <guibutton>Zrušit</guibutton> je okno zavřeno.</para>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term><guilabel>Implicitní</guilabel></term>
+	    <listitem>
+	      <para>Tlačítkem <guibutton>Implicitní</guibutton> mužeme obnovit současnou hodnotu proměnné.</para>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term><guilabel>Proměnná</guilabel></term>
+	    <listitem>
+	      <para>Zde je možno vybrat proměnnou která bude změněna</para>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term><guilabel>Hodnota</guilabel></term>
+	    <listitem>
+	      <para>Zde je možno u znakové proměnné zadat, nebo u
+	      výčtové proměnné vybrat její hodnotu. Nabídkové pole se automaticky mění
+	      podle typu proměnné.
+              </para>
+	    </listitem>
+	  </varlistentry>
+	</variablelist>
+        </para>
+    </sect1>
+
+</chapter>
+
+<chapter id="configuration">
+<title>Nastavení aplikace &knutclient;</title>
+<anchor id="knc-configuration"/>
+<sect1 id="knutclient-configuration">
+<title>Nastavení aplikace</title>
+<para>
+Okno pro nastavení má pět částí Nastavení, UPS, Panel Písma a Analog.
+</para>
+   <sect2>
+   <title>Nastavení</title>
+   <para>
+   Část NASTAVENÍ slouží pro nastavení počtu sloupců analogových panelů, barvy
+pozadí hlavního okna,
+   vstupního  výstupního napětí (120/230)V, vstupní a výstupní frekvence (50/60)Hz a povolení
+použití hodnot
+   input.transfer (input.transfer.low a input.transfer.high)
+   </para>
+   <para>
+   <screenshot>
+      <screeninfo>&knutclient; </screeninfo>
+      <mediaobject>
+         <imageobject>
+            <imagedata fileref="msetting-cs.png" format="PNG" />
+         </imageobject>
+      </mediaobject>
+   </screenshot>
+   </para>
+   <para>
+      <variablelist>
+	 <varlistentry>
+	    <term><guilabel>Počet sloupců</guilabel></term>
+	    <listitem>
+	       <para>Určuje maximální počet sloupců pro analogové panely</para>
+	    </listitem>
+	 </varlistentry>
+         <varlistentry>
+           <term><guilabel>Použít vlastní barvu pozadí</guilabel></term>
+	   <listitem>
+             <para>Dovoluje zvolit vlastní barvu pozadí pro základní okno.
+             </para>
+           </listitem>
+	 </varlistentry>
+	 <varlistentry>
+	    <term><guilabel>Barva pozadí</guilabel></term>
+	    <listitem>
+	       <para>Umožňuje zvolit barvu pozadí</para>
+	    </listitem>
+	 </varlistentry>
+	    <varlistentry>
+	      <term><guilabel>Použít dialog "Jste si jistý"</guilabel></term>
+	      <listitem>
+		<para>Při aktivaci, se při ukončení programu objeví
+		dialog "Jste si jistý" který vyžaduje potvrzení, jinak
+		se program neukončí.</para>
+	      </listitem>
+	    </varlistentry>
+
+	    <varlistentry>
+	      <term><guilabel>Použít hlavní okno když program startuje</guilabel></term>
+	      <listitem>
+		<para> Nastaví zobrazení hlavního okna při startu programu.
+		</para>
+	      </listitem>
+	    </varlistentry>
+	    
+	    <varlistentry>
+	      <term><guilabel>Zobrazit okno zpráv, když program hlásí chybu.</guilabel></term>
+	      <listitem>
+		<para> Povoli zobrazení okna zpráv, kde je zobrazen popis chyby. Má význam jen, když není zakázáno dokování programu.
+		</para>
+	      </listitem>
+	    </varlistentry>
+
+	    	    
+	    <varlistentry>
+	      <term><guilabel>Vstupní napětí</guilabel></term>
+	      <listitem>
+		<para>Umožňuje vybrat vstupní (výstupní) napětí 230/120V. Položka
+		nemá význam pokud je zároveň zvolena
+		položka <guilabel>Použít input.transfer hodnoty </guilabel>.</para>
+	      </listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><guilabel>Vstupní (výstupní) frekvence</guilabel></term>
+	      <listitem>
+		<para>Umožňuje vybrat vstupní (výstupní) frekvenci
+		50/60Hz. Položka nemá význam pokud je zároveň zvolena
+		položka <guilabel>Použít High-Low
+		input.transfer hodnoty</guilabel>.</para>
+	      </listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><guilabel>Použít input.transfer hodnoty</guilabel></term>
+	      <listitem>
+		<para>Nastaví vstupní napětí a vstupní frekvenci na
+		základě hodnot v proměnných NUT-u input.transfer.low (LOWXFER) a
+		input.transfer.high (HIGHXFER). Tyto proměnné udávají rozpětí hodnot vstupního
+		napětí, které muže UPS-ka ještě bezpečně zpracovat. Na
+		základě těchto hodnot &knutclient; nastaví napětí a frekvence pro panely které je
+		používají. Například vstupní napětí, výstupní napětí, vstupní frekvence, výstupní frekvence
+		apod.</para>
+	      </listitem>
+	    </varlistentry>
+      </variablelist>
+   </para>
+   </sect2>
+
+   <sect2>
+   <title>UPS</title>
+   <para>
+   Část UPS slouží pro nastavení seznamu UPS-ek a jejich
+   parametrů. Levá část obsahuje seznam UPS-ek. Pravá část tlačítka pro
+   přidávání, změnu parametrů a smazání záznamu o UPS-kách.
+   </para>
+   <para>
+   <screenshot>
+      <screeninfo>&knutclient; </screeninfo>
+      <mediaobject>
+         <imageobject>
+            <imagedata fileref="usetting-cs.png" format="PNG" />
+         </imageobject>
+      </mediaobject>
+   </screenshot>
+   </para>
+   <para>
+   <variablelist>
+      <varlistentry>
+         <term><guibutton>Přidat</guibutton></term>
+	 <listitem>
+	    <para>Přidá do seznamu další UPS-ku a nastaví její parametry.</para>
+	 </listitem>
+      </varlistentry>
+
+      <varlistentry>
+         <term><guibutton>Úpravy</guibutton></term>
+	 <listitem>
+	    <para>Změní parametry vybrané UPS-ky </para>
+	 </listitem>
+      </varlistentry>
+      <varlistentry>
+	 <term><guibutton>Smazat</guibutton></term>
+	 <listitem><para>Smaže UPS-ku v seznamu</para>
+	 </listitem>
+      </varlistentry>
+   </variablelist>
+   </para>
+       <sect3>
+	  <title>Nastavení parametrů</title>
+       <para>
+       Toto okno slouží k nastavení parametrů UPS-ky.
+       </para>
+       <para>
+       <screenshot>
+          <mediaobject>
+	     <imageobject>
+	       <imagedata fileref="new-cs.png" format="PNG"/>
+	     </imageobject>
+	  </mediaobject>
+       </screenshot>
+       </para>
+	  <para>
+          <variablelist>
+	     <varlistentry>
+		<term><guilabel>Název</guilabel></term>
+		<listitem>
+		<para>Určuje jméno UPS-ky pro program &knutclient;</para>
+		</listitem>
+	     </varlistentry>
+	     <varlistentry>
+		<term><guilabel>Adresa UPS</guilabel></term>
+		<listitem>
+		<para>Určuje adresu počítače ke kterému je UPS připojena.
+		Tedy adresu UPS v síti.
+		Příklad : ns.alo.cz, localhost, 192.168.1.12.</para>
+		</listitem>
+	     </varlistentry>
+	     <varlistentry>
+		<term><guilabel>Jméno UPS</guilabel></term>
+		<listitem>
+		<para>Určuje jméno UPS tak jak je definuje NUT.
+		Pokud není ups definováno, je automaticky použita první ups v seznamu
+		systému NUT daného pc. To platí jen za předpokladu že minimalní
+		verze upsd je 1.3. Blíže v dokumentaci k systému NUT. 
+		Příklad : victron, myups, apc700</para>
+		</listitem>
+	     </varlistentry>
+	     <varlistentry>
+		<term><guilabel>Zpoždění (ms)</guilabel></term>
+		<listitem>
+		<para>Určuje interval mezi dvěma přenosy dat (čteni dat) ze
+		systému NUT.</para>
+		</listitem>
+	     </varlistentry>
+	      <varlistentry>
+		<term><guilabel>Port</guilabel></term>
+		<listitem>
+                 <para>
+		 Nastaví port na který se &knutclient; připojí.
+                 </para>
+		</listitem>
+	      </varlistentry>
+              <varlistentry>
+		<term><guilabel>Uživatelské jméno</guilabel></term>
+		<listitem>
+		  <para>Určuje uživatelské jméno (USERNAME) které
+		  &knutclient; použije při prokázaní totožnosti uživatele
+		  serveru to jest, programu upsd</para>
+		</listitem>
+	      </varlistentry>
+	      <varlistentry>
+		<term><guilabel>Heslo</guilabel></term>
+		<listitem>
+		  <para>Určuje heslo (PASSWORD) pro pro prokázaní
+		  totožnosti uživatele. </para>
+		</listitem>
+	      </varlistentry>
+	      <varlistentry>
+		<term><guilabel>Store NUT password in configuration file.
+		</guilabel></term>
+		<listitem>
+		  <para>Při zvolení této volby bude heslo uloženo do
+		  konfiguračního souboru. V konfiguračním souboru je
+		  heslo uloženo nezašifrovaně. Pokud nebude tato volba
+		  zvolena bude heslo po ukončení programu zapomenuto.</para>
+		</listitem>
+	      </varlistentry>
+
+                <varlistentry>
+		<term><guilabel>UPS Proměnné</guilabel></term>
+		<listitem>
+		  <para>Umožňuje vybrat proměnné které budou zobrazeny
+		  na analogových panelech v pravé části hlavního
+		  okna.</para>
+		</listitem>
+	      </varlistentry>
+	  </variablelist>
+       </para>
+	  <para>Parametry Uživatelské jméno a Heslo mají význam jen
+	  pri použití okamžitých příkazů a změnách RW proměnných, při
+	  sledování stavu UPS-ky není uživatelské jméno a heslo
+	  potřebné. Heslo (PASSWORD) a uživatelské jméno (USERNAME)
+	  mají své  ekvivalenty v systému NUT v souboru upsd.users.
+         </para>
+	</sect3>
+   </sect2>
+
+
+
+   <sect2>
+   <title>Panel</title>
+   <para>
+   Část PANEL slouží pro určení které informační části hlavního panelu budou
+zobrazené
+   </para>
+
+   <para>
+   <screenshot>
+      <screeninfo>&knutclient; </screeninfo>
+      <mediaobject>
+         <imageobject>
+            <imagedata fileref="psetting-cs.png" format="PNG" />
+         </imageobject>
+      </mediaobject>
+   </screenshot>
+   </para>
+
+   <para>
+   <variablelist>
+
+   <varlistentry>
+   <term><guilabel>Přetížení</guilabel></term>
+   <listitem>
+   <para>
+   Povoluje/zakazuje zobrazení přetížení.
+   </para>
+   </listitem>
+   </varlistentry>
+
+   <varlistentry>
+   <term><guilabel>Baterie je vybitá</guilabel></term>
+   <listitem>
+   <para>
+   Povoluje/zakazuje zobrazení vybití baterie.
+   </para>
+   </listitem>
+   </varlistentry>
+
+
+   <varlistentry>
+   <term><guilabel>Vyměnit baterie </guilabel></term>
+   <listitem>
+   <para>
+   Povoluje/zakazuje zobrazení nutnosti výměny baterie.
+   </para>
+   </listitem>
+   </varlistentry>
+
+   <varlistentry>
+   <term><guilabel>Kalibrace UPS</guilabel></term>
+   <listitem>
+   <para>
+   Povoluje/zakazuje zobrazení kalibrace UPS.
+   </para>
+   </listitem>
+   </varlistentry>
+
+   <varlistentry>
+   <term><guilabel>Výrobce + Model</guilabel></term>
+   <listitem>
+   <para>
+   Povoluje/zakazuje zobrazení výrobce a modelu UPS-ky.
+   </para>
+   </listitem>
+   </varlistentry>
+
+   <varlistentry>
+   <term><guilabel>Výrobce</guilabel></term>
+   <listitem>
+   <para>
+   Povoluje/zakazuje zobrazení výrobce UPS-ky.
+   </para>
+   </listitem>
+   </varlistentry>
+
+   <varlistentry>
+   <term><guilabel>Model</guilabel></term>
+   <listitem>
+   <para>
+   Povoluje/zakazuje zobrazení modelu UPS-ky.
+   </para>
+   </listitem>
+   </varlistentry>
+
+   <varlistentry>
+   <term><guilabel>Sériové č.</guilabel></term>
+   <listitem>
+   <para>
+   Povoluje/zakazuje zobrazení sériového čísla UPS-ky.
+   </para>
+   </listitem>
+   </varlistentry>
+
+   <varlistentry>
+   <term><guilabel>Verze Firmvare</guilabel></term>
+   <listitem>
+   <para>
+   Povoluje/zakazuje zobrazení verze firmware UPS-ky.
+   </para>
+   </listitem>
+   </varlistentry>
+
+   <varlistentry>
+   <term><guilabel>Runtime</guilabel></term>
+   <listitem>
+   <para>
+   Povoluje/zakazuje zobrazení doby po kterou je UPS-ka schopna po výpadku
+   napájení dodávat el. proud.
+   </para>
+   </listitem>
+   </varlistentry>
+
+   <varlistentry>
+     <term><guilabel>Použít vlastní barvu pozadí</guilabel></term>
+     <listitem>
+       <para>Dovoluje zvolit vlastní barvu pozadí pro hlavní panel.
+       </para>
+     </listitem>
+   </varlistentry>
+   <varlistentry>
+     <term><guilabel>Barva pozadí</guilabel></term>
+     <listitem>
+       <para>Umožňuje zvolit barvu pozadí pro hlavní panel.</para>
+     </listitem>
+   </varlistentry>
+   </variablelist>
+   </para>
+   </sect2>
+
+
+
+   <sect2>
+   <title>Písma</title>
+   <para>
+   Část PÍSMA slouží pro výběr používaných písmen.
+   </para>
+   <para>
+   <screenshot>
+      <screeninfo>&knutclient; </screeninfo>
+      <mediaobject>
+         <imageobject>
+            <imagedata fileref="fsetting-cs.png" format="PNG" />
+         </imageobject>
+      </mediaobject>
+   </screenshot>
+   </para>
+
+   <para>
+   <variablelist>
+   <varlistentry>
+   <term><guilabel>Použít vlastní písma</guilabel></term>
+   <listitem>
+   <para>
+   Povoluje/zakazuje možnost vybrat vlastní písma pro Hlavni panel a Analogové
+panely.
+   </para>
+   </listitem>
+   </varlistentry>
+   <varlistentry>
+      <term><guilabel>Hlavní panel / Analogové panely</guilabel></term>
+      <listitem>
+	<para>Určuje pro který panel se bude vybírat písmo.</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term><guilabel>Požadované písmo</guilabel></term>
+      <listitem>
+	<para>Vybírá písma pro zadaný typ panelu. Má význam
+	jen tehdy pokud je vybrána položka <guilabel>Použít
+	vlastní písmo</guilabel>.</para>
+      </listitem>
+    </varlistentry>
+   </variablelist>
+   </para>
+  </sect2>
+
+
+   <sect2>
+   <title>Analog</title>
+   <para>
+   Část Analog slouží pro nastavení barev na analogových panelech.
+   </para>
+   <para>
+   <screenshot>
+      <screeninfo>&knutclient; </screeninfo>
+      <mediaobject>
+         <imageobject>
+            <imagedata fileref="asetting-cs.png" format="PNG" />
+         </imageobject>
+      </mediaobject>
+   </screenshot>
+   </para>
+
+   <para>
+   <variablelist>
+
+  <varlistentry>
+     <term><guilabel>Použít vlastní barvu pozadí</guilabel></term>
+     <listitem>
+       <para>Dovoluje zvolit vlastní barvu pozadí pro analogový panel.
+       </para>
+     </listitem>
+   </varlistentry>
+   <varlistentry>
+     <term><guilabel>Barva pozadí</guilabel></term>
+     <listitem>
+       <para>Umožňuje zvolit barvu pozadí pro analogový panel.</para>
+     </listitem>
+   </varlistentry>
+
+
+   <varlistentry>
+     <term><guilabel>Použít vlastní barvy</guilabel></term>
+     <listitem>
+       <para>Dovoluje zvolit vlastní barvy pro následující části analogového panelu.
+       </para>
+      </listitem>
+   </varlistentry>
+
+   <varlistentry>
+     <term><guilabel>Barva ručičky</guilabel></term>
+     <listitem>
+       <para>
+       Umožňuje zvolit barvu ručičky pro analogový panel. Standardní barva
+      je černá.
+      </para>
+     </listitem>
+   </varlistentry>
+
+
+  <varlistentry>
+     <term><guilabel>Barva OK rozsahu</guilabel></term>
+     <listitem>
+       <para>
+       Umožňuje zvolit barvu podbarvení stupnice pro rozsah správných (OK)
+       hodnot. Standardní barva je zelená.</para>
+     </listitem>
+   </varlistentry>
+
+   <varlistentry>
+     <term><guilabel>Barva rozsahu varování</guilabel></term>
+     <listitem>
+       <para>
+       Umožňuje zvolit barvu podbarvení stupnice pro rozsah varovaní.
+       Standardní barva je žlutá.
+       </para>
+     </listitem>
+   </varlistentry>
+
+
+   <varlistentry>
+     <term><guilabel>Barva rozsahu chyby</guilabel></term>
+     <listitem>
+       <para>
+       Umožňuje zvolit barvu podbarvení stupnice pro rozsah chyby.
+       Standardní barva je červená.
+       </para>
+     </listitem>
+   </varlistentry>
+
+   <varlistentry>
+     <term><guilabel>Barva stupnice</guilabel></term>
+     <listitem>
+       <para>
+       Umožňuje zvolit barvu stupnice pro analogový panel.
+       Standardní barva je černá.
+       </para>
+     </listitem>
+   </varlistentry>
+
+   <varlistentry>
+     <term><guilabel>Barva písma</guilabel></term>
+     <listitem>
+       <para>
+       Umožňuje zvolit barvu písma pro analogový panel.
+       Standardní barva je černá.
+       </para>
+     </listitem>
+   </varlistentry>
+
+
+   <varlistentry>
+     <term><guilabel>Vylepšení zpracování ručičky</guilabel></term>
+     <listitem>
+       <para>
+       Umožňuje vybrat grafický způsob zpracování ručičky.
+       </para>
+     </listitem>
+   </varlistentry>
+
+
+   </variablelist>
+   </para>
+  </sect2>
+
+
+   <sect2>
+   <title>Dokovaní</title>
+   <para>
+   Část DOCK slouží pro nastavení parametrů "dokovaní" programu.
+   </para>
+   <para>
+   <screenshot>
+      <screeninfo>&knutclient; </screeninfo>
+      <mediaobject>
+         <imageobject>
+            <imagedata fileref="ksetting-cs.png" format="PNG" />
+         </imageobject>
+      </mediaobject>
+   </screenshot>
+   </para>
+
+   <para>
+   Typ zobrazení v doku. (Dokem je míněn panel KDE.)
+   </para>
+
+    
+   <para>
+   <variablelist>
+
+   <varlistentry>
+   <term><guilabel>Obrázkové</guilabel></term>
+   <listitem>
+   <para>
+   Nastavuje obrazkový typ icony.
+   </para>
+   </listitem>
+   </varlistentry>
+
+
+   <varlistentry>
+   <term><guilabel>Obrázkové</guilabel></term>
+   <listitem>
+   <para>
+   Nastavuje souhrny typ icony, pouze pro specialisty.
+   </para>
+   </listitem>
+   </varlistentry>
+  
+   </variablelist>
+   </para>
+
+   <para>
+   Prvky ToolTipu. (ToolTipem je míněna "bublinova" napověda.)
+   </para>
+
+   <para>
+   <variablelist>
+   <varlistentry>
+   <term><guilabel>Výrobce</guilabel></term>
+   <listitem>
+   <para>
+   Povoluje/zakazuje zobrazení výrobce UPS-ky.
+   </para>
+   </listitem>
+   </varlistentry>
+
+   <varlistentry>
+   <term><guilabel>Model</guilabel></term>
+   <listitem>
+   <para>
+   Povoluje/zakazuje zobrazení modelu UPS-ky.
+   </para>
+   </listitem>
+   </varlistentry>
+
+   <varlistentry>
+   <term><guilabel>Sériové č.</guilabel></term>
+   <listitem>
+   <para>
+   Povoluje/zakazuje zobrazení sériového čísla UPS-ky.
+   </para>
+   </listitem>
+   </varlistentry>
+
+   <varlistentry>
+   <term><guilabel>Verze Firmvare</guilabel></term>
+   <listitem>
+   <para>
+   Povoluje/zakazuje zobrazení verze firmware UPS-ky.
+   </para>
+   </listitem>
+   </varlistentry>
+
+   <varlistentry>
+   <term><guilabel>Runtime</guilabel></term>
+   <listitem>
+   <para>
+   Povoluje/zakazuje zobrazení doby po kterou je UPS-ka schopna po výpadku
+   napájení dodávat el. proud.
+   </para>
+   </listitem>
+   </varlistentry>
+
+   <varlistentry>
+   <term><guilabel>Kapacita baterie</guilabel></term>
+   <listitem>
+   <para>
+   Povoluje/zakazuje zobrazení kapacity baterie.
+   </para>
+   </listitem>
+   </varlistentry>
+
+
+   <varlistentry>
+   <term><guilabel>Zatížení UPS</guilabel></term>
+   <listitem>
+   <para>
+   Povoluje/zakazuje zobrazení zatížení UPS.
+   </para>
+   </listitem>
+   </varlistentry>
+
+
+   <varlistentry>
+     <term><guilabel>Použít vlastní barvu pozadí</guilabel></term>
+     <listitem>
+       <para>Dovoluje zvolit vlastní barvu pozadí pro iconu v KDE panelu, když typ zobrazení icony v panelu je obrázkový.
+       </para>
+     </listitem>
+   </varlistentry>
+   <varlistentry>
+     <term><guilabel>Barva pozadí</guilabel></term>
+     <listitem>
+       <para>Umožnuje zvolit barvu pozadí.</para>
+     </listitem>
+   </varlistentry>
+   </variablelist>
+   </para>
+   </sect2>
+
+
+
+</sect1>
+</chapter>
+
+
+<chapter id="faq">
+<title>Otázky a odpovědi</title>
+
+&reporting.bugs;
+&updating.documentation;
+
+<qandaset id="faqlist">
+<qandaentry>
+<question>
+<para>&knutclient; nepracuje ale program upsc ano. Co mam dělat ?</para>
+</question>
+<answer>
+<para> Zkontrolujte nastaveni čísla portu. Od ver. 0.5 (NUT) je změněno číslo
+portu 3493.
+Klikněte na <link linkend="knutclient-configuration"> odkaz </link> pro další
+údaje.</para>
+</answer>
+</qandaentry>
+</qandaset>
+</chapter>
+
+<chapter id="credits">
+
+
+<title>Credits and License</title>
+<para>
+&knutclient;
+</para>
+<para>
+Program copyright 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010 Daniel Prynych <email>Daniel@prynych.cz</email>
+</para>
+<para>
+Documentation copyright 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010 Daniel Prynych
+<email>Daniel@prynych.cz</email>
+</para>
+<para>
+Translations done by:
+<itemizedlist>
+<listitem>
+<para>Daniel Prynych <email>Daniel@prynych.cz</email> Čeština</para>
+</listitem>
+</itemizedlist>
+</para>
+
+&underFDL;               <!-- FDL: do not remove -->
+&underGPL;        	 <!-- GPL License -->
+
+</chapter>
+
+<appendix id="installation">
+<title>Instalace</title>
+<sect1 id="getting-knutclient">
+<title>Jak získat &knutclient; </title>
+<para>
+&knutclient; není částí KDE projektu
+<ulink url="http://www.kde.org">http://www.kde.org</ulink>.
+&knutclient; může být nalezen na
+<ulink url="ftp://ftp.buzuluk.cz/pub/alo/knutclient">ftp://ftp.buzuluk.cz/pub/alo/knutclient/</ulink>
+</para>
+</sect1>
+
+<sect1 id="requirements">
+<title>Požadavky</title>
+
+<para>
+Pro úspěšné použití &knutclient; potřebujete KDE 4.3.x
+</para>
+
+<para>
+Seznam změn můžete najít na
+<ulink
+url="http://www.knut.prynych.cz">http://www.knut.prynych.cz</ulink>.
+</para>
+</sect1>
+
+<sect1 id="compilation">
+<title>Překlad a instalace</title>
+
+<para>
+Pro překlad a instalaci &knutclient; napište následující příkazy v základním adresáři
+Vaší &knutclient; aplikace.
+
+<screen width="40">
+<prompt>%</prompt> <userinput>cmake ../. -DCMAKE_INSTALL_PREFIX=/usr/ -DCMAKE_BUILD_TYPE=Release</userinput>
+<prompt>%</prompt> <userinput>make</userinput>
+<prompt>%</prompt> <userinput>make install</userinput>
+</screen>
+</para>
+
+<para>
+Od doby kdy KDE aplikace  používají cmake 
+nemůžete mít žádné problémy při překladu :-). Jestliže přesto vzniknou
+nějaké problémy hlaste je prosím do KDE konference.
+</para>
+</sect1>
+</appendix>
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes: nil
+sgml-general-insert-case: lower
+End:
+-->
