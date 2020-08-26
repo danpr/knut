@@ -23,11 +23,13 @@
 #include "knutconst.h"
 
 #include <KSystemTrayIcon>
+#include <KStatusNotifierItem>
 
 #include <QObject>
 #include <QSystemTrayIcon>
 #include <QBrush>
 #include <QIcon>
+
 
 class QAction;
 class QString;
@@ -44,7 +46,9 @@ class QBrush;
  * @short Dock's icons
  * @version 0.4
   */
-class KNutDock : public KSystemTrayIcon  {
+/*class KNutDock : public KSystemTrayIcon  { */
+class KNutDock : public KStatusNotifierItem  {
+
   Q_OBJECT
   public:
 

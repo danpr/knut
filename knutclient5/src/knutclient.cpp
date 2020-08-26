@@ -78,7 +78,7 @@ KNutClient::KNutClient(bool noDock, QWidget* parent) : QWidget(parent) {
      m_myDock = new KNutDock(&m_mainUpsInfo,&settingData,upsRecords);
 
      
-     m_myDock->show();
+/////DAN///     m_myDock->show();
      connect(m_myDock, SIGNAL(endApplication()), this, SLOT(slotExitApplication()));
      connect(m_myDock, SIGNAL(activeMainWindow()), this, SLOT(slotActiveMainWindow()));
      connect(m_myDock, SIGNAL(minimize()), this, SLOT(slotCloseMainWindow()));

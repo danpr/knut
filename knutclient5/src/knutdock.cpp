@@ -25,6 +25,8 @@
 #include <KAboutData>
 #include <KColorScheme>
 #include <KLocalizedString>
+#include <KStatusNotifierItem>
+
 
 #include <QMenu>
 #include <QPalette>
@@ -44,7 +46,12 @@
 
 //#include <iostream>
 
-KNutDock::KNutDock(KNutVarData::upsInfoDef* activeUpsInfo, KNutVarData::SettingDataDef* settingData, KNutUpsData* upsRecords, QWidget* ) : KSystemTrayIcon (NULL) {
+KNutDock::KNutDock(KNutVarData::upsInfoDef* activeUpsInfo, KNutVarData::SettingDataDef* settingData, KNutUpsData* upsRecords, QWidget* ) 
+	
+//  : KSystemTrayIcon (NULL) 
+  : KStatusNotifierItem()
+
+  {
   QString valueName;
 
   qDebug("KNutDock::constructor");
@@ -89,7 +96,8 @@ m_textColor = m_textBrush.color();
 
   qDebug ("initSysTrayImage");
   initSysTrayImage();
-  setToolTip("KNutClient");
+//  setToolTip("KNutClient");
+  setToolTip("knutclient","KNutClient","");
 
   changeKIcon(); // this function calls function repaintIcon 
 
@@ -178,7 +186,8 @@ void KNutDock::changeKIcon (void) {
   }
 
 void KNutDock::initSysTrayImage(void) {
-  setIcon(m_idleIcon);
+///DAN//  setIcon(m_idleIcon);
+  setIconByPixmap(m_idleIcon); 	
   m_dataOk = m_dataOkOld= idle;  //status of ups connecting -- ups isn't connected
   }
 
