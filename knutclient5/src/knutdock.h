@@ -22,7 +22,7 @@
 #include "knutvardata.h"
 #include "knutconst.h"
 
-#include <KSystemTrayIcon>
+//#include <KSystemTrayIcon>
 #include <KStatusNotifierItem>
 
 #include <QObject>
@@ -260,9 +260,11 @@ protected:
 //  bool event( QEvent * );
 
 
+  public Q_SLOTS:
+        virtual void activate(const QPoint &pos);
+
 
   private Q_SLOTS:
-
 
 /**
  * @internal

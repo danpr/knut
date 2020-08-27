@@ -25,7 +25,7 @@
 #include <KAboutData>
 #include <KColorScheme>
 #include <KLocalizedString>
-#include <KStatusNotifierItem>
+//#include <KStatusNotifierItem>
 
 
 #include <QMenu>
@@ -223,17 +223,25 @@ void KNutDock::repaintDock (const bool always) {
 
 
   if (m_dataOk == ok) {
-    setIcon(QIcon( QPixmap::fromImage(*m_mainLayer)));
+///DAN///	  
+//    setIcon(QIcon( QPixmap::fromImage(*m_mainLayer)));
+    setIconByPixmap(QIcon( QPixmap::fromImage(*m_mainLayer)));
     }
   else {
     if ((m_dataOk != m_dataOkOld) || always) {
       toolTip(0, -1, 0, 0);
       m_dataOkOld=m_dataOk; 
-      if (m_dataOk == connecting) setIcon(m_connectionIcon);  // knutNet is in connecting state
+///DAN///      
+//      if (m_dataOk == connecting) setIcon(m_connectionIcon);  // knutNet is in connecting state
+      if (m_dataOk == connecting) setIconByPixmap(m_connectionIcon);  // knutNet is in connecting state
       else {
-        if (m_dataOk == error) setIcon(m_errorIcon);  // knutNet is in error state
+///DAN//
+//        if (m_dataOk == error) setIcon(m_errorIcon);  // knutNet is in error state
+        if (m_dataOk == error) setIconByPixmap(m_errorIcon);  // knutNet is in error state
         else  {
-          setIcon(m_idleIcon);  // knutNet is in idle state
+///DAN///
+//          setIcon(m_idleIcon);  // knutNet is in idle state
+          setIconByPixmap(m_idleIcon);  // knutNet is in idle state
           }
         }
       }
@@ -509,7 +517,8 @@ qDebug("KnutDock::toolTip");
     if (upsLoad != knc::numberVarError)
       text += "\n" + i18n("UPS Load") + QString(" : %1 %").arg(upsLoad);
     }
-  setToolTip(text);
+//  setToolTip(text);
+  setToolTipTitle(text);
  }
 
 
@@ -526,6 +535,12 @@ qDebug("KnutDock::toolTip");
    activeMainWindow();
    }
  }
+
+
+void KNutDock::activate(const QPoint &pos) {
+   Q_UNUSED(pos);
+   activeMainWindow();
+}
 
   void KNutDock::slotShowMyAbout() {
 
