@@ -835,7 +835,8 @@ void KNutPrefDlg::initUps () {
   connect (newButton,SIGNAL(clicked()),this,SLOT(slotNewUps()));
   connect (editButton,SIGNAL(clicked()),this,SLOT(slotEditUps()));
   connect (deleteButton,SIGNAL(clicked()),this,SLOT(slotDeleteUps()));
-  connect (m_listWidget2,SIGNAL(doubleClicked(QListWidgetItem *,const QPoint &)),this,SLOT(slotEditUps()));
+  //connect (m_listWidget2,SIGNAL(doubleClicked(QListWidgetItem *,const QPoint &)),this,SLOT(slotEditUps()));
+  connect (m_listWidget2,SIGNAL(itemDoubleClicked(QListWidgetItem *)),this,SLOT(slotEditUps()));
   setDefaultPage(upsSettingPage);
   }
 

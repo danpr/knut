@@ -25,7 +25,6 @@
 #include <KAboutData>
 #include <KColorScheme>
 #include <KLocalizedString>
-//#include <KStatusNotifierItem>
 
 
 #include <QMenu>
@@ -96,14 +95,9 @@ m_textColor = m_textBrush.color();
 
   qDebug ("initSysTrayImage");
   initSysTrayImage();
-//  setToolTip("KNutClient");
   setToolTip("knutclient","KNutClient","");
 
   changeKIcon(); // this function calls function repaintIcon 
-
-  // Uses own working of signal activated because in parent class signal activated is connected to activatedOrHide,
-  //  but procedure activatedOrHide doesn't work when parent object is 0.
-  connect (this, SIGNAL (activated ( QSystemTrayIcon::ActivationReason )), this, SLOT(slotActivated ( QSystemTrayIcon::ActivationReason ))); 
   }
 
 
@@ -111,7 +105,7 @@ KNutDock::~KNutDock(){
 
   delete m_mainLayer;
   delete m_backgroundLayer;
-  delete m_menu;
+//  delete m_menu;
   }
 
 
@@ -186,7 +180,6 @@ void KNutDock::changeKIcon (void) {
   }
 
 void KNutDock::initSysTrayImage(void) {
-///DAN//  setIcon(m_idleIcon);
   setIconByPixmap(m_idleIcon); 	
   m_dataOk = m_dataOkOld= idle;  //status of ups connecting -- ups isn't connected
   }
@@ -202,8 +195,6 @@ void KNutDock::repaintDock (const bool always) {
   if (m_activeUpsInfo->upsNet == 0)  return;
 
   m_dataOkOld=m_dataOk; 
- 
-
 
   if (m_activeUpsInfo->netError)  m_dataOk = error; // error is value not variable
   else { // makes OKIcon when is needed and sets m_dataOk - status of Icon
@@ -223,24 +214,16 @@ void KNutDock::repaintDock (const bool always) {
 
 
   if (m_dataOk == ok) {
-///DAN///	  
-//    setIcon(QIcon( QPixmap::fromImage(*m_mainLayer)));
     setIconByPixmap(QIcon( QPixmap::fromImage(*m_mainLayer)));
     }
   else {
     if ((m_dataOk != m_dataOkOld) || always) {
       toolTip(0, -1, 0, 0);
       m_dataOkOld=m_dataOk; 
-///DAN///      
-//      if (m_dataOk == connecting) setIcon(m_connectionIcon);  // knutNet is in connecting state
       if (m_dataOk == connecting) setIconByPixmap(m_connectionIcon);  // knutNet is in connecting state
       else {
-///DAN//
-//        if (m_dataOk == error) setIcon(m_errorIcon);  // knutNet is in error state
         if (m_dataOk == error) setIconByPixmap(m_errorIcon);  // knutNet is in error state
         else  {
-///DAN///
-//          setIcon(m_idleIcon);  // knutNet is in idle state
           setIconByPixmap(m_idleIcon);  // knutNet is in idle state
           }
         }
@@ -517,7 +500,6 @@ qDebug("KnutDock::toolTip");
     if (upsLoad != knc::numberVarError)
       text += "\n" + i18n("UPS Load") + QString(" : %1 %").arg(upsLoad);
     }
-//  setToolTip(text);
   setToolTipTitle(text);
  }
 
@@ -529,13 +511,6 @@ qDebug("KnutDock::toolTip");
 /*                                                                                           */
 /*********************************************************************************************/
 
- void KNutDock::slotActivated ( QSystemTrayIcon::ActivationReason reason ) {
- 
- if (reason == QSystemTrayIcon::Trigger) { 
-   activeMainWindow();
-   }
- }
-
 
 void KNutDock::activate(const QPoint &pos) {
    Q_UNUSED(pos);
@@ -543,15 +518,9 @@ void KNutDock::activate(const QPoint &pos) {
 }
 
   void KNutDock::slotShowMyAbout() {
-
-  /* KAboutApplicationDialog *dialog = new KAboutApplicationDialog(KGlobal::config()->componentData().aboutData()); */
-//	  KAboutData KAboutData::applicationData();
   
   KAboutApplicationDialog *dialog = new KAboutApplicationDialog(KAboutData::applicationData());
 
-/*
-  KAboutApplicationDialog *dialog = new KAboutApplicationDialog(KSharedConfig::openConfig()->componentData().aboutData());
-*/
   dialog->exec();
   delete dialog;
   }

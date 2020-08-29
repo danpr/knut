@@ -22,7 +22,6 @@
 #include "knutvardata.h"
 #include "knutconst.h"
 
-//#include <KSystemTrayIcon>
 #include <KStatusNotifierItem>
 
 #include <QObject>
@@ -44,9 +43,8 @@ class QBrush;
  *
  * @author Daniel Prynych
  * @short Dock's icons
- * @version 0.4
+ * @version 0.5
   */
-/*class KNutDock : public KSystemTrayIcon  { */
 class KNutDock : public KStatusNotifierItem  {
 
   Q_OBJECT
@@ -91,7 +89,7 @@ class KNutDock : public KStatusNotifierItem  {
  * @param  upsRecord odkaz na instanci tridy tActiveUpsInfo
  * @param  upsRecord pointer to class tActiveUpsInfo
  * @param  parent je ignorovan
- * @since  0.3
+ * @since  0.4
  * Constructor calls parent constructor with parametr NULL because it
  * uses own working of signal activated because in parent class signal activated is connected to activatedOrHide,
  * but procedure activatedOrHide doesn't work when parent object is 0 / NULL.
@@ -158,7 +156,7 @@ class KNutDock : public KStatusNotifierItem  {
  * @param always Kdyz je true prorovede vykresleni vzdy, kde je false provede vykresleni jen kdyz je zmenena nejaka hodnota UPS.
  * @param always When param is true, icon is made always, is one is false icon is makeing when same UPS's value is changed.
  *
- * @since  0.4
+ * @since  0.5
  **/
   void repaintDock ( const bool always = false);
 
@@ -261,7 +259,13 @@ protected:
 
 
   public Q_SLOTS:
-        virtual void activate(const QPoint &pos);
+/**
+ * @internal
+ *
+ * @since  0.1
+ **/
+  virtual void activate(const QPoint &pos);
+
 
 
   private Q_SLOTS:
@@ -275,8 +279,6 @@ protected:
  **/
   void slotShowMyAbout();
 
-
- void slotActivated ( QSystemTrayIcon::ActivationReason reason );
  
  void slotExitApplication (void);
 
@@ -354,7 +356,7 @@ protected:
  * Sets all for painting of basic icon.
  * This icon is painted
  *
- * @since  0.2
+ * @since  0.3
  **/
   void initSysTrayImage(void);
 
@@ -369,7 +371,7 @@ protected:
  * Sets tooltip.
  * Nastavi ToolTip.
  *
- * @since  0.1
+ * @since  0.2
  **/
     void toolTip (int runtime, int status, int batteryCharge, int upsLoad );
 
@@ -549,10 +551,6 @@ bool dataValueIsChanged(void);
     QIcon m_connectionIcon;
     QIcon m_idleIcon;
 
-/*    KIcon m_errorIcon;
-    KIcon m_connectionIcon;
-    KIcon m_idleIcon;
-*/
     QImage m_upsPix;
     QImage m_battPix;
 

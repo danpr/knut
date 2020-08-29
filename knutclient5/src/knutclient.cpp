@@ -78,7 +78,6 @@ KNutClient::KNutClient(bool noDock, QWidget* parent) : QWidget(parent) {
      m_myDock = new KNutDock(&m_mainUpsInfo,&settingData,upsRecords);
 
      
-/////DAN///     m_myDock->show();
      m_myDock->setStatus(KStatusNotifierItem::Active);
 
      connect(m_myDock, SIGNAL(endApplication()), this, SLOT(slotExitApplication()));
