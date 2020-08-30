@@ -37,8 +37,6 @@ static const char version[] = "1.1.0";
 int main(int argc, char **argv)
 {
 
-
-
 QApplication app(argc, argv);
 
 KAboutData about(QStringLiteral( "knutclient"), i18n("KNutClient"), version ,

@@ -98,6 +98,7 @@ m_textColor = m_textBrush.color();
   setToolTip("knutclient","KNutClient","");
 
   changeKIcon(); // this function calls function repaintIcon 
+  setStandardActionsEnabled(false);
   }
 
 
