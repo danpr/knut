@@ -394,6 +394,7 @@ void KNutDock::toolTip (int runtime, int status, int batteryCharge, int upsLoad 
 qDebug("KnutDock::toolTip");
 
   QString text;
+  QString subText;
   QString manufacturer = "";
   QString upsModel = "";
   QString serial = "";
@@ -429,78 +430,80 @@ qDebug("KnutDock::toolTip");
 
   text = i18n("Name")+" : "+m_activeUpsInfo->record.name + "\n"
   +i18n("UPS name")+" : "+m_activeUpsInfo->record.upsName + "\n"
-  +i18n("UPS address")+" : "+m_activeUpsInfo->record.upsAddress +"\n"
-  +i18n("Status : ");
+  +i18n("UPS address")+" : "+m_activeUpsInfo->record.upsAddress;
+
+  subText = i18n("Status : ");
 
   if (status == -1) {
-    text += i18n("Connection doesn't exist.");
+    subText += i18n("Connection doesn't exist.");
     }
   else {
     if (status & KNutNet::OL) {
-      text += i18n("UPS On line");
+      subText += i18n("UPS On line");
       }
     else {
       if (status & KNutNet::OB) {
-        text += i18n("UPS On battery");
+        subText += i18n("UPS On battery");
         }
       else {
         if (status & KNutNet::OFF) {
-          text += i18n("UPS Of line");
+          subText += i18n("UPS Of line");
           }
         }  
       }
 
     if (status & KNutNet::LB) {
-      text += "\n" + i18n("Status : ") + i18n("UPS Battery is low");
+      subText +="\n" +  i18n("Status : ") + i18n("UPS Battery is low");
       }
     if (status & KNutNet::RB) {
-      text += "\n" + i18n("Status : ") + i18n("Replace battery");
+      subText += "\n" + i18n("Status : ") + i18n("Replace battery");
       }
     if (status & KNutNet::CAL) {
-      text += "\n" + i18n("Status : ") + i18n("UPS is performing calibration");
+      subText += "\n" + i18n("Status : ") + i18n("UPS is performing calibration");
       }
     if (status & KNutNet::OVER) {
-      text += "\n" + i18n("Status : ") + i18n("UPS is Overload");
+      subText += "\n" + i18n("Status : ") + i18n("UPS is Overload");
       }
     if (status & KNutNet::TRIM) {
-      text += "\n" + i18n("Status : ") + i18n("UPS is trimming voltage");
+      subText += "\n" + i18n("Status : ") + i18n("UPS is trimming voltage");
       }
     if (status & KNutNet::BOOST) {
-      text += "\n" + i18n("Status : ")+ i18n("UPS is boosting voltage");
+      subText += "\n" + i18n("Status : ")+ i18n("UPS is boosting voltage");
       }
 
 
     }
   if ((status == -1) && (myNetErr != KNutNet::NoError)) {
-    text += "\n" + i18n("Error : ")+ KNutVarData::errorToText(myNetErr);
+    subText += "\n" + i18n("Error : ")+ KNutVarData::errorToText(myNetErr);
     }
 
-  if (m_toolTipFlags & TTMFR) text += "\n" + i18n("Manufac. : ")+ manufacturer;
+  if (m_toolTipFlags & TTMFR) subText += "\n" + i18n("Manufac. : ")+ manufacturer;
 
-  if (m_toolTipFlags & TTModel) text += "\n" + i18n("Name")+" : "+ upsModel;
+  if (m_toolTipFlags & TTModel) subText += "\n" + i18n("Name")+" : "+ upsModel;
 
-  if (m_toolTipFlags & TTSerial) text += "\n" + i18n("Serial")+" : "+ serial;
+  if (m_toolTipFlags & TTSerial) subText += "\n" + i18n("Serial")+" : "+ serial;
 
-  if (m_toolTipFlags & TTFirm) text += "\n" + i18n("Firmware")+" : "+ firmware;
+  if (m_toolTipFlags & TTFirm) subText += "\n" + i18n("Firmware")+" : "+ firmware;
+
 
   if (m_toolTipFlags & TTRun) {
     if (runtime != knc::numberVarError) {
-//      QString strRuntime = QString(" %1:%2 min").arg(min).arg(sec);
-    //  text += "\n" + i18n("Runtime") + i18n(" : %1:%2 min").arg(min).arg(sec);
-      text += "\n" + i18n("Runtime") + QString(" %1:%2 min").arg(min).arg(sec);
+      subText += "\n" + i18n("Runtime") + QString(" %1:%2 min").arg(min).arg(sec);
       }
     }
 
   if (m_toolTipFlags & TTCharge) {
     if (batteryCharge != knc::numberVarError)
-      text += "\n" + i18n("Battery Charge") + QString(" : %1 %").arg(batteryCharge);
+      subText += "\n" + i18n("Battery Charge") + QString(" : %1 %").arg(batteryCharge);
     }
 
   if (m_toolTipFlags & TTLoad) {
     if (upsLoad != knc::numberVarError)
-      text += "\n" + i18n("UPS Load") + QString(" : %1 %").arg(upsLoad);
+      subText += "\n" + i18n("UPS Load") + QString(" : %1 %").arg(upsLoad);
     }
-  setToolTipTitle(text);
+//  qDebug() << text;
+//  qDebug() << subText;
+  setToolTip("knutclient",text,subText);
  }
 
 
@@ -624,7 +627,6 @@ void KNutDock::createUpsMenu(void) {
 void KNutDock::createMainMenu(void) {
   m_menu = new QMenu();
 
-
   QString KNCName = KAboutData::applicationData().desktopFileName();
 /* dan */  
   m_upsServerMenu = (QMenu *)m_menu->addMenu(QIcon(),"UPS");
@@ -641,6 +643,8 @@ void KNutDock::createMainMenu(void) {
   m_menu->addAction(QIcon(KNCName),i18n("&About KNutClient"), this, SLOT(slotShowMyAbout()));
   m_menu->addSeparator();
   m_menu->addAction(i18n("&Minimize"), this, SLOT(slotMinimize()));
+
+  // KStatusNotifierItem adds Action Exit
   m_menu->addSeparator();
   m_menu->addAction (QIcon("application-exit"),i18n("&Exit"),this ,SLOT(slotExitApplication()));
   

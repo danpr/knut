@@ -1185,6 +1185,7 @@ qDebug ("KNutClient::slotCloseMainWindow");
 
 
 void KNutClient::slotExitApplication(void) {
+  qDebug () << "slotExitApp";
 
   if ((!(settingData.areYouSure)) ||
      ((settingData.areYouSure) &&  (KMessageBox::questionYesNo (0,i18n("Are you sure ?"),"") == KMessageBox::Yes))) {
