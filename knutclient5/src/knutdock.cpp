@@ -626,29 +626,30 @@ void KNutDock::createUpsMenu(void) {
  }
 
 void KNutDock::createMainMenu(void) {
+  qDebug("KNutDock::createMainMenu"); 
+	
   m_menu = new QMenu();
 
-  QString KNCName = KAboutData::applicationData().desktopFileName();
-/* dan */  
+  QString KNCName = KAboutData::applicationData().displayName().toLower();
+
   m_upsServerMenu = (QMenu *)m_menu->addMenu(QIcon(),"UPS");
   m_menu->addSeparator();
 
-  m_menu->addAction(QIcon("view-list-tree"),i18n("&Showing UPS variables and commands"), this, SLOT(slotPrintUPSVars()));
+  m_menu->addAction(QIcon::fromTheme(QStringLiteral("view-list-tree")),i18n("&Showing UPS variables and commands"), this, SLOT(slotPrintUPSVars()));
   m_menu->addAction(i18n("&Running instant commands"), this, SLOT(slotInstComms()));
   m_menu->addAction(i18n("Setting R&W variables"), this, SLOT(slotRWVars()));
   m_menu->addSeparator();
-  m_menu->addAction(QIcon("view-refresh"),i18n("Reconnect"), this, SLOT(slotRefreshConnection()));
+  m_menu->addAction(QIcon::fromTheme(QStringLiteral("view-refresh")),i18n("Reconnect"), this, SLOT(slotRefreshConnection()));
   m_menu->addSeparator();
-  m_menu->addAction(QIcon("configure"),i18n("&Preferences"), this, SLOT(slotPreferences()));
+  m_menu->addAction(QIcon::fromTheme(QStringLiteral("configure")),i18n("&Preferences"), this, SLOT(slotPreferences()));
   m_menu->addSeparator();
-  m_menu->addAction(QIcon(KNCName),i18n("&About KNutClient"), this, SLOT(slotShowMyAbout()));
+  m_menu->addAction(QIcon::fromTheme(KNCName),i18n("&About KNutClient"), this, SLOT(slotShowMyAbout()));
   m_menu->addSeparator();
   m_menu->addAction(i18n("&Minimize"), this, SLOT(slotMinimize()));
 
-  // KStatusNotifierItem adds Action Exit
   m_menu->addSeparator();
-  m_menu->addAction (QIcon("application-exit"),i18n("&Exit"),this ,SLOT(slotExitApplication()));
-  
+  m_menu->addAction (QIcon::fromTheme(QStringLiteral( "application-exit")),i18n("&Exit"),this ,SLOT(slotExitApplication()));
+
   createUpsMenu();
   setContextMenu(m_menu);
   }
