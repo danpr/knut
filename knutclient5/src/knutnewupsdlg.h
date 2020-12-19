@@ -22,9 +22,10 @@
 #include "knutvardata.h"
 
 #include <KActionSelector>
-#include <KDialog>
+//#include <KDialog>
 #include <KPageWidgetItem>
 #include <KComboBox>
+#include <KConfigGroup>
 
 #include <QListWidget>
 #include <QDialog>
