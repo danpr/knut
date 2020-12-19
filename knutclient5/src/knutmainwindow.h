@@ -34,7 +34,7 @@
 
 #include <KXmlGuiWindow>
 #include <KToggleAction>
-#include <KAction>
+//#include <KAction>
 
 #include <QDateTime>
 #include <QAction>

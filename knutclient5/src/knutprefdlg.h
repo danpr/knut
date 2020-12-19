@@ -28,7 +28,7 @@
 #include <KFontChooser>
 #include <KColorButton>
 #include <KComboBox>
-#include <kpushbutton.h>
+//#include <kpushbutton.h>
 
 #include <QWidget>
 #include <QListWidget>

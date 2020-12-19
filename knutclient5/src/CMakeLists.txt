@@ -33,7 +33,8 @@ add_executable(knutclient ${knutclient_SRCS})
 
 target_link_libraries(knutclient
     ##    Qt5::Quick
-    ##    Qt5::Qt5Gui
+    Qt5::Gui
+    Qt5::Network
     Qt5::Widgets
     KF5::CoreAddons
     KF5::I18n
