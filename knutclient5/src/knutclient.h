@@ -33,7 +33,7 @@
 #include "knutinstcomms.h"
 
 
-#include <KSessionManager>
+#include <KSessionManager> 
 
 #include <QTimer>
 #include <QWidget>

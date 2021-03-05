@@ -49,7 +49,6 @@ target_link_libraries(knutclient
     KF5::IconThemes   
     KF5::ConfigCore
     KF5::ConfigGui
-    KF5::I18n
     KF5::ConfigWidgets
     ## KF5::QuickAddons
     ##    PW::KWorkspace
