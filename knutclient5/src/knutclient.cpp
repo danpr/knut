@@ -31,8 +31,8 @@
 #include <KMessageBox>
 #include <KWindowSystem>
 #include <KNotification>
-#include <klocale.h>
-/**#include <KGlobal> **/
+#include <KLocalizedString>
+#include <KSharedConfig>
 
 #include <QApplication>
 #include <QDropEvent>
@@ -93,7 +93,7 @@ KNutClient::KNutClient(bool noDock, QWidget* parent) : QWidget(parent) {
      connect(m_myDock, SIGNAL(makeRefreshConnection()),this, SLOT(slotRefreshConnection()));
      }
 
-  addEventString(xi18n("Ready."));
+  addEventString(i18n("Ready."));
 
 
   // nastavime data pro vybranou polozku
