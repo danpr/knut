@@ -22,14 +22,15 @@
 
 #include <KToolBar> 
 #include <KShortcutsDialog>
-#include <KStatusBar>
 #include <KStandardAction>
 #include <KActionCollection>
-#include <KApplication>
 #include <KLocalizedString>
+#include <KSharedConfig>
 
+#include <QApplication>
 #include <QWidgetAction>
 #include <QProgressBar>
+#include <QStatusBar>
 #include <QCloseEvent>
 #include <QFont>
 #include <QPalette>
@@ -267,11 +268,9 @@ void KNutMainWindow::setConfig (unsigned int changeSetting) {
       (changeSetting & KNutPrefDlg::ChangeAPOColor)) {
      if (m_settingData->customOAnalogColor) {
        repaintAllPanels=true;
-/*       repaintOAPanels=true; */
        }
      else {
        repaintAllPanels=true;
-/*       repaintOAPanels=true; */
        }
     }
   // regeneration of panel uses for setting Main and setting Analog 
@@ -279,7 +278,6 @@ void KNutMainWindow::setConfig (unsigned int changeSetting) {
   m_panelMeter->repaintAnalogPanels (repaintFrequencyPanels, repaintVoltagePanels, repaintAllPanels);
 
   if (m_activeUpsInfo->record.name != "") {
-//    m_mainSplitter->refresh();
     }
 
   // UPS Setting
@@ -698,13 +696,11 @@ void KNutMainWindow::initToolBarAction ( void ) {
   QLabel *upsNazev = new QLabel ("UPS : ",this);
   m_upsComboBox = new KComboBox(this);
 
-  //KAction *upsToolBarLabel = new KAction(i18n("UPS Label"),this);
   QWidgetAction *upsToolBarLabel = new QWidgetAction(this);
   upsToolBarLabel->setText(i18n("UPS Label"));
   upsToolBarLabel->setDefaultWidget(upsNazev);
   actionCollection()->addAction("upslabel",upsToolBarLabel);
 
-  //KAction *upsToolBarComboBox = new KAction(i18n("UPS ComboBox"),this);
   QWidgetAction *upsToolBarComboBox = new QWidgetAction(this);
   upsToolBarComboBox->setText(i18n("UPS ComboBox"));
 
@@ -768,7 +764,7 @@ void KNutMainWindow::initVars ( void ) {
 
   //nastavime fonty
   // sets fonts
-  m_mainPalette= kapp->palette(); //saves init system palette
+  m_mainPalette= qApp->palette(); //saves init system palette
   m_areaPalette=m_mainPalette;
 
   m_aPanelPalette=m_mainPalette;

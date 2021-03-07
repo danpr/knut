@@ -53,7 +53,7 @@ class QProgressBar;
  *
  * @author Daniel Prynych
  * @short Hlavni okno
- * @version 0.4.0
+ * @version 0.4.1
  */
 class KNutMainWindow : public KXmlGuiWindow {
   Q_OBJECT

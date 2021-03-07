@@ -336,7 +336,6 @@ void KNutClient::saveCommonConfiguration ( void ) {
 
 
   KConfigGroup config( KSharedConfig::openConfig(), "" );
-  //KConfigGroup config = KGlobal::config()->group("");
   config.writeEntry ("PreviousMainWindow",settingData.activatedMainWindow);
   KNutUpsData::upsRecordDef upsData; // struktura obsahuje udaje o UPS // structure includes information about UPS
 
@@ -394,7 +393,6 @@ void KNutClient::savePreferencesConfiguration ( void ) {
 
   for (int i=0; i<upsCount; i++) {
     groupName.sprintf ("UPS %d",i);
-//    config = KGlobal::config()->group(groupName);
     config =  KConfigGroup ( KSharedConfig::openConfig(), groupName );
 
     upsRecords->get(i,upsData);
@@ -412,7 +410,6 @@ void KNutClient::savePreferencesConfiguration ( void ) {
       groupName.sprintf ("Var %d",j);
       config.writeEntry (groupName,upsData.upsVarCode[j]);
       }
-    //config = KGlobal::config()->group("");
     config =  KConfigGroup ( KSharedConfig::openConfig(), "" );
     }
   }
@@ -1071,7 +1068,6 @@ qDebug(" KNutClient::slotSetNewUPS");
 
 void KNutClient::slotRefreshConnection(void) {
 qDebug("KNutClient::slotRefreshConnection");
-
 
   m_reconnectMutex.lock();
 

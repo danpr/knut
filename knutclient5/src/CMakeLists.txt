@@ -40,7 +40,7 @@ target_link_libraries(knutclient
     KF5::I18n
     KF5::DBusAddons
     KF5::Crash
-    KF5::KDELibs4Support
+    ####KF5::KDELibs4Support
     KF5::WidgetsAddons
     KF5::Completion
     KF5::XmlGui

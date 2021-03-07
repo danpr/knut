@@ -33,8 +33,7 @@
 #include "knutinstcomms.h"
 
 
-#include <KSessionManager> 
-
+#include <QSessionManager>
 #include <QTimer>
 #include <QWidget>
 #include <QStringList>
@@ -54,7 +53,8 @@
  *
  **/
 
-class KNutClient : public QWidget, public KSessionManager  {
+/**class KNutClient : public QWidget, public QSessionManager  { **/
+class KNutClient : public QWidget  {
     Q_OBJECT
 public:
     KNutClient(bool noDock = false, QWidget* parent=0);
@@ -71,7 +71,6 @@ private Q_SLOTS:
  *
  * @since  0.2
  **/
-//    void slotTryFirstConnection (int maxCount);
     void slotTryFirstConnection (int );
 
 

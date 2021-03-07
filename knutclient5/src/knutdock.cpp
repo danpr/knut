@@ -19,7 +19,7 @@
 #include "knutnet.h"
 
 
-#include <kapplication.h>
+/**#include <kapplication.h>**/
 #include <KIconLoader>
 #include <KAboutApplicationDialog>
 #include <KAboutData>
