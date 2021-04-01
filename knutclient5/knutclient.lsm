@@ -1,12 +1,12 @@
 Begin3
 Title:          KNutClient 
-Version:        1.1
-Entered-date:   2020-07-09
+Version:        1.1.1
+Entered-date:   2021-03-07
 Description:    A graphic NUT client
 Keywords:       NUT UPS
 Author:         Daniel Prynych <Daniel@prynych.cz>
 Maintained-by:  Daniel Prynych <Daniel@prynych.cz>
-Primary-site:   ftp://ftp.buzuluk.cz/alo/knutclient/knutclient-1.1.tar.gz	
+Primary-site:   ftp://ftp.buzuluk.cz/alo/knutclient/knutclient-1.1.1.tar.gz	
 Original-site:  
 Platforms:       KF 5.x
 Copying-policy: GNU Public License

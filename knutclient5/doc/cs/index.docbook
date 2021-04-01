@@ -34,7 +34,7 @@ as Authors, publish date, the abstract, and Keywords -->
 
 
 <copyright>
-<year>2001-2020</year>
+<year>2001-2021</year>
 <holder>Daniel Prynych</holder>
 </copyright>
 <!-- Translators: put here the copyright notice of the translation -->
@@ -49,8 +49,8 @@ Please respect the format of the date (DD/MM/YYYY) and of the version
 (V.MM.LL), it could be used by automation scripts.
 Do NOT change these in the translation. -->
 
-<date>09/12/2010</date>
-<releaseinfo>0.14.0</releaseinfo>
+<date>07/03/2021</date>
+<releaseinfo>0.14.1</releaseinfo>
 
 <!-- Abstract about this handbook -->
 
@@ -59,7 +59,7 @@ Do NOT change these in the translation. -->
 &knutclient; je grafická klientská aplikace pro UPS systém NUT.
 </para>
 <para>
-Tento dokument popisuje aplikaci &knutclient; verze 1.1.0
+Tento dokument popisuje aplikaci &knutclient; verze 1.1.1
 </para>
 </abstract>
 
@@ -100,6 +100,10 @@ a možnost změny RW proměnných.
 </para>
 <para>
 Od verze 0.9.0 nepodporuje &knutclient; protokol UDP. 
+</para>
+
+<para>
+Od verze 1.1.0 podporuje &knutclient; KDE Frameworks 5 (KF5). 
 </para>
 
 <para>

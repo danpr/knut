@@ -37,7 +37,7 @@ as Authors, publish date, the abstract, and Keywords -->
 
 
 <copyright>
-<year>2001-2020</year>
+<year>2001-2021</year>
 <holder>Daniel Prynych</holder>
 </copyright>
 
@@ -53,8 +53,8 @@ Please respect the format of the date (DD/MM/YYYY) and of the version
 (V.MM.LL), it could be used by automation scripts.
 Do NOT change these in the translation. -->
 
-<date>09/12/2010</date>
-<releaseinfo>0.14.0</releaseinfo>
+<date>06/03/2021</date>
+<releaseinfo>0.14.1</releaseinfo>
 
 <!-- Abstract about this handbook -->
 
@@ -63,7 +63,7 @@ Do NOT change these in the translation. -->
 &knutclient; is GUI client for UPS system NUT.
 </para>
 <para>
-This document describes &knutclient; version 1.1.0
+This document describes &knutclient; version 1.1.1
 </para>
 </abstract>
 
@@ -110,6 +110,9 @@ enables the change of RW variables.
 </para>
 <para>
 From version 0.9.0 &knutclient; doesn't support protocol UDP.
+</para>
+<para>
+From version 1.1.0 &knutclient; support KDE Frameworks 5 (KF5).
 </para>
 
 <para>

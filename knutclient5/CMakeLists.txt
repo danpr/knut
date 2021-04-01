@@ -25,7 +25,6 @@ include(FeatureSummary)
 find_package(Qt5 REQUIRED COMPONENTS Core Gui Widgets Network )
 find_package(KF5 REQUIRED COMPONENTS CoreAddons I18n DocTools WidgetsAddons Completion XmlGui Notifications WindowSystem IconThemes Config ConfigWidgets )
 find_package(KF5 REQUIRED COMPONENTS DBusAddons Crash)
-###find_package(KF5 REQUIRED COMPONENTS CoreAddons KDELibs4Support I18n DocTools WidgetsAddons Completion XmlGui Notifications WindowSystem IconThemes Config ConfigWidgets)
 
 add_subdirectory(src)
 add_subdirectory(pics)
